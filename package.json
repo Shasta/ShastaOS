@@ -1,0 +1,37 @@
+{
+  "name": "shasta-os",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "truffle": "4.1.14",
+    "truffle-bytecode-manager": "^1.1.1",
+    "truffle-extract": "^1.2.1",
+    "truffle-assertions": "^0.4.0",
+    "ganache-cli": "^6.1.0",
+    "solium": "^1.1.8",
+    "solidity-coverage": "0.5.8",
+    "web3-utils": "1.0.0-beta.33"
+  },
+  "dependencies": {
+    "homedir": "^0.6.0",
+    "bluebird": "^3.5.1",
+    "ipfs": "^0.31.7",
+    "ipfs-api": "^24.0.1",
+    "truffle-hdwallet-provider": "0.0.6",
+    "openzeppelin-solidity": "github:OpenZeppelin/openzeppelin-solidity#master"
+  },
+  "scripts": {
+    "compile": "truffle compile",
+    "test": "TRUFFLE_TEST=true npm run ganache-cli:test",
+    "test:gas": "GAS_REPORTER=true npm test",
+    "lint": "solium --dir ./contracts",
+    "coverage": "SOLIDITY_COVERAGE=true npm run ganache-cli:test",
+    "console": "truffle dev",
+    "ganache-cli:test": "scripts/ganache-cli.sh",
+    "abi:extract": "truffle-extract --output abi/ --keys abi",
+    "bytecode:extract": "truffle-bytecode extract -o bytecode",
+    "bytecode:extract:new": "truffle-bytecode extract -o bytecode_new",
+    "bytecode:compare": "npm run bytecode:extract:new && truffle-bytecode compare bytecode bytecode_new",
+    "prepublishOnly": "truffle compile --all && npm run abi:extract -- --no-compile"
+  }
+}
