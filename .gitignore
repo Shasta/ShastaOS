@@ -13,7 +13,7 @@ allFiredEvents
 scTopics
 
 # truffle build artifacts
-abi/
+# abi/
 build/
 bytecode/
 cat >  .gitignore <<EOF
