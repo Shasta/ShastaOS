@@ -1,0 +1,9 @@
+{
+  "name": "shasta-os",
+  "version": "0.1.0",
+  "contracts": {},
+  "stdlib": {
+    "name": "openzeppelin-zos",
+    "version": "^1.9.4"
+  }
+}
