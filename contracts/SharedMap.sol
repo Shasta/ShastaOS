@@ -1,8 +1,8 @@
-pragma solidity ^0.4.19;
+pragma solidity ^0.4.24;
 
-import './OpenZeppelin/Ownable.sol';
-import './OpenZeppelin/Pausable.sol';
-import './User.sol';
+import "openzeppelin-solidity/contracts/math/Ownable.sol";
+import "openzeppelin-solidity/contracts/lifecycle/Pausable.sol";
+import "./User.sol";
 
  /**
   * @title SharedMap
