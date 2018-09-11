@@ -73,9 +73,10 @@ contract BillSystem is Ownable, Migratable {
     balance = balances[tokenAddress][userAddress];
   }
 
-  function generateBill(uint wh, uint price, address seller, address tokenAddress, string ipfsMetadata) public returns(uint newIndex) {
-    newIndex = bills.push(Bill(wh, tokenAddress, seller, msg.sender, price, wh * price, ipfsMetadata)) - 1;
-    consumerBillIndex[msg.sender].push(newIndex);
+  // TODO: Refactor to get the contract ID once contract registry is finished
+  function generateBill(uint wh, uint price, address seller, address consumer, address tokenAddress, string ipfsMetadata) public returns(uint newIndex) {
+    newIndex = bills.push(Bill(wh, tokenAddress, seller, consumer, price, wh * price, ipfsMetadata)) - 1;
+    consumerBillIndex[consumer].push(newIndex);
     sellerBillIndex[seller].push(newIndex);
     emit NewBill(msg.sender, seller, newIndex);
     return newIndex;

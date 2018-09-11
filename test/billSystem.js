@@ -55,7 +55,7 @@ contract('BillSystem', function(accounts) {
 
   it('Should be able to create a new bill', async function() {
     const wattsHourConsumed = web3.utils.toBN(1.5 * 1000); // 1.5 kWh to watt Hour
-    const billParams = [wattsHourConsumed, fakeContract.price, fakeContract.seller, fakeContract.token, ipfsHash]
+    const billParams = [wattsHourConsumed, fakeContract.price, fakeContract.seller, fakeContract.consumer, fakeContract.token, ipfsHash]
     const txConfig = { from: fakeContract.consumer };
     txConfig.gas = await billSystemInstance.methods.generateBill(...billParams).estimateGas(txConfig);
     const result = await billSystemInstance.methods.generateBill(...billParams).send(txConfig);

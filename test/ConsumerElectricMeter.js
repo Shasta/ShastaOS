@@ -50,7 +50,6 @@ contract('ConsumerElectricMeter', function(accounts) {
     const setBillGas = await electricMeterInstance.methods.setBillSystemAddress(billSystemInstance.options.address).estimateGas({from: consumer})
     await electricMeterInstance.methods.setBillSystemAddress(billSystemInstance.options.address).send({from: consumer, gas: setBillGas})
     const newBillAddress = await electricMeterInstance.methods.billSystemAddress().call();
-    console.log("new bill", newBillAddress, "current bil", billSystemInstance.options.address)
 
     // 100 usd for each account, make it rain!
     tokenDecimals = await shaLedgerInstance.methods.decimals().call();
@@ -64,7 +63,6 @@ contract('ConsumerElectricMeter', function(accounts) {
       price: web3.utils.toBN(web3.utils.toWei(priceUsd, 'ether')),
       token: shaLedgerInstance.options.address,
     }
-    console.log("BeforeEach is finished.")
   });
 
   it('Should be able to set a new contract', async function() {
@@ -81,31 +79,14 @@ contract('ConsumerElectricMeter', function(accounts) {
   });
   
   it('Should be able to generate a bill', async function() {
-    console.log("Start");
     const wattsHourConsumed = web3.utils.toBN(1.5 * 1000); // 1.5 kWh to watt Hour
     const gas = await electricMeterInstance.methods.setEnergyContract(fakeContract.token, fakeContract.seller, fakeContract.consumer, fakeContract.price,  ipfsHash).estimateGas({from: accounts[2]});
     await electricMeterInstance.methods.setEnergyContract(fakeContract.token, fakeContract.seller, fakeContract.consumer, fakeContract.price, ipfsHash).send({from: accounts[2], gas});
-    const currentBillAddress = await electricMeterInstance.methods.billSystemAddress().call();
-    console.log("curr biill", currentBillAddress)
-    console.log("curr bill addr", billSystemInstance.options.address)
     const energyConsumedGas = await electricMeterInstance.methods.energyConsumed(wattsHourConsumed, ipfsHash).estimateGas({from: accounts[2]});
-    electricMeterInstance.methods.energyConsumed(1500, ipfsHash).send({from: accounts[0], gas: 3000000})
-    .on('receipt', function(receipt){
-      console.log("OK", receipt);
-    })
-    .on('error', error => {
-      console.log(error)
-    });
+    const tx = await electricMeterInstance.methods.energyConsumed(1500, ipfsHash).send({from: accounts[0], gas: energyConsumedGas})
+    const newId = tx.events.NewBillIndex.returnValues["index"];
 
-
-    /*
-    console.log("AFTR")
-
-    console.log("bill id", billId);
-
-    const txConfig = { from: fakeContract.consumer };
-    txConfig.gas = await billSystemInstance.methods.generateBill(...billParams).estimateGas(txConfig);
-    const bill = await billSystemInstance.methods.getBill(web3.utils.toBN(billId)).call();
+    const bill = await billSystemInstance.methods.getBill(web3.utils.toBN(newId)).call();
     const consumerBillsLength = await billSystemInstance.methods.getConsumerBillsLength(fakeContract.consumer).call();
     const sellerBillsLength = await billSystemInstance.methods.getSellerBillsLength(fakeContract.seller).call();
 
@@ -128,6 +109,6 @@ contract('ConsumerElectricMeter', function(accounts) {
     assert.equal(amount, fakeContract.price.mul(wattsHourConsumed));
     assert.equal(ipfsMetadata, ipfsHash);
     assert.equal(consumerBillsLength, 1);
-    assert.equal(sellerBillsLength, 1); */
+    assert.equal(sellerBillsLength, 1);
   });
 });

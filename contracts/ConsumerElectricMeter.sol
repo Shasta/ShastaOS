@@ -23,6 +23,9 @@ contract ConsumerElectricMeter is Ownable, Migratable {
 
   BillSystem billSystem;
   EnergyContract public currentContract;
+  uint[] public billIndexes;
+
+  event NewBillIndex(uint index);
 
   /** TODO:
     * Make it only accesible via RBAC, so only the Shasta contract that manages contracts can call this function
@@ -37,8 +40,15 @@ contract ConsumerElectricMeter is Ownable, Migratable {
     billSystem = BillSystem(billSystemAddress);
   }
 
+
   function energyConsumed(uint wh, string ipfsMetadata) public returns(uint billId) {
-    billId = billSystem.generateBill(wh, currentContract.price, currentContract.seller, currentContract.tokenAddress, ipfsMetadata);
+    billId = billSystem.generateBill(wh, currentContract.price, currentContract.seller, currentContract.consumer, currentContract.tokenAddress, ipfsMetadata);
+    billIndexes.push(billId);
+    emit NewBillIndex(billId);
+  }
+
+  function getBillsLength() public view returns (uint) {
+    return billIndexes.length;
   }
 
   function getCurrentContract() public view returns (
