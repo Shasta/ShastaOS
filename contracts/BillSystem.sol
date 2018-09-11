@@ -10,8 +10,6 @@ import "zos-lib/contracts/migrations/Migratable.sol";
  */
 
 contract BillSystem is Ownable, Migratable {
-  address public ledgerAddress;
-  
 
   struct Bill {
     uint256 whConsumed;
@@ -63,15 +61,24 @@ contract BillSystem is Ownable, Migratable {
     length = bills.length;
   }
 
+  function getConsumerBillsLength(address _address) public view returns (uint length) {
+    length = consumerBillIndex[_address].length;
+  }
+
+  function getSellerBillsLength(address _address) public view returns (uint length) {
+    length = sellerBillIndex[_address].length;
+  }
+
   function getBalance(address tokenAddress, address userAddress) public view returns(uint256 balance) {
     balance = balances[tokenAddress][userAddress];
   }
 
-  function generateBill(uint wh, uint price, address seller, address tokenAddress, string ipfsMetadata) public returns (bool) {
-    uint newIndex = bills.push(Bill(wh, tokenAddress, seller, msg.sender, price, wh * price, ipfsMetadata));
+  function generateBill(uint wh, uint price, address seller, address tokenAddress, string ipfsMetadata) public returns(uint newIndex) {
+    newIndex = bills.push(Bill(wh, tokenAddress, seller, msg.sender, price, wh * price, ipfsMetadata)) - 1;
     consumerBillIndex[msg.sender].push(newIndex);
-    sellerBillIndex[msg.sender].push(newIndex);
+    sellerBillIndex[seller].push(newIndex);
     emit NewBill(msg.sender, seller, newIndex);
+    return newIndex;
   }
 
   function payBillERC20(address tokenAddress, address consumer, uint256 amount, uint256 billIndex) public {
