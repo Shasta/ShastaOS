@@ -11,11 +11,11 @@
       "inputs": [
         {
           "indexed": true,
-          "name": "previousOwner",
+          "name": "account",
           "type": "address"
         }
       ],
-      "name": "OwnershipRenounced",
+      "name": "PauserAdded",
       "type": "event"
     },
     {
@@ -23,36 +23,22 @@
       "inputs": [
         {
           "indexed": true,
-          "name": "previousOwner",
-          "type": "address"
-        },
-        {
-          "indexed": true,
-          "name": "newOwner",
+          "name": "account",
           "type": "address"
         }
       ],
-      "name": "OwnershipTransferred",
+      "name": "PauserRemoved",
       "type": "event"
     },
     {
       "constant": true,
-      "inputs": [],
-      "name": "owner",
-      "outputs": [
+      "inputs": [
         {
-          "name": "",
+          "name": "account",
           "type": "address"
         }
       ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [],
-      "name": "isOwner",
+      "name": "isPauser",
       "outputs": [
         {
           "name": "",
@@ -65,8 +51,13 @@
     },
     {
       "constant": false,
-      "inputs": [],
-      "name": "renounceOwnership",
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "addPauser",
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
@@ -74,13 +65,8 @@
     },
     {
       "constant": false,
-      "inputs": [
-        {
-          "name": "newOwner",
-          "type": "address"
-        }
-      ],
-      "name": "transferOwnership",
+      "inputs": [],
+      "name": "renouncePauser",
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
