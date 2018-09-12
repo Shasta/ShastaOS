@@ -8,7 +8,7 @@ const Promise = require("bluebird");
 /**
  * SharedMap test cases
  */
-contract('ConsumerElectricMeter', function(accounts) {
+contract('BillSystem', function(accounts) {
   // Participants
   var owner = accounts[0];
   var seller = accounts[1];
@@ -25,9 +25,6 @@ contract('ConsumerElectricMeter', function(accounts) {
   let tokenDecimals;
   // Fake IPFS hash string for testing purposes
   const ipfsHash = "QmZfSNpHVzTNi9gezLcgq64Wbj1xhwi9wk4AxYyxMZgtCc";
-
-  // Seller-Consumer contract;
-  let storedContract;
 
   // In each test the contracts are deployed again, recovering the initial state.
   beforeEach('Initialize contract with Web3 state per test case', async function () {
@@ -82,38 +79,16 @@ contract('ConsumerElectricMeter', function(accounts) {
     const initialBalance = (web3.utils.toBN(100)).pow(web3.utils.toBN(tokenDecimals));
     await Promise.map([0, 1, 2], account => shaLedgerInstance.methods.mint(accounts[account], initialBalance).send({ from: accounts[0]}));
   });
-/*
-  it('Should be able to set a new contract into the electric meter', async function() {
-    const gas = await electricMeterInstance.methods.setEnergyContract(contractId).estimateGas({from: consumer});
-    await electricMeterInstance.methods.setEnergyContract(contractId).send({from: consumer, gas});
 
-    const currentContractIndex = await electricMeterInstance.methods.currentContractIndex().call();
-
-    const currentContract = await contractRegistryInstance.methods.getContract(currentContractIndex).call();
-    assert.equal(currentContract.tokenAddress, fakeContract.tokenAddress);
-    assert.equal(currentContract.seller, fakeContract.seller);
-    assert.equal(currentContract.consumer, fakeContract.consumer);
-    assert.equal(currentContract.price, fakeContract.price);
-    assert.equal(currentContract.ipfsContractMetadata, ipfsHash);
-  });*/
-  
   it('Should be able to generate a bill', async function() {
     const wattsHourConsumed = web3.utils.toBN(1.5 * 1000); // 1.5 kWh to watt Hour
     const gas = await electricMeterInstance.methods.setEnergyContract(contractId).estimateGas({from: accounts[2]});
     await electricMeterInstance.methods.setEnergyContract(contractId).send({from: accounts[2], gas});
 
-    const address = await billSystemInstance.methods.contractRegistryAddress().call();
-    const billAdd = await electricMeterInstance.methods.billSystemAddress().call();
-    console.log("consuming energy with contract...", address, contractRegistryInstance.options.address);
-    
-    console.log("current bill address", billAdd, billSystemInstance.options.address)
-    
-    const energyConsumedGas = await electricMeterInstance.methods.energyConsumed(wattsHourConsumed, ipfsHash, billAdd, address).estimateGas({from: accounts[2]});
-    const tx = await electricMeterInstance.methods.energyConsumed(wattsHourConsumed, ipfsHash, billAdd, address).send({from: accounts[2], gas: energyConsumedGas})
-    console.log("tx", tx)
+    const energyConsumedGas = await billSystemInstance.methods.generateBill(wattsHourConsumed, contractId, ipfsHash).estimateGas({from: accounts[2]});
+    const tx = await billSystemInstance.methods.generateBill(wattsHourConsumed, contractId, ipfsHash).send({from: accounts[2], gas: energyConsumedGas})
     const newId = tx.events.NewBill.returnValues["index"];
 
-    console.log("setting getting bill", newId)
     const bill = await billSystemInstance.methods.getBill(web3.utils.toBN(newId)).call();
     const consumerBillsLength = await billSystemInstance.methods.getConsumerBillsLength(fakeContract.consumer).call();
     const sellerBillsLength = await billSystemInstance.methods.getSellerBillsLength(fakeContract.seller).call();
@@ -121,23 +96,20 @@ contract('ConsumerElectricMeter', function(accounts) {
     const {
       whConsumed,
       tokenAddress,
-      seller,
-      consumer,
       price,
       amount,
       ipfsMetadata
     } = bill;
 
     assert.equal(whConsumed, wattsHourConsumed);
-    assert.equal(tokenAddress, fakeContract.token);
-    assert.equal(seller, fakeContract.seller);
-    assert.equal(consumer, fakeContract.consumer);
+    assert.equal(tokenAddress, fakeContract.tokenAddress);
+    assert.equal(seller, bill.seller);
+    assert.equal(consumer, bill.consumer);
     assert.equal(price, fakeContract.price);
-    assert.equal(web3.utils.fromWei(price, "ether"), priceUsd);
-    assert.equal(amount, fakeContract.price.mul(wattsHourConsumed));
+    assert.equal(web3.utils.fromWei(price, "ether"), priceSha);
+    assert.equal(amount, web3.utils.toBN(price).mul(wattsHourConsumed));
     assert.equal(ipfsMetadata, ipfsHash);
     assert.equal(consumerBillsLength, 1);
     assert.equal(sellerBillsLength, 1);
-    assert.equal("debug test error", false)
   });
 });

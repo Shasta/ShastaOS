@@ -67,8 +67,8 @@ contract BillSystem is Ownable {
     balance = balances[tokenAddress][userAddress];
   }
 
-  function generateBill(uint wh, uint contractId, string ipfsMetadata, address _registry) public returns(uint newIndex) {
-    (address tokenAddress, address seller, address consumer, uint price, bool enabled) = ContractRegistry(_registry).getContractData(contractId);
+  function generateBill(uint wh, uint contractId, string ipfsMetadata) public returns(uint newIndex) {
+    (address tokenAddress, address seller, address consumer, uint price, bool enabled) = ContractRegistry(contractRegistryAddress).getContractData(contractId);
     require(enabled == true, "Contract is not enabled.");
     newIndex = bills.push(
       ShastaTypes.Bill(
