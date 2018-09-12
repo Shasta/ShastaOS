@@ -3,27 +3,21 @@ pragma solidity ^0.4.24;
 import "openzeppelin-solidity/contracts/ownership/Ownable.sol";
 import "zos-lib/contracts/migrations/Migratable.sol";
 import "./BillSystem.sol";
+import "./ContractRegistry.sol";
 
 /**
  * @title ElectricMeter
  */
 
-contract ConsumerElectricMeter is Ownable, Migratable {
-
-  struct EnergyContract {
-    address tokenAddress; // If tokenAddress 0x00 == ETHER as payment
-    address seller;
-    address consumer;
-    uint256 price;
-    string ipfsContractMetadata;
-  }
+contract ConsumerElectricMeter is Ownable{
 
   address public billSystemAddress;
-  address public marketRbacAddress;
+  address public contractRegistryAddress;
 
   BillSystem billSystem;
-  EnergyContract public currentContract;
-  uint[] public billIndexes;
+  ContractRegistry contractRegistry;
+
+  uint public currentContractIndex;
 
   event NewBillIndex(uint index);
 
@@ -31,8 +25,15 @@ contract ConsumerElectricMeter is Ownable, Migratable {
     * Make it only accesible via RBAC, so only the Shasta contract that manages contracts can call this function
     * OR ownable that accepts an Offer marketer id and grabs the info from the Shasta offer registry. 
     */
-  function setEnergyContract(address tokenAddress, address seller, address consumer, uint price, string ipfsContractMetadata) public {
-    currentContract = EnergyContract(tokenAddress, seller, consumer, price, ipfsContractMetadata);
+
+
+  function setContractRegistry(address _contractRegistryAddress) public onlyOwner {
+    contractRegistryAddress = _contractRegistryAddress;
+    contractRegistry = ContractRegistry(contractRegistryAddress);
+  }
+
+  function setEnergyContract(uint index) public {
+    currentContractIndex = index;
   }
 
   function setBillSystemAddress(address _address) public {
@@ -40,28 +41,12 @@ contract ConsumerElectricMeter is Ownable, Migratable {
     billSystem = BillSystem(billSystemAddress);
   }
 
-
-  function energyConsumed(uint wh, string ipfsMetadata) public returns(uint billId) {
-    billId = billSystem.generateBill(wh, currentContract.price, currentContract.seller, currentContract.consumer, currentContract.tokenAddress, ipfsMetadata);
-    billIndexes.push(billId);
-    emit NewBillIndex(billId);
-  }
-
-  function getBillsLength() public view returns (uint) {
-    return billIndexes.length;
-  }
-
-  function getCurrentContract() public view returns (
-    address tokenAddress,
-    address seller,
-    address consumer,
-    uint256 price,
-    string ipfsContractMetadata
-  ) {
-    tokenAddress = currentContract.tokenAddress;
-    seller = currentContract.seller;
-    consumer = currentContract.consumer;
-    price = currentContract.price;
-    ipfsContractMetadata = currentContract.ipfsContractMetadata;
+  function energyConsumed(uint wh, string ipfsMetadata, address _bill, address _registry) public {
+    BillSystem(_bill).generateBill(
+      wh,
+      currentContractIndex,
+      ipfsMetadata,
+      _registry
+    );
   }
 }

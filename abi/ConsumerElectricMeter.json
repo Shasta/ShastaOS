@@ -17,7 +17,7 @@
     {
       "constant": true,
       "inputs": [],
-      "name": "marketRbacAddress",
+      "name": "contractRegistryAddress",
       "outputs": [
         {
           "name": "",
@@ -35,36 +35,6 @@
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [],
-      "name": "currentContract",
-      "outputs": [
-        {
-          "name": "tokenAddress",
-          "type": "address"
-        },
-        {
-          "name": "seller",
-          "type": "address"
-        },
-        {
-          "name": "consumer",
-          "type": "address"
-        },
-        {
-          "name": "price",
-          "type": "uint256"
-        },
-        {
-          "name": "ipfsContractMetadata",
-          "type": "string"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
       "type": "function"
     },
     {
@@ -97,40 +67,12 @@
     },
     {
       "constant": true,
-      "inputs": [
-        {
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "name": "billIndexes",
+      "inputs": [],
+      "name": "currentContractIndex",
       "outputs": [
         {
           "name": "",
           "type": "uint256"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [
-        {
-          "name": "contractName",
-          "type": "string"
-        },
-        {
-          "name": "migrationId",
-          "type": "string"
-        }
-      ],
-      "name": "isMigrated",
-      "outputs": [
-        {
-          "name": "",
-          "type": "bool"
         }
       ],
       "payable": false,
@@ -167,23 +109,6 @@
       "anonymous": false,
       "inputs": [
         {
-          "indexed": false,
-          "name": "contractName",
-          "type": "string"
-        },
-        {
-          "indexed": false,
-          "name": "migrationId",
-          "type": "string"
-        }
-      ],
-      "name": "Migrated",
-      "type": "event"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
           "indexed": true,
           "name": "previousOwner",
           "type": "address"
@@ -213,24 +138,22 @@
       "constant": false,
       "inputs": [
         {
-          "name": "tokenAddress",
+          "name": "_contractRegistryAddress",
           "type": "address"
-        },
+        }
+      ],
+      "name": "setContractRegistry",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
         {
-          "name": "seller",
-          "type": "address"
-        },
-        {
-          "name": "consumer",
-          "type": "address"
-        },
-        {
-          "name": "price",
+          "name": "index",
           "type": "uint256"
-        },
-        {
-          "name": "ipfsContractMetadata",
-          "type": "string"
         }
       ],
       "name": "setEnergyContract",
@@ -263,61 +186,20 @@
         {
           "name": "ipfsMetadata",
           "type": "string"
+        },
+        {
+          "name": "_bill",
+          "type": "address"
+        },
+        {
+          "name": "_registry",
+          "type": "address"
         }
       ],
       "name": "energyConsumed",
-      "outputs": [
-        {
-          "name": "billId",
-          "type": "uint256"
-        }
-      ],
+      "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [],
-      "name": "getBillsLength",
-      "outputs": [
-        {
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [],
-      "name": "getCurrentContract",
-      "outputs": [
-        {
-          "name": "tokenAddress",
-          "type": "address"
-        },
-        {
-          "name": "seller",
-          "type": "address"
-        },
-        {
-          "name": "consumer",
-          "type": "address"
-        },
-        {
-          "name": "price",
-          "type": "uint256"
-        },
-        {
-          "name": "ipfsContractMetadata",
-          "type": "string"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
       "type": "function"
     }
   ]

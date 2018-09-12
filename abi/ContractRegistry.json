@@ -8,12 +8,8 @@
           "type": "uint256"
         }
       ],
-      "name": "bills",
+      "name": "contracts",
       "outputs": [
-        {
-          "name": "whConsumed",
-          "type": "uint256"
-        },
         {
           "name": "tokenAddress",
           "type": "address"
@@ -31,26 +27,12 @@
           "type": "uint256"
         },
         {
-          "name": "amount",
-          "type": "uint256"
+          "name": "enabled",
+          "type": "bool"
         },
         {
-          "name": "ipfsMetadata",
+          "name": "ipfsContractMetadata",
           "type": "string"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [],
-      "name": "contractRegistryAddress",
-      "outputs": [
-        {
-          "name": "",
-          "type": "address"
         }
       ],
       "payable": false,
@@ -95,29 +77,6 @@
       "type": "function"
     },
     {
-      "constant": true,
-      "inputs": [
-        {
-          "name": "",
-          "type": "address"
-        },
-        {
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "name": "balances",
-      "outputs": [
-        {
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
       "constant": false,
       "inputs": [
         {
@@ -136,12 +95,12 @@
       "inputs": [
         {
           "indexed": false,
-          "name": "consumer",
+          "name": "seller",
           "type": "address"
         },
         {
           "indexed": false,
-          "name": "seller",
+          "name": "consumer",
           "type": "address"
         },
         {
@@ -150,19 +109,7 @@
           "type": "uint256"
         }
       ],
-      "name": "NewBill",
-      "type": "event"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": false,
-          "name": "seller",
-          "type": "address"
-        }
-      ],
-      "name": "Newseller",
+      "name": "NewContract",
       "type": "event"
     },
     {
@@ -198,14 +145,66 @@
       "constant": false,
       "inputs": [
         {
-          "name": "_contractRegistryAddress",
+          "name": "tokenAddress",
           "type": "address"
+        },
+        {
+          "name": "seller",
+          "type": "address"
+        },
+        {
+          "name": "consumer",
+          "type": "address"
+        },
+        {
+          "name": "price",
+          "type": "uint256"
+        },
+        {
+          "name": "enabled",
+          "type": "bool"
+        },
+        {
+          "name": "ipfsContractMetadata",
+          "type": "string"
         }
       ],
-      "name": "setContractRegistry",
+      "name": "newContract",
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "index",
+          "type": "uint256"
+        },
+        {
+          "name": "status",
+          "type": "bool"
+        }
+      ],
+      "name": "setContractStatus",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getContractsLength",
+      "outputs": [
+        {
+          "name": "length",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
       "type": "function"
     },
     {
@@ -216,12 +215,27 @@
           "type": "uint256"
         }
       ],
-      "name": "getBill",
+      "name": "isEnabled",
       "outputs": [
         {
-          "name": "whConsumed",
+          "name": "enabled",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "index",
           "type": "uint256"
-        },
+        }
+      ],
+      "name": "getContract",
+      "outputs": [
         {
           "name": "tokenAddress",
           "type": "address"
@@ -239,11 +253,11 @@
           "type": "uint256"
         },
         {
-          "name": "amount",
-          "type": "uint256"
+          "name": "enabled",
+          "type": "bool"
         },
         {
-          "name": "ipfsMetadata",
+          "name": "ipfsContractMetadata",
           "type": "string"
         }
       ],
@@ -253,171 +267,37 @@
     },
     {
       "constant": true,
-      "inputs": [],
-      "name": "getBillsLength",
+      "inputs": [
+        {
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "getContractData",
       "outputs": [
         {
-          "name": "length",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "name": "",
+          "type": "address"
+        },
+        {
+          "name": "",
+          "type": "address"
+        },
+        {
+          "name": "",
           "type": "uint256"
+        },
+        {
+          "name": "",
+          "type": "bool"
         }
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [
-        {
-          "name": "_address",
-          "type": "address"
-        }
-      ],
-      "name": "getConsumerBillsLength",
-      "outputs": [
-        {
-          "name": "length",
-          "type": "uint256"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [
-        {
-          "name": "_address",
-          "type": "address"
-        }
-      ],
-      "name": "getSellerBillsLength",
-      "outputs": [
-        {
-          "name": "length",
-          "type": "uint256"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [
-        {
-          "name": "tokenAddress",
-          "type": "address"
-        },
-        {
-          "name": "userAddress",
-          "type": "address"
-        }
-      ],
-      "name": "getBalance",
-      "outputs": [
-        {
-          "name": "balance",
-          "type": "uint256"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": false,
-      "inputs": [
-        {
-          "name": "wh",
-          "type": "uint256"
-        },
-        {
-          "name": "contractId",
-          "type": "uint256"
-        },
-        {
-          "name": "ipfsMetadata",
-          "type": "string"
-        },
-        {
-          "name": "_registry",
-          "type": "address"
-        }
-      ],
-      "name": "generateBill",
-      "outputs": [
-        {
-          "name": "newIndex",
-          "type": "uint256"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "constant": false,
-      "inputs": [],
-      "name": "withdrawETH",
-      "outputs": [],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "constant": false,
-      "inputs": [
-        {
-          "name": "tokenAddress",
-          "type": "address"
-        }
-      ],
-      "name": "withdrawERC20",
-      "outputs": [],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "constant": false,
-      "inputs": [
-        {
-          "name": "billIndex",
-          "type": "uint256"
-        }
-      ],
-      "name": "payBillETH",
-      "outputs": [],
-      "payable": true,
-      "stateMutability": "payable",
-      "type": "function"
-    },
-    {
-      "constant": false,
-      "inputs": [
-        {
-          "name": "tokenAddress",
-          "type": "address"
-        },
-        {
-          "name": "consumer",
-          "type": "address"
-        },
-        {
-          "name": "amount",
-          "type": "uint256"
-        },
-        {
-          "name": "billIndex",
-          "type": "uint256"
-        }
-      ],
-      "name": "payBillERC20",
-      "outputs": [],
-      "payable": false,
-      "stateMutability": "nonpayable",
       "type": "function"
     }
   ]

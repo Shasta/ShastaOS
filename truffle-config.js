@@ -72,6 +72,11 @@ module.exports = {
       port: 8555,
     }
   },
+  compilers: {
+    solc: {
+      version: "0.4.24"
+    }
+  },
   build: {},
   mocha,
 }
