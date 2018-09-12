@@ -18,6 +18,7 @@ contract ShastaMarket is Ownable, Pausable {
     mapping(address => uint[]) private addressToOffersIndex;
     Bid[] private bidsList;
     Offer[] private offersList;
+    address public owner;
     
     struct Bid {
         address seller;
