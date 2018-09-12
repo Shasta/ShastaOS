@@ -10,11 +10,7 @@ import "openzeppelin-solidity/contracts/ownership/Ownable.sol";
  * 
  */
 contract ShaLedger is ERC20, Ownable, ERC20Burnable, ERC20Mintable {
-  string public name = "fake USD";
-  string public symbol = "USD";
+  string public name = "Sha";
+  string public symbol = "SHA";
   uint8 public decimals = 18;
-  
-  constructor() public {
-    addMinter(msg.sender);
-  }
 }
