@@ -9,7 +9,7 @@ import "./ContractRegistry.sol";
  * @title BillSystem
  */
 
-contract BillSystem is Ownable {
+contract BillSystem is Ownable, Migratable {
 
   address public contractRegistryAddress;
   ContractRegistry contractRegistry;
@@ -25,6 +25,10 @@ contract BillSystem is Ownable {
 
   event NewBill(address consumer, address seller, uint index);
   event Newseller(address seller);
+
+// Upgradeable contract pattern with initializer using zeppelinOS way.
+  function initialize() public isInitializer("BillSystem", "0") {
+  }
 
   function setContractRegistry(address _contractRegistryAddress) public {
     contractRegistryAddress = _contractRegistryAddress;

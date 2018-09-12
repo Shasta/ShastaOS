@@ -8,13 +8,16 @@ import "./libraries/ShastaTypes.sol";
  * @title ContractRegistry
  */
 
-contract ContractRegistry is Ownable {
+contract ContractRegistry is Ownable, Migratable {
 
   ShastaTypes.EnergyContract[] public contracts;
 
   event NewContract(address seller, address consumer, uint index);
 
 
+  // Upgradeable contract pattern with initializer using zeppelinOS way.
+  function initialize() public isInitializer("ContractRegistry", "0") {
+  }
 
   /** TODO:
     * Make it only accesible via RBAC, so only the Shasta contract that manages contracts can call this function
