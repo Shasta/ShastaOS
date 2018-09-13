@@ -64,11 +64,20 @@ module.exports = {
       host: "localhost",
       network_id: "*",
       port: 8545,
+      gas: 4000000
     },
     coverage: {
       host: "localhost",
       network_id: "*",
       port: 8555,
+    }
+  },
+  compilers: {
+    solc: {
+      version: './node_modules/solc', // Version is managed in package.json as an NPM dependency.
+      optimizer: {
+	enabled: true,
+      },
     }
   },
   build: {},

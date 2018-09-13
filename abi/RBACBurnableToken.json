@@ -2,9 +2,23 @@
   "abi": [
     {
       "constant": false,
-      "inputs": [],
-      "name": "unpause",
-      "outputs": [],
+      "inputs": [
+        {
+          "name": "_spender",
+          "type": "address"
+        },
+        {
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "approve",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
       "payable": false,
       "stateMutability": "nonpayable",
       "type": "function"
@@ -13,15 +27,28 @@
       "constant": true,
       "inputs": [
         {
-          "name": "account",
+          "name": "_operator",
           "type": "address"
+        },
+        {
+          "name": "_role",
+          "type": "string"
         }
       ],
-      "name": "isPauser",
+      "name": "checkRole",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "totalSupply",
       "outputs": [
         {
           "name": "",
-          "type": "bool"
+          "type": "uint256"
         }
       ],
       "payable": false,
@@ -30,8 +57,17 @@
     },
     {
       "constant": true,
-      "inputs": [],
-      "name": "paused",
+      "inputs": [
+        {
+          "name": "_operator",
+          "type": "address"
+        },
+        {
+          "name": "_role",
+          "type": "string"
+        }
+      ],
+      "name": "hasRole",
       "outputs": [
         {
           "name": "",
@@ -44,54 +80,77 @@
     },
     {
       "constant": false,
-      "inputs": [],
-      "name": "renouncePauser",
-      "outputs": [],
+      "inputs": [
+        {
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "transferFrom",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
       "payable": false,
       "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_spender",
+          "type": "address"
+        },
+        {
+          "name": "_subtractedValue",
+          "type": "uint256"
+        }
+      ],
+      "name": "decreaseApproval",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
       "type": "function"
     },
     {
       "constant": false,
       "inputs": [],
       "name": "renounceOwnership",
-      "outputs": [],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [],
-      "name": "userStorage",
-      "outputs": [
-        {
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": false,
-      "inputs": [
-        {
-          "name": "account",
-          "type": "address"
-        }
-      ],
-      "name": "addPauser",
-      "outputs": [],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "constant": false,
-      "inputs": [],
-      "name": "pause",
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
@@ -112,13 +171,68 @@
       "type": "function"
     },
     {
-      "constant": true,
-      "inputs": [],
-      "name": "isOwner",
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "transfer",
       "outputs": [
         {
           "name": "",
           "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_spender",
+          "type": "address"
+        },
+        {
+          "name": "_addedValue",
+          "type": "uint256"
+        }
+      ],
+      "name": "increaseApproval",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_owner",
+          "type": "address"
+        },
+        {
+          "name": "_spender",
+          "type": "address"
+        }
+      ],
+      "name": "allowance",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
         }
       ],
       "payable": false,
@@ -129,7 +243,7 @@
       "constant": false,
       "inputs": [
         {
-          "name": "newOwner",
+          "name": "_newOwner",
           "type": "address"
         }
       ],
@@ -143,8 +257,8 @@
       "anonymous": false,
       "inputs": [
         {
-          "indexed": false,
-          "name": "seller",
+          "indexed": true,
+          "name": "burner",
           "type": "address"
         },
         {
@@ -153,41 +267,7 @@
           "type": "uint256"
         }
       ],
-      "name": "newBid",
-      "type": "event"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": false,
-          "name": "buyer",
-          "type": "address"
-        },
-        {
-          "indexed": false,
-          "name": "value",
-          "type": "uint256"
-        },
-        {
-          "indexed": false,
-          "name": "locationIndex",
-          "type": "uint256"
-        }
-      ],
-      "name": "newOffer",
-      "type": "event"
-    },
-    {
-      "anonymous": false,
-      "inputs": [],
-      "name": "Paused",
-      "type": "event"
-    },
-    {
-      "anonymous": false,
-      "inputs": [],
-      "name": "Unpaused",
+      "name": "TokensBurned",
       "type": "event"
     },
     {
@@ -195,11 +275,16 @@
       "inputs": [
         {
           "indexed": true,
-          "name": "account",
+          "name": "operator",
           "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "role",
+          "type": "string"
         }
       ],
-      "name": "PauserAdded",
+      "name": "RoleAdded",
       "type": "event"
     },
     {
@@ -207,11 +292,16 @@
       "inputs": [
         {
           "indexed": true,
-          "name": "account",
+          "name": "operator",
           "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "role",
+          "type": "string"
         }
       ],
-      "name": "PauserRemoved",
+      "name": "RoleRemoved",
       "type": "event"
     },
     {
@@ -244,18 +334,58 @@
       "type": "event"
     },
     {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "Transfer",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "spender",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "Approval",
+      "type": "event"
+    },
+    {
       "constant": false,
       "inputs": [
         {
           "name": "_value",
           "type": "uint256"
-        },
-        {
-          "name": "_seller",
-          "type": "address"
         }
       ],
-      "name": "createBid",
+      "name": "burn",
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
@@ -265,33 +395,15 @@
       "constant": false,
       "inputs": [
         {
-          "name": "_value",
-          "type": "uint256"
-        }
-      ],
-      "name": "createOffer",
-      "outputs": [],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "constant": false,
-      "inputs": [
-        {
-          "name": "origin",
+          "name": "_from",
           "type": "address"
         },
         {
           "name": "_value",
           "type": "uint256"
-        },
-        {
-          "name": "_locationIndex",
-          "type": "uint256"
         }
       ],
-      "name": "createOfferFor",
+      "name": "burnFrom",
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
@@ -301,127 +413,45 @@
       "constant": true,
       "inputs": [
         {
-          "name": "_index",
-          "type": "uint256"
-        }
-      ],
-      "name": "getBidFromIndex",
-      "outputs": [
-        {
-          "name": "",
-          "type": "uint256"
-        },
-        {
-          "name": "",
+          "name": "_account",
           "type": "address"
         }
       ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [],
-      "name": "getBidsIndexesFromAddress",
+      "name": "isBurner",
       "outputs": [
         {
           "name": "",
-          "type": "uint256[]"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [
-        {
-          "name": "_index",
-          "type": "uint256"
-        }
-      ],
-      "name": "getOfferFromIndex",
-      "outputs": [
-        {
-          "name": "",
-          "type": "uint256"
-        },
-        {
-          "name": "",
-          "type": "address"
-        },
-        {
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [],
-      "name": "getOfferIndexesFromAddress",
-      "outputs": [
-        {
-          "name": "",
-          "type": "uint256[]"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [],
-      "name": "getBidsLength",
-      "outputs": [
-        {
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [],
-      "name": "getOffersLength",
-      "outputs": [
-        {
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": false,
-      "inputs": [
-        {
-          "name": "username",
-          "type": "bytes16"
-        },
-        {
-          "name": "ipfsHash",
-          "type": "bytes"
-        }
-      ],
-      "name": "createUser",
-      "outputs": [
-        {
-          "name": "success",
           "type": "bool"
         }
       ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_burner",
+          "type": "address"
+        }
+      ],
+      "name": "addBurner",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_burner",
+          "type": "address"
+        }
+      ],
+      "name": "removeBurner",
+      "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
       "type": "function"

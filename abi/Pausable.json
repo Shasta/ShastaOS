@@ -2,8 +2,13 @@
   "abi": [
     {
       "constant": true,
-      "inputs": [],
-      "name": "paused",
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "isPauser",
       "outputs": [
         {
           "name": "",
@@ -17,35 +22,21 @@
     {
       "constant": false,
       "inputs": [],
-      "name": "renounceOwnership",
+      "name": "renouncePauser",
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
       "type": "function"
     },
     {
-      "constant": true,
-      "inputs": [],
-      "name": "owner",
-      "outputs": [
-        {
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
       "constant": false,
       "inputs": [
         {
-          "name": "_newOwner",
+          "name": "account",
           "type": "address"
         }
       ],
-      "name": "transferOwnership",
+      "name": "addPauser",
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
@@ -68,11 +59,11 @@
       "inputs": [
         {
           "indexed": true,
-          "name": "previousOwner",
+          "name": "account",
           "type": "address"
         }
       ],
-      "name": "OwnershipRenounced",
+      "name": "PauserAdded",
       "type": "event"
     },
     {
@@ -80,17 +71,26 @@
       "inputs": [
         {
           "indexed": true,
-          "name": "previousOwner",
-          "type": "address"
-        },
-        {
-          "indexed": true,
-          "name": "newOwner",
+          "name": "account",
           "type": "address"
         }
       ],
-      "name": "OwnershipTransferred",
+      "name": "PauserRemoved",
       "type": "event"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "paused",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
     },
     {
       "constant": false,

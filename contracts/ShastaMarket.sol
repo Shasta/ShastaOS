@@ -12,7 +12,6 @@ import "./User.sol";
   */
 
 contract ShastaMarket is Ownable, Pausable {
-
     User public userStorage;
     mapping(address => uint[]) private addressToBidsIndex;
     mapping(address => uint[]) private addressToOffersIndex;
@@ -34,10 +33,6 @@ contract ShastaMarket is Ownable, Pausable {
     event newBid(address seller, uint value);
     event newOffer(address buyer, uint value, uint locationIndex);
 
-    constructor () public {
-        owner = msg.sender;
-    }
-    
     /**
     * @dev Throws if non-user is trying to interact with the contract method.
     */

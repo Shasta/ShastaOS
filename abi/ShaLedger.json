@@ -3,11 +3,25 @@
     {
       "constant": true,
       "inputs": [],
-      "name": "shastaMarketAddress",
+      "name": "mintingFinished",
       "outputs": [
         {
           "name": "",
-          "type": "address"
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "name",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
         }
       ],
       "payable": false,
@@ -16,8 +30,114 @@
     },
     {
       "constant": false,
+      "inputs": [
+        {
+          "name": "spender",
+          "type": "address"
+        },
+        {
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "approve",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
       "inputs": [],
-      "name": "unpause",
+      "name": "totalSupply",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "transferFrom",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "decimals",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "spender",
+          "type": "address"
+        },
+        {
+          "name": "addedValue",
+          "type": "uint256"
+        }
+      ],
+      "name": "increaseAllowance",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "burn",
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
@@ -27,42 +147,19 @@
       "constant": true,
       "inputs": [
         {
-          "name": "account",
+          "name": "owner",
           "type": "address"
         }
       ],
-      "name": "isPauser",
+      "name": "balanceOf",
       "outputs": [
         {
           "name": "",
-          "type": "bool"
+          "type": "uint256"
         }
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [],
-      "name": "paused",
-      "outputs": [
-        {
-          "name": "",
-          "type": "bool"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": false,
-      "inputs": [],
-      "name": "renouncePauser",
-      "outputs": [],
-      "payable": false,
-      "stateMutability": "nonpayable",
       "type": "function"
     },
     {
@@ -75,47 +172,18 @@
       "type": "function"
     },
     {
-      "constant": true,
-      "inputs": [],
-      "name": "userStorage",
-      "outputs": [
-        {
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [
-        {
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "name": "locationIndexByAddress",
-      "outputs": [
-        {
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
       "constant": false,
       "inputs": [
         {
-          "name": "account",
+          "name": "from",
           "type": "address"
+        },
+        {
+          "name": "value",
+          "type": "uint256"
         }
       ],
-      "name": "addPauser",
+      "name": "burnFrom",
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
@@ -124,8 +192,13 @@
     {
       "constant": false,
       "inputs": [],
-      "name": "pause",
-      "outputs": [],
+      "name": "finishMinting",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
       "payable": false,
       "stateMutability": "nonpayable",
       "type": "function"
@@ -161,11 +234,99 @@
     {
       "constant": true,
       "inputs": [],
-      "name": "userContractAddress",
+      "name": "symbol",
       "outputs": [
         {
           "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "account",
           "type": "address"
+        }
+      ],
+      "name": "addMinter",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "renounceMinter",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "spender",
+          "type": "address"
+        },
+        {
+          "name": "subtractedValue",
+          "type": "uint256"
+        }
+      ],
+      "name": "decreaseAllowance",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "transfer",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "isMinter",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
         }
       ],
       "payable": false,
@@ -176,15 +337,19 @@
       "constant": true,
       "inputs": [
         {
-          "name": "",
-          "type": "uint256"
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "name": "spender",
+          "type": "address"
         }
       ],
-      "name": "locationsIpfsHashes",
+      "name": "allowance",
       "outputs": [
         {
           "name": "",
-          "type": "string"
+          "type": "uint256"
         }
       ],
       "payable": false,
@@ -206,64 +371,9 @@
       "type": "function"
     },
     {
-      "inputs": [
-        {
-          "name": "contractAddress",
-          "type": "address"
-        },
-        {
-          "name": "_shastaMarketAddress",
-          "type": "address"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "constructor"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": false,
-          "name": "ipfsHash",
-          "type": "string"
-        },
-        {
-          "indexed": false,
-          "name": "index",
-          "type": "uint256"
-        }
-      ],
-      "name": "NewLocation",
-      "type": "event"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": false,
-          "name": "ipfsHash",
-          "type": "string"
-        },
-        {
-          "indexed": false,
-          "name": "index",
-          "type": "uint256"
-        }
-      ],
-      "name": "LocationUpdate",
-      "type": "event"
-    },
-    {
       "anonymous": false,
       "inputs": [],
-      "name": "Paused",
-      "type": "event"
-    },
-    {
-      "anonymous": false,
-      "inputs": [],
-      "name": "Unpaused",
+      "name": "MintingFinished",
       "type": "event"
     },
     {
@@ -275,7 +385,7 @@
           "type": "address"
         }
       ],
-      "name": "PauserAdded",
+      "name": "MinterAdded",
       "type": "event"
     },
     {
@@ -287,7 +397,7 @@
           "type": "address"
         }
       ],
-      "name": "PauserRemoved",
+      "name": "MinterRemoved",
       "type": "event"
     },
     {
@@ -320,83 +430,62 @@
       "type": "event"
     },
     {
-      "constant": false,
+      "anonymous": false,
       "inputs": [
         {
-          "name": "contractAddress",
+          "indexed": true,
+          "name": "from",
           "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "value",
+          "type": "uint256"
         }
       ],
-      "name": "setUserContractAddress",
-      "outputs": [],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "function"
+      "name": "Transfer",
+      "type": "event"
     },
     {
-      "constant": true,
+      "anonymous": false,
       "inputs": [
         {
-          "name": "locationIndex",
+          "indexed": true,
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "spender",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "value",
           "type": "uint256"
         }
       ],
-      "name": "isLocationIndexFromUser",
-      "outputs": [
-        {
-          "name": "",
-          "type": "bool"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [],
-      "name": "getLocationsLength",
-      "outputs": [
-        {
-          "name": "length",
-          "type": "uint256"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
+      "name": "Approval",
+      "type": "event"
     },
     {
       "constant": false,
       "inputs": [
         {
-          "name": "price",
-          "type": "uint256"
+          "name": "to",
+          "type": "address"
         },
         {
-          "name": "locationIpfsHash",
-          "type": "string"
-        }
-      ],
-      "name": "addLocation",
-      "outputs": [],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "constant": false,
-      "inputs": [
-        {
-          "name": "locationIpfsHash",
-          "type": "string"
-        },
-        {
-          "name": "index",
+          "name": "amount",
           "type": "uint256"
         }
       ],
-      "name": "updateLocation",
+      "name": "mint",
       "outputs": [
         {
           "name": "",
@@ -411,15 +500,11 @@
       "constant": false,
       "inputs": [
         {
-          "name": "locationIpfsHash",
-          "type": "string"
-        },
-        {
-          "name": "index",
-          "type": "uint256"
+          "name": "_bool",
+          "type": "bool"
         }
       ],
-      "name": "ownerUpdateLocation",
+      "name": "toggleMinting",
       "outputs": [
         {
           "name": "",
