@@ -56,9 +56,9 @@ contract ShastaMarket is Ownable, Pausable {
         emit newBid(msg.sender, _value);
     }
     
-    function createOffer(uint _value) public whenNotPaused {
+    function createOffer(uint _value, address _seller) public whenNotPaused {
         Offer memory myOffer;
-        myOffer.buyer = msg.sender;
+        myOffer.buyer = _seller;
         myOffer.value = _value;
         
         uint index = offersList.push(myOffer) - 1;

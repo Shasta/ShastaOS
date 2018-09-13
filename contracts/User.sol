@@ -83,6 +83,10 @@ function createBid(uint _value, bytes ipfsHash) public payable {
         updateUser(ipfsHash);
 }
 
+function createOffer(uint _value, bytes ipfsHash) public payable {
+       shastaMarket.createOffer(_value, msg.sender);
+        updateUser(ipfsHash);
+}
   function updateUser(bytes ipfsHash) public payable returns(bool success)
   {
     require(hasUser(msg.sender));
