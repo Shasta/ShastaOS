@@ -6,7 +6,7 @@
     "ganache-cli": "^6.1.0",
     "solidity-coverage": "0.5.8",
     "solium": "^1.1.8",
-    "truffle": "^5.0.0-beta.0",
+    "truffle": "",
     "truffle-assertions": "^0.4.0",
     "truffle-bytecode-manager": "^1.1.1",
     "truffle-extract": "^1.2.1",
@@ -19,6 +19,8 @@
     "ipfs-api": "^24.0.1",
     "openzeppelin-solidity": "^2.0.0-rc.1",
     "openzeppelin-zos": "^1.9.4",
+    "solc": "^0.4.24",
+    "truffle": "^5.0.0-next.11",
     "truffle-hdwallet-provider": "0.0.6"
   },
   "scripts": {
