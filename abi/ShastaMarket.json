@@ -267,6 +267,10 @@
         {
           "name": "_value",
           "type": "uint256"
+        },
+        {
+          "name": "_seller",
+          "type": "address"
         }
       ],
       "name": "createOffer",
