@@ -2,6 +2,11 @@
   "name": "shasta-os",
   "version": "0.1.0",
   "private": true,
+  "files": [
+    "build",
+    "contracts",
+    "test"
+  ],
   "devDependencies": {
     "ganache-cli": "^6.1.0",
     "solidity-coverage": "0.5.8",
