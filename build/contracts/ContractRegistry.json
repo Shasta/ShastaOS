@@ -384,7 +384,7 @@
         "id": 541,
         "nodeType": "ImportDirective",
         "scope": 753,
-        "sourceUnit": 2841,
+        "sourceUnit": 2857,
         "src": "26:63:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -395,7 +395,7 @@
         "id": 542,
         "nodeType": "ImportDirective",
         "scope": 753,
-        "sourceUnit": 3592,
+        "sourceUnit": 3608,
         "src": "90:53:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -406,7 +406,7 @@
         "id": 543,
         "nodeType": "ImportDirective",
         "scope": 753,
-        "sourceUnit": 2269,
+        "sourceUnit": 2285,
         "src": "144:37:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -420,10 +420,10 @@
               "id": 544,
               "name": "Ownable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2840,
+              "referencedDeclaration": 2856,
               "src": "248:7:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Ownable_$2840",
+                "typeIdentifier": "t_contract$_Ownable_$2856",
                 "typeString": "contract Ownable"
               }
             },
@@ -438,10 +438,10 @@
               "id": 546,
               "name": "Migratable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 3591,
+              "referencedDeclaration": 3607,
               "src": "257:10:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Migratable_$3591",
+                "typeIdentifier": "t_contract$_Migratable_$3607",
                 "typeString": "contract Migratable"
               }
             },
@@ -451,8 +451,8 @@
           }
         ],
         "contractDependencies": [
-          2840,
-          3591
+          2856,
+          3607
         ],
         "contractKind": "contract",
         "documentation": "@title ContractRegistry",
@@ -460,8 +460,8 @@
         "id": 752,
         "linearizedBaseContracts": [
           752,
-          3591,
-          2840
+          3607,
+          2856
         ],
         "name": "ContractRegistry",
         "nodeType": "ContractDefinition",
@@ -476,7 +476,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_array$_t_struct$_EnergyContract_$2252_storage_$dyn_storage",
+              "typeIdentifier": "t_array$_t_struct$_EnergyContract_$2268_storage_$dyn_storage",
               "typeString": "struct ShastaTypes.EnergyContract[]"
             },
             "typeName": {
@@ -485,10 +485,10 @@
                 "id": 548,
                 "name": "ShastaTypes.EnergyContract",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 2252,
+                "referencedDeclaration": 2268,
                 "src": "273:26:1",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_EnergyContract_$2252_storage_ptr",
+                  "typeIdentifier": "t_struct$_EnergyContract_$2268_storage_ptr",
                   "typeString": "struct ShastaTypes.EnergyContract"
                 }
               },
@@ -497,7 +497,7 @@
               "nodeType": "ArrayTypeName",
               "src": "273:28:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_array$_t_struct$_EnergyContract_$2252_storage_$dyn_storage_ptr",
+                "typeIdentifier": "t_array$_t_struct$_EnergyContract_$2268_storage_$dyn_storage_ptr",
                 "typeString": "struct ShastaTypes.EnergyContract[]"
               }
             },
@@ -659,7 +659,7 @@
                   "name": "isInitializer",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 3538,
+                  "referencedDeclaration": 3554,
                   "src": "494:13:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$_t_string_memory_ptr_$_t_string_memory_ptr_$",
@@ -859,10 +859,10 @@
                               "name": "ShastaTypes",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 2268,
+                              "referencedDeclaration": 2284,
                               "src": "953:11:1",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_type$_t_contract$_ShastaTypes_$2268_$",
+                                "typeIdentifier": "t_type$_t_contract$_ShastaTypes_$2284_$",
                                 "typeString": "type(library ShastaTypes)"
                               }
                             },
@@ -873,10 +873,10 @@
                             "lValueRequested": false,
                             "memberName": "EnergyContract",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 2252,
+                            "referencedDeclaration": 2268,
                             "src": "953:26:1",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_type$_t_struct$_EnergyContract_$2252_storage_ptr_$",
+                              "typeIdentifier": "t_type$_t_struct$_EnergyContract_$2268_storage_ptr_$",
                               "typeString": "type(struct ShastaTypes.EnergyContract storage pointer)"
                             }
                           },
@@ -890,7 +890,7 @@
                           "nodeType": "FunctionCall",
                           "src": "953:96:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_EnergyContract_$2252_memory",
+                            "typeIdentifier": "t_struct$_EnergyContract_$2268_memory",
                             "typeString": "struct ShastaTypes.EnergyContract memory"
                           }
                         }
@@ -898,7 +898,7 @@
                       "expression": {
                         "argumentTypes": [
                           {
-                            "typeIdentifier": "t_struct$_EnergyContract_$2252_memory",
+                            "typeIdentifier": "t_struct$_EnergyContract_$2268_memory",
                             "typeString": "struct ShastaTypes.EnergyContract memory"
                           }
                         ],
@@ -911,7 +911,7 @@
                           "referencedDeclaration": 550,
                           "src": "938:9:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_array$_t_struct$_EnergyContract_$2252_storage_$dyn_storage",
+                            "typeIdentifier": "t_array$_t_struct$_EnergyContract_$2268_storage_$dyn_storage",
                             "typeString": "struct ShastaTypes.EnergyContract storage ref[] storage ref"
                           }
                         },
@@ -925,7 +925,7 @@
                         "referencedDeclaration": null,
                         "src": "938:14:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_EnergyContract_$2252_storage_$returns$_t_uint256_$",
+                          "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_EnergyContract_$2268_storage_$returns$_t_uint256_$",
                           "typeString": "function (struct ShastaTypes.EnergyContract storage ref) returns (uint256)"
                         }
                       },
@@ -1267,7 +1267,7 @@
                       "stateVariable": false,
                       "storageLocation": "storage",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_EnergyContract_$2252_storage_ptr",
+                        "typeIdentifier": "t_struct$_EnergyContract_$2268_storage_ptr",
                         "typeString": "struct ShastaTypes.EnergyContract"
                       },
                       "typeName": {
@@ -1275,10 +1275,10 @@
                         "id": 614,
                         "name": "ShastaTypes.EnergyContract",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 2252,
+                        "referencedDeclaration": 2268,
                         "src": "1178:26:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_EnergyContract_$2252_storage_ptr",
+                          "typeIdentifier": "t_struct$_EnergyContract_$2268_storage_ptr",
                           "typeString": "struct ShastaTypes.EnergyContract"
                         }
                       },
@@ -1298,7 +1298,7 @@
                       "referencedDeclaration": 550,
                       "src": "1231:9:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_array$_t_struct$_EnergyContract_$2252_storage_$dyn_storage",
+                        "typeIdentifier": "t_array$_t_struct$_EnergyContract_$2268_storage_$dyn_storage",
                         "typeString": "struct ShastaTypes.EnergyContract storage ref[] storage ref"
                       }
                     },
@@ -1323,7 +1323,7 @@
                     "nodeType": "IndexAccess",
                     "src": "1231:16:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_EnergyContract_$2252_storage",
+                      "typeIdentifier": "t_struct$_EnergyContract_$2268_storage",
                       "typeString": "struct ShastaTypes.EnergyContract storage ref"
                     }
                   },
@@ -1349,7 +1349,7 @@
                         "referencedDeclaration": 615,
                         "src": "1253:15:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_EnergyContract_$2252_storage_ptr",
+                          "typeIdentifier": "t_struct$_EnergyContract_$2268_storage_ptr",
                           "typeString": "struct ShastaTypes.EnergyContract storage pointer"
                         }
                       },
@@ -1360,7 +1360,7 @@
                       "lValueRequested": true,
                       "memberName": "enabled",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2249,
+                      "referencedDeclaration": 2265,
                       "src": "1253:23:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -1514,7 +1514,7 @@
                         "referencedDeclaration": 550,
                         "src": "1374:9:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_struct$_EnergyContract_$2252_storage_$dyn_storage",
+                          "typeIdentifier": "t_array$_t_struct$_EnergyContract_$2268_storage_$dyn_storage",
                           "typeString": "struct ShastaTypes.EnergyContract storage ref[] storage ref"
                         }
                       },
@@ -1619,7 +1619,7 @@
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_EnergyContract_$2252_memory_ptr",
+                        "typeIdentifier": "t_struct$_EnergyContract_$2268_memory_ptr",
                         "typeString": "struct ShastaTypes.EnergyContract"
                       },
                       "typeName": {
@@ -1627,10 +1627,10 @@
                         "id": 647,
                         "name": "ShastaTypes.EnergyContract",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 2252,
+                        "referencedDeclaration": 2268,
                         "src": "1471:26:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_EnergyContract_$2252_storage_ptr",
+                          "typeIdentifier": "t_struct$_EnergyContract_$2268_storage_ptr",
                           "typeString": "struct ShastaTypes.EnergyContract"
                         }
                       },
@@ -1650,7 +1650,7 @@
                       "referencedDeclaration": 550,
                       "src": "1523:9:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_array$_t_struct$_EnergyContract_$2252_storage_$dyn_storage",
+                        "typeIdentifier": "t_array$_t_struct$_EnergyContract_$2268_storage_$dyn_storage",
                         "typeString": "struct ShastaTypes.EnergyContract storage ref[] storage ref"
                       }
                     },
@@ -1675,7 +1675,7 @@
                     "nodeType": "IndexAccess",
                     "src": "1523:16:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_EnergyContract_$2252_storage",
+                      "typeIdentifier": "t_struct$_EnergyContract_$2268_storage",
                       "typeString": "struct ShastaTypes.EnergyContract storage ref"
                     }
                   },
@@ -1716,7 +1716,7 @@
                         "referencedDeclaration": 648,
                         "src": "1555:15:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_EnergyContract_$2252_memory_ptr",
+                          "typeIdentifier": "t_struct$_EnergyContract_$2268_memory_ptr",
                           "typeString": "struct ShastaTypes.EnergyContract memory"
                         }
                       },
@@ -1727,7 +1727,7 @@
                       "lValueRequested": false,
                       "memberName": "enabled",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2249,
+                      "referencedDeclaration": 2265,
                       "src": "1555:23:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -1848,7 +1848,7 @@
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_EnergyContract_$2252_memory_ptr",
+                        "typeIdentifier": "t_struct$_EnergyContract_$2268_memory_ptr",
                         "typeString": "struct ShastaTypes.EnergyContract"
                       },
                       "typeName": {
@@ -1856,10 +1856,10 @@
                         "id": 678,
                         "name": "ShastaTypes.EnergyContract",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 2252,
+                        "referencedDeclaration": 2268,
                         "src": "1786:26:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_EnergyContract_$2252_storage_ptr",
+                          "typeIdentifier": "t_struct$_EnergyContract_$2268_storage_ptr",
                           "typeString": "struct ShastaTypes.EnergyContract"
                         }
                       },
@@ -1879,7 +1879,7 @@
                       "referencedDeclaration": 550,
                       "src": "1838:9:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_array$_t_struct$_EnergyContract_$2252_storage_$dyn_storage",
+                        "typeIdentifier": "t_array$_t_struct$_EnergyContract_$2268_storage_$dyn_storage",
                         "typeString": "struct ShastaTypes.EnergyContract storage ref[] storage ref"
                       }
                     },
@@ -1904,7 +1904,7 @@
                     "nodeType": "IndexAccess",
                     "src": "1838:16:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_EnergyContract_$2252_storage",
+                      "typeIdentifier": "t_struct$_EnergyContract_$2268_storage",
                       "typeString": "struct ShastaTypes.EnergyContract storage ref"
                     }
                   },
@@ -1945,7 +1945,7 @@
                         "referencedDeclaration": 679,
                         "src": "1875:15:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_EnergyContract_$2252_memory_ptr",
+                          "typeIdentifier": "t_struct$_EnergyContract_$2268_memory_ptr",
                           "typeString": "struct ShastaTypes.EnergyContract memory"
                         }
                       },
@@ -1956,7 +1956,7 @@
                       "lValueRequested": false,
                       "memberName": "tokenAddress",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2241,
+                      "referencedDeclaration": 2257,
                       "src": "1875:28:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -2007,7 +2007,7 @@
                         "referencedDeclaration": 679,
                         "src": "1918:15:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_EnergyContract_$2252_memory_ptr",
+                          "typeIdentifier": "t_struct$_EnergyContract_$2268_memory_ptr",
                           "typeString": "struct ShastaTypes.EnergyContract memory"
                         }
                       },
@@ -2018,7 +2018,7 @@
                       "lValueRequested": false,
                       "memberName": "seller",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2243,
+                      "referencedDeclaration": 2259,
                       "src": "1918:22:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -2069,7 +2069,7 @@
                         "referencedDeclaration": 679,
                         "src": "1957:15:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_EnergyContract_$2252_memory_ptr",
+                          "typeIdentifier": "t_struct$_EnergyContract_$2268_memory_ptr",
                           "typeString": "struct ShastaTypes.EnergyContract memory"
                         }
                       },
@@ -2080,7 +2080,7 @@
                       "lValueRequested": false,
                       "memberName": "consumer",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2245,
+                      "referencedDeclaration": 2261,
                       "src": "1957:24:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -2131,7 +2131,7 @@
                         "referencedDeclaration": 679,
                         "src": "1995:15:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_EnergyContract_$2252_memory_ptr",
+                          "typeIdentifier": "t_struct$_EnergyContract_$2268_memory_ptr",
                           "typeString": "struct ShastaTypes.EnergyContract memory"
                         }
                       },
@@ -2142,7 +2142,7 @@
                       "lValueRequested": false,
                       "memberName": "price",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2247,
+                      "referencedDeclaration": 2263,
                       "src": "1995:21:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -2193,7 +2193,7 @@
                         "referencedDeclaration": 679,
                         "src": "2032:15:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_EnergyContract_$2252_memory_ptr",
+                          "typeIdentifier": "t_struct$_EnergyContract_$2268_memory_ptr",
                           "typeString": "struct ShastaTypes.EnergyContract memory"
                         }
                       },
@@ -2204,7 +2204,7 @@
                       "lValueRequested": false,
                       "memberName": "enabled",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2249,
+                      "referencedDeclaration": 2265,
                       "src": "2032:23:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -2255,7 +2255,7 @@
                         "referencedDeclaration": 679,
                         "src": "2084:15:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_EnergyContract_$2252_memory_ptr",
+                          "typeIdentifier": "t_struct$_EnergyContract_$2268_memory_ptr",
                           "typeString": "struct ShastaTypes.EnergyContract memory"
                         }
                       },
@@ -2266,7 +2266,7 @@
                       "lValueRequested": false,
                       "memberName": "ipfsContractMetadata",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2251,
+                      "referencedDeclaration": 2267,
                       "src": "2084:36:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_memory",
@@ -2517,7 +2517,7 @@
                       "stateVariable": false,
                       "storageLocation": "storage",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_EnergyContract_$2252_storage_ptr",
+                        "typeIdentifier": "t_struct$_EnergyContract_$2268_storage_ptr",
                         "typeString": "struct ShastaTypes.EnergyContract"
                       },
                       "typeName": {
@@ -2525,10 +2525,10 @@
                         "id": 732,
                         "name": "ShastaTypes.EnergyContract",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 2252,
+                        "referencedDeclaration": 2268,
                         "src": "2256:26:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_EnergyContract_$2252_storage_ptr",
+                          "typeIdentifier": "t_struct$_EnergyContract_$2268_storage_ptr",
                           "typeString": "struct ShastaTypes.EnergyContract"
                         }
                       },
@@ -2548,7 +2548,7 @@
                       "referencedDeclaration": 550,
                       "src": "2309:9:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_array$_t_struct$_EnergyContract_$2252_storage_$dyn_storage",
+                        "typeIdentifier": "t_array$_t_struct$_EnergyContract_$2268_storage_$dyn_storage",
                         "typeString": "struct ShastaTypes.EnergyContract storage ref[] storage ref"
                       }
                     },
@@ -2573,7 +2573,7 @@
                     "nodeType": "IndexAccess",
                     "src": "2309:16:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_EnergyContract_$2252_storage",
+                      "typeIdentifier": "t_struct$_EnergyContract_$2268_storage",
                       "typeString": "struct ShastaTypes.EnergyContract storage ref"
                     }
                   },
@@ -2595,7 +2595,7 @@
                           "referencedDeclaration": 733,
                           "src": "2339:15:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_EnergyContract_$2252_storage_ptr",
+                            "typeIdentifier": "t_struct$_EnergyContract_$2268_storage_ptr",
                             "typeString": "struct ShastaTypes.EnergyContract storage pointer"
                           }
                         },
@@ -2606,7 +2606,7 @@
                         "lValueRequested": false,
                         "memberName": "tokenAddress",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 2241,
+                        "referencedDeclaration": 2257,
                         "src": "2339:28:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -2624,7 +2624,7 @@
                           "referencedDeclaration": 733,
                           "src": "2369:15:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_EnergyContract_$2252_storage_ptr",
+                            "typeIdentifier": "t_struct$_EnergyContract_$2268_storage_ptr",
                             "typeString": "struct ShastaTypes.EnergyContract storage pointer"
                           }
                         },
@@ -2635,7 +2635,7 @@
                         "lValueRequested": false,
                         "memberName": "seller",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 2243,
+                        "referencedDeclaration": 2259,
                         "src": "2369:22:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -2653,7 +2653,7 @@
                           "referencedDeclaration": 733,
                           "src": "2393:15:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_EnergyContract_$2252_storage_ptr",
+                            "typeIdentifier": "t_struct$_EnergyContract_$2268_storage_ptr",
                             "typeString": "struct ShastaTypes.EnergyContract storage pointer"
                           }
                         },
@@ -2664,7 +2664,7 @@
                         "lValueRequested": false,
                         "memberName": "consumer",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 2245,
+                        "referencedDeclaration": 2261,
                         "src": "2393:24:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -2682,7 +2682,7 @@
                           "referencedDeclaration": 733,
                           "src": "2419:15:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_EnergyContract_$2252_storage_ptr",
+                            "typeIdentifier": "t_struct$_EnergyContract_$2268_storage_ptr",
                             "typeString": "struct ShastaTypes.EnergyContract storage pointer"
                           }
                         },
@@ -2693,7 +2693,7 @@
                         "lValueRequested": false,
                         "memberName": "price",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 2247,
+                        "referencedDeclaration": 2263,
                         "src": "2419:21:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -2711,7 +2711,7 @@
                           "referencedDeclaration": 733,
                           "src": "2442:15:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_EnergyContract_$2252_storage_ptr",
+                            "typeIdentifier": "t_struct$_EnergyContract_$2268_storage_ptr",
                             "typeString": "struct ShastaTypes.EnergyContract storage pointer"
                           }
                         },
@@ -2722,7 +2722,7 @@
                         "lValueRequested": false,
                         "memberName": "enabled",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 2249,
+                        "referencedDeclaration": 2265,
                         "src": "2442:23:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
@@ -2969,7 +2969,7 @@
         "id": 541,
         "nodeType": "ImportDirective",
         "scope": 753,
-        "sourceUnit": 2841,
+        "sourceUnit": 2857,
         "src": "26:63:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -2980,7 +2980,7 @@
         "id": 542,
         "nodeType": "ImportDirective",
         "scope": 753,
-        "sourceUnit": 3592,
+        "sourceUnit": 3608,
         "src": "90:53:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -2991,7 +2991,7 @@
         "id": 543,
         "nodeType": "ImportDirective",
         "scope": 753,
-        "sourceUnit": 2269,
+        "sourceUnit": 2285,
         "src": "144:37:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -3005,10 +3005,10 @@
               "id": 544,
               "name": "Ownable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2840,
+              "referencedDeclaration": 2856,
               "src": "248:7:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Ownable_$2840",
+                "typeIdentifier": "t_contract$_Ownable_$2856",
                 "typeString": "contract Ownable"
               }
             },
@@ -3023,10 +3023,10 @@
               "id": 546,
               "name": "Migratable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 3591,
+              "referencedDeclaration": 3607,
               "src": "257:10:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Migratable_$3591",
+                "typeIdentifier": "t_contract$_Migratable_$3607",
                 "typeString": "contract Migratable"
               }
             },
@@ -3036,8 +3036,8 @@
           }
         ],
         "contractDependencies": [
-          2840,
-          3591
+          2856,
+          3607
         ],
         "contractKind": "contract",
         "documentation": "@title ContractRegistry",
@@ -3045,8 +3045,8 @@
         "id": 752,
         "linearizedBaseContracts": [
           752,
-          3591,
-          2840
+          3607,
+          2856
         ],
         "name": "ContractRegistry",
         "nodeType": "ContractDefinition",
@@ -3061,7 +3061,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_array$_t_struct$_EnergyContract_$2252_storage_$dyn_storage",
+              "typeIdentifier": "t_array$_t_struct$_EnergyContract_$2268_storage_$dyn_storage",
               "typeString": "struct ShastaTypes.EnergyContract[]"
             },
             "typeName": {
@@ -3070,10 +3070,10 @@
                 "id": 548,
                 "name": "ShastaTypes.EnergyContract",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 2252,
+                "referencedDeclaration": 2268,
                 "src": "273:26:1",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_EnergyContract_$2252_storage_ptr",
+                  "typeIdentifier": "t_struct$_EnergyContract_$2268_storage_ptr",
                   "typeString": "struct ShastaTypes.EnergyContract"
                 }
               },
@@ -3082,7 +3082,7 @@
               "nodeType": "ArrayTypeName",
               "src": "273:28:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_array$_t_struct$_EnergyContract_$2252_storage_$dyn_storage_ptr",
+                "typeIdentifier": "t_array$_t_struct$_EnergyContract_$2268_storage_$dyn_storage_ptr",
                 "typeString": "struct ShastaTypes.EnergyContract[]"
               }
             },
@@ -3244,7 +3244,7 @@
                   "name": "isInitializer",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 3538,
+                  "referencedDeclaration": 3554,
                   "src": "494:13:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$_t_string_memory_ptr_$_t_string_memory_ptr_$",
@@ -3444,10 +3444,10 @@
                               "name": "ShastaTypes",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 2268,
+                              "referencedDeclaration": 2284,
                               "src": "953:11:1",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_type$_t_contract$_ShastaTypes_$2268_$",
+                                "typeIdentifier": "t_type$_t_contract$_ShastaTypes_$2284_$",
                                 "typeString": "type(library ShastaTypes)"
                               }
                             },
@@ -3458,10 +3458,10 @@
                             "lValueRequested": false,
                             "memberName": "EnergyContract",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 2252,
+                            "referencedDeclaration": 2268,
                             "src": "953:26:1",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_type$_t_struct$_EnergyContract_$2252_storage_ptr_$",
+                              "typeIdentifier": "t_type$_t_struct$_EnergyContract_$2268_storage_ptr_$",
                               "typeString": "type(struct ShastaTypes.EnergyContract storage pointer)"
                             }
                           },
@@ -3475,7 +3475,7 @@
                           "nodeType": "FunctionCall",
                           "src": "953:96:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_EnergyContract_$2252_memory",
+                            "typeIdentifier": "t_struct$_EnergyContract_$2268_memory",
                             "typeString": "struct ShastaTypes.EnergyContract memory"
                           }
                         }
@@ -3483,7 +3483,7 @@
                       "expression": {
                         "argumentTypes": [
                           {
-                            "typeIdentifier": "t_struct$_EnergyContract_$2252_memory",
+                            "typeIdentifier": "t_struct$_EnergyContract_$2268_memory",
                             "typeString": "struct ShastaTypes.EnergyContract memory"
                           }
                         ],
@@ -3496,7 +3496,7 @@
                           "referencedDeclaration": 550,
                           "src": "938:9:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_array$_t_struct$_EnergyContract_$2252_storage_$dyn_storage",
+                            "typeIdentifier": "t_array$_t_struct$_EnergyContract_$2268_storage_$dyn_storage",
                             "typeString": "struct ShastaTypes.EnergyContract storage ref[] storage ref"
                           }
                         },
@@ -3510,7 +3510,7 @@
                         "referencedDeclaration": null,
                         "src": "938:14:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_EnergyContract_$2252_storage_$returns$_t_uint256_$",
+                          "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_EnergyContract_$2268_storage_$returns$_t_uint256_$",
                           "typeString": "function (struct ShastaTypes.EnergyContract storage ref) returns (uint256)"
                         }
                       },
@@ -3852,7 +3852,7 @@
                       "stateVariable": false,
                       "storageLocation": "storage",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_EnergyContract_$2252_storage_ptr",
+                        "typeIdentifier": "t_struct$_EnergyContract_$2268_storage_ptr",
                         "typeString": "struct ShastaTypes.EnergyContract"
                       },
                       "typeName": {
@@ -3860,10 +3860,10 @@
                         "id": 614,
                         "name": "ShastaTypes.EnergyContract",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 2252,
+                        "referencedDeclaration": 2268,
                         "src": "1178:26:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_EnergyContract_$2252_storage_ptr",
+                          "typeIdentifier": "t_struct$_EnergyContract_$2268_storage_ptr",
                           "typeString": "struct ShastaTypes.EnergyContract"
                         }
                       },
@@ -3883,7 +3883,7 @@
                       "referencedDeclaration": 550,
                       "src": "1231:9:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_array$_t_struct$_EnergyContract_$2252_storage_$dyn_storage",
+                        "typeIdentifier": "t_array$_t_struct$_EnergyContract_$2268_storage_$dyn_storage",
                         "typeString": "struct ShastaTypes.EnergyContract storage ref[] storage ref"
                       }
                     },
@@ -3908,7 +3908,7 @@
                     "nodeType": "IndexAccess",
                     "src": "1231:16:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_EnergyContract_$2252_storage",
+                      "typeIdentifier": "t_struct$_EnergyContract_$2268_storage",
                       "typeString": "struct ShastaTypes.EnergyContract storage ref"
                     }
                   },
@@ -3934,7 +3934,7 @@
                         "referencedDeclaration": 615,
                         "src": "1253:15:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_EnergyContract_$2252_storage_ptr",
+                          "typeIdentifier": "t_struct$_EnergyContract_$2268_storage_ptr",
                           "typeString": "struct ShastaTypes.EnergyContract storage pointer"
                         }
                       },
@@ -3945,7 +3945,7 @@
                       "lValueRequested": true,
                       "memberName": "enabled",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2249,
+                      "referencedDeclaration": 2265,
                       "src": "1253:23:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -4099,7 +4099,7 @@
                         "referencedDeclaration": 550,
                         "src": "1374:9:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_struct$_EnergyContract_$2252_storage_$dyn_storage",
+                          "typeIdentifier": "t_array$_t_struct$_EnergyContract_$2268_storage_$dyn_storage",
                           "typeString": "struct ShastaTypes.EnergyContract storage ref[] storage ref"
                         }
                       },
@@ -4204,7 +4204,7 @@
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_EnergyContract_$2252_memory_ptr",
+                        "typeIdentifier": "t_struct$_EnergyContract_$2268_memory_ptr",
                         "typeString": "struct ShastaTypes.EnergyContract"
                       },
                       "typeName": {
@@ -4212,10 +4212,10 @@
                         "id": 647,
                         "name": "ShastaTypes.EnergyContract",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 2252,
+                        "referencedDeclaration": 2268,
                         "src": "1471:26:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_EnergyContract_$2252_storage_ptr",
+                          "typeIdentifier": "t_struct$_EnergyContract_$2268_storage_ptr",
                           "typeString": "struct ShastaTypes.EnergyContract"
                         }
                       },
@@ -4235,7 +4235,7 @@
                       "referencedDeclaration": 550,
                       "src": "1523:9:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_array$_t_struct$_EnergyContract_$2252_storage_$dyn_storage",
+                        "typeIdentifier": "t_array$_t_struct$_EnergyContract_$2268_storage_$dyn_storage",
                         "typeString": "struct ShastaTypes.EnergyContract storage ref[] storage ref"
                       }
                     },
@@ -4260,7 +4260,7 @@
                     "nodeType": "IndexAccess",
                     "src": "1523:16:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_EnergyContract_$2252_storage",
+                      "typeIdentifier": "t_struct$_EnergyContract_$2268_storage",
                       "typeString": "struct ShastaTypes.EnergyContract storage ref"
                     }
                   },
@@ -4301,7 +4301,7 @@
                         "referencedDeclaration": 648,
                         "src": "1555:15:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_EnergyContract_$2252_memory_ptr",
+                          "typeIdentifier": "t_struct$_EnergyContract_$2268_memory_ptr",
                           "typeString": "struct ShastaTypes.EnergyContract memory"
                         }
                       },
@@ -4312,7 +4312,7 @@
                       "lValueRequested": false,
                       "memberName": "enabled",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2249,
+                      "referencedDeclaration": 2265,
                       "src": "1555:23:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -4433,7 +4433,7 @@
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_EnergyContract_$2252_memory_ptr",
+                        "typeIdentifier": "t_struct$_EnergyContract_$2268_memory_ptr",
                         "typeString": "struct ShastaTypes.EnergyContract"
                       },
                       "typeName": {
@@ -4441,10 +4441,10 @@
                         "id": 678,
                         "name": "ShastaTypes.EnergyContract",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 2252,
+                        "referencedDeclaration": 2268,
                         "src": "1786:26:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_EnergyContract_$2252_storage_ptr",
+                          "typeIdentifier": "t_struct$_EnergyContract_$2268_storage_ptr",
                           "typeString": "struct ShastaTypes.EnergyContract"
                         }
                       },
@@ -4464,7 +4464,7 @@
                       "referencedDeclaration": 550,
                       "src": "1838:9:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_array$_t_struct$_EnergyContract_$2252_storage_$dyn_storage",
+                        "typeIdentifier": "t_array$_t_struct$_EnergyContract_$2268_storage_$dyn_storage",
                         "typeString": "struct ShastaTypes.EnergyContract storage ref[] storage ref"
                       }
                     },
@@ -4489,7 +4489,7 @@
                     "nodeType": "IndexAccess",
                     "src": "1838:16:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_EnergyContract_$2252_storage",
+                      "typeIdentifier": "t_struct$_EnergyContract_$2268_storage",
                       "typeString": "struct ShastaTypes.EnergyContract storage ref"
                     }
                   },
@@ -4530,7 +4530,7 @@
                         "referencedDeclaration": 679,
                         "src": "1875:15:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_EnergyContract_$2252_memory_ptr",
+                          "typeIdentifier": "t_struct$_EnergyContract_$2268_memory_ptr",
                           "typeString": "struct ShastaTypes.EnergyContract memory"
                         }
                       },
@@ -4541,7 +4541,7 @@
                       "lValueRequested": false,
                       "memberName": "tokenAddress",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2241,
+                      "referencedDeclaration": 2257,
                       "src": "1875:28:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -4592,7 +4592,7 @@
                         "referencedDeclaration": 679,
                         "src": "1918:15:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_EnergyContract_$2252_memory_ptr",
+                          "typeIdentifier": "t_struct$_EnergyContract_$2268_memory_ptr",
                           "typeString": "struct ShastaTypes.EnergyContract memory"
                         }
                       },
@@ -4603,7 +4603,7 @@
                       "lValueRequested": false,
                       "memberName": "seller",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2243,
+                      "referencedDeclaration": 2259,
                       "src": "1918:22:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -4654,7 +4654,7 @@
                         "referencedDeclaration": 679,
                         "src": "1957:15:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_EnergyContract_$2252_memory_ptr",
+                          "typeIdentifier": "t_struct$_EnergyContract_$2268_memory_ptr",
                           "typeString": "struct ShastaTypes.EnergyContract memory"
                         }
                       },
@@ -4665,7 +4665,7 @@
                       "lValueRequested": false,
                       "memberName": "consumer",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2245,
+                      "referencedDeclaration": 2261,
                       "src": "1957:24:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -4716,7 +4716,7 @@
                         "referencedDeclaration": 679,
                         "src": "1995:15:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_EnergyContract_$2252_memory_ptr",
+                          "typeIdentifier": "t_struct$_EnergyContract_$2268_memory_ptr",
                           "typeString": "struct ShastaTypes.EnergyContract memory"
                         }
                       },
@@ -4727,7 +4727,7 @@
                       "lValueRequested": false,
                       "memberName": "price",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2247,
+                      "referencedDeclaration": 2263,
                       "src": "1995:21:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -4778,7 +4778,7 @@
                         "referencedDeclaration": 679,
                         "src": "2032:15:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_EnergyContract_$2252_memory_ptr",
+                          "typeIdentifier": "t_struct$_EnergyContract_$2268_memory_ptr",
                           "typeString": "struct ShastaTypes.EnergyContract memory"
                         }
                       },
@@ -4789,7 +4789,7 @@
                       "lValueRequested": false,
                       "memberName": "enabled",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2249,
+                      "referencedDeclaration": 2265,
                       "src": "2032:23:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -4840,7 +4840,7 @@
                         "referencedDeclaration": 679,
                         "src": "2084:15:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_EnergyContract_$2252_memory_ptr",
+                          "typeIdentifier": "t_struct$_EnergyContract_$2268_memory_ptr",
                           "typeString": "struct ShastaTypes.EnergyContract memory"
                         }
                       },
@@ -4851,7 +4851,7 @@
                       "lValueRequested": false,
                       "memberName": "ipfsContractMetadata",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2251,
+                      "referencedDeclaration": 2267,
                       "src": "2084:36:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_memory",
@@ -5102,7 +5102,7 @@
                       "stateVariable": false,
                       "storageLocation": "storage",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_EnergyContract_$2252_storage_ptr",
+                        "typeIdentifier": "t_struct$_EnergyContract_$2268_storage_ptr",
                         "typeString": "struct ShastaTypes.EnergyContract"
                       },
                       "typeName": {
@@ -5110,10 +5110,10 @@
                         "id": 732,
                         "name": "ShastaTypes.EnergyContract",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 2252,
+                        "referencedDeclaration": 2268,
                         "src": "2256:26:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_EnergyContract_$2252_storage_ptr",
+                          "typeIdentifier": "t_struct$_EnergyContract_$2268_storage_ptr",
                           "typeString": "struct ShastaTypes.EnergyContract"
                         }
                       },
@@ -5133,7 +5133,7 @@
                       "referencedDeclaration": 550,
                       "src": "2309:9:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_array$_t_struct$_EnergyContract_$2252_storage_$dyn_storage",
+                        "typeIdentifier": "t_array$_t_struct$_EnergyContract_$2268_storage_$dyn_storage",
                         "typeString": "struct ShastaTypes.EnergyContract storage ref[] storage ref"
                       }
                     },
@@ -5158,7 +5158,7 @@
                     "nodeType": "IndexAccess",
                     "src": "2309:16:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_EnergyContract_$2252_storage",
+                      "typeIdentifier": "t_struct$_EnergyContract_$2268_storage",
                       "typeString": "struct ShastaTypes.EnergyContract storage ref"
                     }
                   },
@@ -5180,7 +5180,7 @@
                           "referencedDeclaration": 733,
                           "src": "2339:15:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_EnergyContract_$2252_storage_ptr",
+                            "typeIdentifier": "t_struct$_EnergyContract_$2268_storage_ptr",
                             "typeString": "struct ShastaTypes.EnergyContract storage pointer"
                           }
                         },
@@ -5191,7 +5191,7 @@
                         "lValueRequested": false,
                         "memberName": "tokenAddress",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 2241,
+                        "referencedDeclaration": 2257,
                         "src": "2339:28:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -5209,7 +5209,7 @@
                           "referencedDeclaration": 733,
                           "src": "2369:15:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_EnergyContract_$2252_storage_ptr",
+                            "typeIdentifier": "t_struct$_EnergyContract_$2268_storage_ptr",
                             "typeString": "struct ShastaTypes.EnergyContract storage pointer"
                           }
                         },
@@ -5220,7 +5220,7 @@
                         "lValueRequested": false,
                         "memberName": "seller",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 2243,
+                        "referencedDeclaration": 2259,
                         "src": "2369:22:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -5238,7 +5238,7 @@
                           "referencedDeclaration": 733,
                           "src": "2393:15:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_EnergyContract_$2252_storage_ptr",
+                            "typeIdentifier": "t_struct$_EnergyContract_$2268_storage_ptr",
                             "typeString": "struct ShastaTypes.EnergyContract storage pointer"
                           }
                         },
@@ -5249,7 +5249,7 @@
                         "lValueRequested": false,
                         "memberName": "consumer",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 2245,
+                        "referencedDeclaration": 2261,
                         "src": "2393:24:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -5267,7 +5267,7 @@
                           "referencedDeclaration": 733,
                           "src": "2419:15:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_EnergyContract_$2252_storage_ptr",
+                            "typeIdentifier": "t_struct$_EnergyContract_$2268_storage_ptr",
                             "typeString": "struct ShastaTypes.EnergyContract storage pointer"
                           }
                         },
@@ -5278,7 +5278,7 @@
                         "lValueRequested": false,
                         "memberName": "price",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 2247,
+                        "referencedDeclaration": 2263,
                         "src": "2419:21:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -5296,7 +5296,7 @@
                           "referencedDeclaration": 733,
                           "src": "2442:15:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_EnergyContract_$2252_storage_ptr",
+                            "typeIdentifier": "t_struct$_EnergyContract_$2268_storage_ptr",
                             "typeString": "struct ShastaTypes.EnergyContract storage pointer"
                           }
                         },
@@ -5307,7 +5307,7 @@
                         "lValueRequested": false,
                         "memberName": "enabled",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 2249,
+                        "referencedDeclaration": 2265,
                         "src": "2442:23:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
@@ -5533,5 +5533,5 @@
   },
   "networks": {},
   "schemaVersion": "3.0.0-beta.0",
-  "updatedAt": "2018-09-15T21:13:29.620Z"
+  "updatedAt": "2018-09-15T23:51:32.561Z"
 }

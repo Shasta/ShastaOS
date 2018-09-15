@@ -10,11 +10,25 @@ import "openzeppelin-solidity/contracts/ownership/Ownable.sol";
  * 
  */
 contract ShaLedger is ERC20, Ownable, ERC20Burnable, ERC20Mintable {
+ 
+  // Shadow _balances private mapping to allow Drizzle to keep the balance state.
+  mapping (address => uint256) private _balances;
+  
   string public name = "Sha";
   string public symbol = "SHA";
   uint8 public decimals = 18;
 
   bool private _mintingFinished = false;
+
+/**
+  * @dev Shadow balanceOf to allow Drizzle to keep the balance state.
+  * @dev Gets the balance of the specified address.
+  * @param owner The address to query the balance of.
+  * @return An uint256 representing the amount owned by the passed address.
+  */
+  function balanceOf(address owner) public view returns (uint256) {
+    return _balances[owner];
+  }
 
   // Shadow ERC20Mintable.mint function to remove RBAC permissions and set a limit.
   function mint(
