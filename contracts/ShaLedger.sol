@@ -21,13 +21,11 @@ contract ShaLedger is ERC20, Ownable, ERC20Burnable, ERC20Mintable {
   bool private _mintingFinished = false;
 
 /**
-  * @dev Shadow balanceOf to allow Drizzle to keep the balance state.
-  * @dev Gets the balance of the specified address.
-  * @param owner The address to query the balance of.
+  * @dev Gets the balance of the current address.
   * @return An uint256 representing the amount owned by the passed address.
   */
-  function balanceOf(address owner) public view returns (uint256) {
-    return _balances[owner];
+  function balance() public view returns (uint256) {
+    return _balances[msg.sender];
   }
 
   // Shadow ERC20Mintable.mint function to remove RBAC permissions and set a limit.
