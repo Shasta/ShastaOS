@@ -11,8 +11,9 @@ import "openzeppelin-solidity/contracts/ownership/Ownable.sol";
  */
 contract ShaLedger is ERC20, Ownable, ERC20Burnable, ERC20Mintable {
  
+ 
+  mapping (address => uint256) public _balances;
   // Shadow _balances private mapping to allow Drizzle to keep the balance state.
-  mapping (address => uint256) private _balances;
   
   string public name = "Sha";
   string public symbol = "SHA";
