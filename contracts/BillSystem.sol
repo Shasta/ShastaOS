@@ -25,6 +25,7 @@ contract BillSystem is Ownable, Migratable {
 
   event NewBill(address consumer, address seller, uint index);
   event Newseller(address seller);
+  event BillPaid(uint index, address consumer, address seller);
 
 // Upgradeable contract pattern with initializer using zeppelinOS way.
   function initialize() public isInitializer("BillSystem", "0") {
@@ -69,6 +70,22 @@ contract BillSystem is Ownable, Migratable {
 
   function getBalance(address tokenAddress, address userAddress) public view returns(uint256 balance) {
     balance = balances[tokenAddress][userAddress];
+  }
+
+  function newPrepaidContract(
+    address tokenAddress,
+    address seller,
+    address consumer,
+    uint price,
+    uint monthlyWh,
+    bool enabled,
+    string ipfsContractMetadata,
+    string ipfsBillMetadata
+  ) public {
+    uint newIndex = contractRegistry.newContract(tokenAddress, seller, consumer, price, monthlyWh, enabled, ipfsContractMetadata);
+    uint newBillIndex = generateBill(monthlyWh, newIndex, ipfsBillMetadata);
+    uint totalCost = monthlyWh * price;
+    payBillERC20(tokenAddress, consumer, totalCost, newBillIndex);
   }
 
   function generateBill(uint wh, uint contractId, string ipfsMetadata) public returns(uint newIndex) {
@@ -128,5 +145,6 @@ contract BillSystem is Ownable, Migratable {
     tokenInstance.transferFrom(consumer, address(this), amount);
     isBillPaid[billIndex] = true;
     balances[tokenAddress][bill.seller] += amount;
+    emit BillPaid(billIndex, bill.consumer, bill.seller);
   }
 }

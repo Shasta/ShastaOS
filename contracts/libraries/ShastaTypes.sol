@@ -7,6 +7,7 @@ library ShastaTypes {
     address seller;
     address consumer;
     uint256 price;
+    uint monthlyWh;
     bool enabled;
     string ipfsContractMetadata;
   }

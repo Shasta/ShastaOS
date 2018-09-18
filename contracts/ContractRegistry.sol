@@ -23,11 +23,21 @@ contract ContractRegistry is Ownable, Migratable {
     * Make it only accesible via RBAC, so only the Shasta contract that manages contracts can call this function
     * OR ownable that accepts an Offer marketer id and grabs the info from the Shasta offer registry. 
     */
-  function newContract(address tokenAddress, address seller, address consumer, uint price, bool enabled, string ipfsContractMetadata) public {
-    uint newIndex = contracts.push(ShastaTypes.EnergyContract(tokenAddress, seller, consumer, price, enabled, ipfsContractMetadata)) - 1;
+  function newContract(
+    address tokenAddress,
+    address seller,
+    address consumer,
+    uint price,
+    uint monthlyWh,
+    bool enabled,
+    string ipfsContractMetadata
+  ) public returns (uint newIndex) {
+    newIndex = contracts.push(
+      ShastaTypes.EnergyContract(tokenAddress, seller, consumer, price, monthlyWh, enabled, ipfsContractMetadata)
+    ) - 1;
     emit NewContract(seller, consumer, newIndex);
   }
-
+  
   function setContractStatus(uint index, bool status) public {
     ShastaTypes.EnergyContract storage currentContract = contracts[index];
     currentContract.enabled = status;
@@ -64,6 +74,7 @@ contract ContractRegistry is Ownable, Migratable {
     address,
     address,
     uint,
+
     bool
   ) {
     ShastaTypes.EnergyContract storage currentContract = contracts[index];

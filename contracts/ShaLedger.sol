@@ -41,4 +41,11 @@ contract ShaLedger is ERC20, Ownable, ERC20Burnable, ERC20Mintable {
     emit MintingFinished();
     return true;
   }
+
+  function approveAndCall(address _spender, uint256 _value, bytes _data) public payable returns (bool) {
+    require(_spender != address(this));
+    require(super.approve(_spender, _value));
+    require(_spender.call(_data));
+    return true;
+  }
 }
