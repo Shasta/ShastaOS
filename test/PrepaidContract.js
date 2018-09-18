@@ -8,13 +8,13 @@ const Promise = require("bluebird");
 /**
  * SharedMap test cases
  */
-contract('BillSystem', function(accounts) {
+contract('PrepaidContract', function(accounts) {
   // Participants
-  var owner = accounts[0];
-  var seller = accounts[1];
-  var consumer = accounts[2];
+  const owner = accounts[0];
+  const seller = accounts[1];
+  const consumer = accounts[2];
 
-  const priceSha = "0.00017" // Sha/wattHour
+  const priceSha = "0.0002" // Sha/wattHour
   const contractId = 0;
   // Contract pointers
   let shaLedgerInstance;
@@ -25,6 +25,7 @@ contract('BillSystem', function(accounts) {
   let tokenDecimals;
   // Fake IPFS hash string for testing purposes
   const ipfsHash = "QmZfSNpHVzTNi9gezLcgq64Wbj1xhwi9wk4AxYyxMZgtCc";
+  const ipfsBillHash = "QmZfSNpHVzTNi9gezLcgq64Wbj1xhwi9wk4AxYyxMZgtCc";
 
   // In each test the contracts are deployed again, recovering the initial state.
   beforeEach('Initialize contract with Web3 state per test case', async function () {
@@ -60,57 +61,79 @@ contract('BillSystem', function(accounts) {
     const setBillGas = await electricMeterInstance.methods.setBillSystemAddress(billSystemInstance.options.address).estimateGas({from: consumer})
     await electricMeterInstance.methods.setBillSystemAddress(billSystemInstance.options.address).send({from: consumer, gas: setBillGas})
 
+    // 100 "Sha" for each account, make it rain!
+    tokenDecimals = await shaLedgerInstance.methods.decimals().call();
+    const initialBalance = web3.utils.toWei('100', 'ether');
+    await Promise.map([0, 1, 2], account => shaLedgerInstance.methods.mint(accounts[account], initialBalance).send({ from: accounts[0]}));
+  });
+
+  it('Should be able to create and pay a prepaid contract between user and producer, in one TX', async function() {
+    const consumerBalancePrior = await shaLedgerInstance.methods.balanceOf(consumer).call();
+    const rawPriceSha = web3.utils.toBN(web3.utils.toWei(priceSha, 'ether'));
+    const monthlyWattsHour = web3.utils.toBN(200 * 1000); // 20kWh of monthly consumption
+    const totalPrepaidShaCost = rawPriceSha.mul(monthlyWattsHour);
+    console.log(totalPrepaidShaCost)
     // Enable a contract between seller and consumer
     const contractParams = [
       shaLedgerInstance.options.address,
       seller,
       consumer,
-      web3.utils.toBN(web3.utils.toWei(priceSha, 'ether')),
-      web3.utils.toBN(1.5 * 1000),
+      rawPriceSha,
+      monthlyWattsHour,
       true,
-      ipfsHash
+      ipfsHash,
+      ipfsBillHash
     ];
 
-    const newContractGas = await contractRegistryInstance.methods.newContract(...contractParams).estimateGas({from: owner});
-    await contractRegistryInstance.methods.newContract(...contractParams).send({from: owner, gas: newContractGas});
-    fakeContract = await contractRegistryInstance.methods.getContract(contractId).call({from: owner});
-
-    // 100 "Sha" for each account, make it rain!
-    tokenDecimals = await shaLedgerInstance.methods.decimals().call();
-    const initialBalance = (web3.utils.toBN(100)).pow(web3.utils.toBN(tokenDecimals));
-    await Promise.map([0, 1, 2], account => shaLedgerInstance.methods.mint(accounts[account], initialBalance).send({ from: accounts[0]}));
+    // const newContractGas = await billSystemInstance.methods.newPrepaidContract(...contractParams).estimateGas({from: consumer});
+    try {
+      const newContractAbi = await billSystemInstance.methods.newPrepaidContract(...contractParams).encodeABI();
+      const newContractPayment = await shaLedgerInstance.methods.approveAndCall(billSystemInstance.options.address, totalPrepaidShaCost, newContractAbi).send({gas: 3000000, from: consumer});
+      const consumerBalanceAfter = await shaLedgerInstance.methods.balanceOf(consumer).call();
+      console.log(newContractPayment)
+      console.log("prior balance", web3.utils.fromWei(consumerBalancePrior, 'ether'));
+      console.log("after balance", web3.utils.fromWei(consumerBalanceAfter, 'ether'));
+    } catch (err) {
+      console.log(err)
+      throw err;
+    }
   });
 
-  it('Should be able to generate a bill', async function() {
-    const wattsHourConsumed = web3.utils.toBN(1.5 * 1000); // 1.5 kWh to watt Hour
-    const gas = await electricMeterInstance.methods.setEnergyContract(contractId).estimateGas({from: accounts[2]});
-    await electricMeterInstance.methods.setEnergyContract(contractId).send({from: accounts[2], gas});
+  it('Should be able to allow producer withdraw his SHA', async function() {
+    const sellerBalancePrior = await shaLedgerInstance.methods.balanceOf(seller).call();
+    const rawPriceSha = web3.utils.toBN(web3.utils.toWei(priceSha, 'ether'));
+    const monthlyWattsHour = web3.utils.toBN(200 * 1000); // 20kWh of monthly consumption
+    const totalPrepaidShaCost = rawPriceSha.mul(monthlyWattsHour);
+    console.log(totalPrepaidShaCost)
+    // Enable a contract between seller and consumer
+    const contractParams = [
+      shaLedgerInstance.options.address,
+      seller,
+      consumer,
+      rawPriceSha,
+      monthlyWattsHour,
+      true,
+      ipfsHash,
+      ipfsBillHash
+    ];
 
-    const energyConsumedGas = await billSystemInstance.methods.generateBill(wattsHourConsumed, contractId, ipfsHash).estimateGas({from: accounts[2]});
-    const tx = await billSystemInstance.methods.generateBill(wattsHourConsumed, contractId, ipfsHash).send({from: accounts[2], gas: energyConsumedGas})
-    const newId = tx.events.NewBill.returnValues["index"];
+    // const newContractGas = await billSystemInstance.methods.newPrepaidContract(...contractParams).estimateGas({from: consumer});
+    try {
+      // Create contract
+      const newContractAbi = await billSystemInstance.methods.newPrepaidContract(...contractParams).encodeABI();
+      const newContractPayment = await shaLedgerInstance.methods.approveAndCall(billSystemInstance.options.address, totalPrepaidShaCost, newContractAbi).send({gas: 3000000, from: consumer})
 
-    const bill = await billSystemInstance.methods.getBill(web3.utils.toBN(newId)).call();
-    const consumerBillsLength = await billSystemInstance.methods.getConsumerBillsLength(fakeContract.consumer).call();
-    const sellerBillsLength = await billSystemInstance.methods.getSellerBillsLength(fakeContract.seller).call();
+      // Withdraw Sha tokens
+      const withdrawShaGas = await billSystemInstance.methods.withdrawERC20(shaLedgerInstance.options.address).estimateGas({from: seller})
+      const withdrawSha = await billSystemInstance.methods.withdrawERC20(shaLedgerInstance.options.address).send({gas: withdrawShaGas, from: seller})
+      const sellerBalanceAfter = await shaLedgerInstance.methods.balanceOf(seller).call();
 
-    const {
-      whConsumed,
-      tokenAddress,
-      price,
-      amount,
-      ipfsMetadata
-    } = bill;
-
-    assert.equal(whConsumed, wattsHourConsumed);
-    assert.equal(tokenAddress, fakeContract.tokenAddress);
-    assert.equal(seller, bill.seller);
-    assert.equal(consumer, bill.consumer);
-    assert.equal(price, fakeContract.price);
-    assert.equal(web3.utils.fromWei(price, "ether"), priceSha);
-    assert.equal(amount, web3.utils.toBN(price).mul(wattsHourConsumed));
-    assert.equal(ipfsMetadata, ipfsHash);
-    assert.equal(consumerBillsLength, 1);
-    assert.equal(sellerBillsLength, 1);
+      console.log("prior balance", web3.utils.fromWei(sellerBalancePrior, 'ether'));
+      console.log("after balance", web3.utils.fromWei(sellerBalanceAfter, 'ether'));
+      assert.equal(web3.utils.fromWei(sellerBalanceAfter, 'ether'), "140");
+    } catch (err) {
+      console.log(err)
+      throw err;
+    }
   });
 });
