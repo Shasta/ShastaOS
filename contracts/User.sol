@@ -180,11 +180,11 @@ function createOffer(uint _value, bytes ipfsHash) public payable {
     return addresses[usernameToIndex[username]];
   }  
 
- /*  function getIpfsHashByUsername(bytes16 username) public view returns(bytes ipfsHash)
+  function getIpfsHashByUsername(bytes16 username) public view returns(bytes ipfsHash)
   {
-    require(usernameTaken(username));
+    require(usernameTaken(username), "Username does not exists.");
 
     return ipfsHashes[usernameToIndex[username]];
-  }     */
+  }
 
 }

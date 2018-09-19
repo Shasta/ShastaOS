@@ -2,6 +2,12 @@
   "name": "shasta-os",
   "version": "0.1.0",
   "private": true,
+  "files": [
+    "abi",
+    "build",
+    "contracts",
+    "test"
+  ],
   "devDependencies": {
     "ganache-cli": "^6.1.0",
     "solidity-coverage": "0.5.8",
@@ -34,6 +40,6 @@
     "bytecode:extract": "truffle-bytecode extract -o bytecode",
     "bytecode:extract:new": "truffle-bytecode extract -o bytecode_new",
     "bytecode:compare": "npm run bytecode:extract:new && truffle-bytecode compare bytecode bytecode_new",
-    "prepublishOnly": "truffle compile --all && npm run abi:extract -- --no-compile"
+    "prepublishOnly": "truffle compile --all && npm run abi:extract -- --no-compile && truffle networks --clean"
   }
 }
