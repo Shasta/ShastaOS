@@ -193,6 +193,28 @@
       "inputs": [
         {
           "indexed": false,
+          "name": "index",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "consumer",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "seller",
+          "type": "address"
+        }
+      ],
+      "name": "BillPaid",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
           "name": "contractName",
           "type": "string"
         },
@@ -373,6 +395,48 @@
       ],
       "payable": false,
       "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "tokenAddress",
+          "type": "address"
+        },
+        {
+          "name": "seller",
+          "type": "address"
+        },
+        {
+          "name": "consumer",
+          "type": "address"
+        },
+        {
+          "name": "price",
+          "type": "uint256"
+        },
+        {
+          "name": "monthlyWh",
+          "type": "uint256"
+        },
+        {
+          "name": "enabled",
+          "type": "bool"
+        },
+        {
+          "name": "ipfsContractMetadata",
+          "type": "string"
+        },
+        {
+          "name": "ipfsBillMetadata",
+          "type": "string"
+        }
+      ],
+      "name": "newPrepaidContract",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
       "type": "function"
     },
     {

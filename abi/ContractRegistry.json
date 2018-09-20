@@ -27,6 +27,10 @@
           "type": "uint256"
         },
         {
+          "name": "monthlyWh",
+          "type": "uint256"
+        },
+        {
           "name": "enabled",
           "type": "bool"
         },
@@ -210,6 +214,10 @@
           "type": "uint256"
         },
         {
+          "name": "monthlyWh",
+          "type": "uint256"
+        },
+        {
           "name": "enabled",
           "type": "bool"
         },
@@ -219,7 +227,12 @@
         }
       ],
       "name": "newContract",
-      "outputs": [],
+      "outputs": [
+        {
+          "name": "newIndex",
+          "type": "uint256"
+        }
+      ],
       "payable": false,
       "stateMutability": "nonpayable",
       "type": "function"
