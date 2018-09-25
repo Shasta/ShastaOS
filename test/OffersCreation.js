@@ -51,16 +51,17 @@ contract('OffersCreation', function (accounts) {
         //Check array length is one
         assert.equal(offerIndexes.length, 1)
         //Get the offer
-        console.log("index: ", offerIndexes[0])
         const offer = await MarketInstance.methods.getOfferFromIndex(offerIndexes[0]).call();
+        assert.equal(offer[2],true);
+
     });
 
     it('Should cancel an offer', async function () {
 
         const gas = await UserInstance.methods.cancelOffer(offerIndexes[0], "0x123456").estimateGas({ from: user });
         await UserInstance.methods.cancelOffer(offerIndexes[0], "0x123456").send({ from: user, gas: gas });
-        //let canceledOffer = await MarketInstance.methods.getOfferFromIndex().call();
-        console.log("offer", "")
+        let canceledOffer = await MarketInstance.methods.getOfferFromIndex(offerIndexes[0]).call();
+        assert.equal(canceledOffer[2],false);
 
     });
 });
