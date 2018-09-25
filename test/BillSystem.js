@@ -1,7 +1,6 @@
 const truffleAssert = require("truffle-assertions");
 const ShaLedger = artifacts.require("shasta-os/ShaLedger");
 const BillSystem = artifacts.require("shasta-os/BillSystem");
-const ConsumerElectricMeter = artifacts.require("shasta-os/ConsumerElectricMeter");
 const ContractRegistry = artifacts.require("shasta-os/ContractRegistry");
 const Promise = require("bluebird");
 
@@ -33,19 +32,17 @@ contract('BillSystem', function(accounts) {
     // the token used.
 
     // Initialize each contract data in Web3, instead of Truffle contract.
+    console.log("web3: ", web3.version)
     const shaLedgerContract = await new web3.eth.Contract(ShaLedger.abi);
     const billSystemContract = await new web3.eth.Contract(BillSystem.abi);
-    const electricMeterContract = await new web3.eth.Contract(ConsumerElectricMeter.abi);
     const contractRegistryContract = await new web3.eth.Contract(ContractRegistry.abi);
 
     const shaLedgerGas = await shaLedgerContract.deploy({ data: ShaLedger.bytecode }).estimateGas({from: owner});
     const billSystemGas = await billSystemContract.deploy({ data: BillSystem.bytecode }).estimateGas({from: owner});
-    const meterGas = await electricMeterContract.deploy({ data: ConsumerElectricMeter.bytecode }).estimateGas({from: accounts[2]})
     const contractRegistryGas = await contractRegistryContract.deploy({ data: ContractRegistry.bytecode }).estimateGas({from: owner})
 
     shaLedgerInstance = await shaLedgerContract.deploy({ data: ShaLedger.bytecode }).send({from: owner, gas: shaLedgerGas});
     billSystemInstance = await billSystemContract.deploy({ data: BillSystem.bytecode }).send({from: owner, gas: billSystemGas});
-    electricMeterInstance = await electricMeterContract.deploy({ data: ConsumerElectricMeter.bytecode }).send({from: accounts[2], gas: meterGas});
     contractRegistryInstance = await contractRegistryContract.deploy({ data: ContractRegistry.bytecode }).send({from: owner, gas: contractRegistryGas});
 
     // Estimate gas for setting contract registry at billing and electric meter instances

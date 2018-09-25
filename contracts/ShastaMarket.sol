@@ -7,32 +7,24 @@ import "./User.sol";
 
  /**
   * @title ShastaMarketplace
-  * This contract will manage the creation and execution of bids and asks
+  * This contract will manage the creation and execution of sell offers
   *
   */
 
 contract ShastaMarket is Ownable, Pausable {
     User public userStorage;
-    mapping(address => uint[]) private addressToBidsIndex;
     mapping(address => uint[]) private addressToOffersIndex;
-    Bid[] private bidsList;
     Offer[] private offersList;
     address public owner;
-    
-    struct Bid {
-        address seller;
-        uint value;
-    }
 
     struct Offer {
-        address buyer;
+        address seller;
         uint value;
-        uint locationIndex;
+        bool isActive;
     }
 
-    event newBid(address seller, uint value);
-    event newOffer(address buyer, uint value, uint locationIndex);
-
+    event newOffer(address seller, uint value);
+    event cancelOfferEvent(address seller, uint value);
     /**
     * @dev Throws if non-user is trying to interact with the contract method.
     */
@@ -40,58 +32,37 @@ contract ShastaMarket is Ownable, Pausable {
         require(userStorage.hasUser(msg.sender));
         _;
     }
-
-    function createBid(uint _value, address _seller) public whenNotPaused {
-        Bid memory myBid;
-        myBid.seller = _seller;
-        myBid.value = _value;
-        
-        uint index = bidsList.push(myBid) - 1;
-        addressToBidsIndex[msg.sender].push(index);
-        emit newBid(msg.sender, _value);
-    }
     
     function createOffer(uint _value, address _seller) public whenNotPaused {
         Offer memory myOffer;
-        myOffer.buyer = _seller;
+        myOffer.seller = _seller;
         myOffer.value = _value;
+        myOffer.isActive = true;
+
+        uint index = offersList.push(myOffer) - 1;
+        addressToOffersIndex[_seller].push(index);
+        emit newOffer(_seller, _value);
+    }
+
+    /**
+    * @dev Cancel an offer. Only offer owners can cancel their offer
+    * @param _id The id of the offer to cancel
+    */
+    function cancelOffer(uint _id, address sender) public whenNotPaused {
+
+        require(offersList[_id].seller == sender);
+        offersList[_id].isActive = false;
+        emit cancelOfferEvent(sender, offersList[_id].value);
         
-        uint index = offersList.push(myOffer) - 1;
-        addressToOffersIndex[msg.sender].push(index);
-        emit newOffer(msg.sender, _value, 999);
     }
 
-    // Not secure, for demo purposes only, this call need to be whitelisted via a modifier.
-    function createOfferFor(address origin, uint _value, uint _locationIndex) public whenNotPaused {
-        Offer memory myOffer;
-        myOffer.buyer = origin;
-        myOffer.value = _value;
-        myOffer.locationIndex = _locationIndex;
-            
-        uint index = offersList.push(myOffer) - 1;
-        addressToOffersIndex[origin].push(index);
-        emit newOffer(origin, _value, _locationIndex);
-    }
-    
-    function getBidFromIndex(uint _index) public view returns(uint, address) {
-        require(bidsList.length > _index);
-        return (bidsList[_index].value, bidsList[_index].seller);
-    }
-    
-    function getBidsIndexesFromAddress() public view returns(uint[]) {
-        return addressToBidsIndex[msg.sender];
-    }
-
-    function getOfferFromIndex(uint _index) public view returns(uint, address, uint) {
+    function getOfferFromIndex(uint _index) public view returns(uint, address, bool) {
         require(offersList.length > _index);
-        return (offersList[_index].value, offersList[_index].buyer, offersList[_index].locationIndex);
+        return (offersList[_index].value, offersList[_index].seller, offersList[_index].isActive);
     }
     
     function getOfferIndexesFromAddress() public view returns(uint[]) {
         return addressToOffersIndex[msg.sender];
-    }
-    function getBidsLength() public view returns(uint) {
-        return bidsList.length;
     }
     function getOffersLength() public view returns(uint) {
         return offersList.length;
