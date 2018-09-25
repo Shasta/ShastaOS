@@ -20,3 +20,7 @@ cat >  .gitignore <<EOF
 demoFile.json
 
 .zos.session
+
+build/
+
+abi/

@@ -93,21 +93,6 @@ contract SharedMapPrice is Ownable, Pausable {
   }
 
   /**
-    * @dev Add a new location. Only registered users can add locations if the contract is not paused.
-    * @param locationIpfsHash The IPFS hash that points to the location data.
-    * @return added Should return true if location is added.
-    */
-  function addLocation(uint price, string locationIpfsHash) public whenNotPaused onlyUser {
-    require(bytes(locationIpfsHash).length > 0);
-    // Add relation between location index and msg.sender.
-    uint newLength = locationsIpfsHashes.push(locationIpfsHash);
-    uint newIndex = newLength - 1;
-    locationIndexByAddress[newIndex] = msg.sender;
-    shastaMarket.createOfferFor(msg.sender, price, newIndex);
-    emit NewLocation(locationIpfsHash, newIndex);
-  }
-
-  /**
     * @dev Update a location. Users can only update their own locations if the contract is not paused.
     * @param locationIpfsHash The IPFS hash that points to the new location data.
     * @param index The index of the location data hash in locationsIpfsHashes.

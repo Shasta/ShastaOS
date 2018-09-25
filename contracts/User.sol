@@ -7,7 +7,6 @@ contract User {
     
   mapping(address => uint) private addressToIndex;
   mapping(bytes16 => uint) private usernameToIndex;
-  mapping(address => uint) private addressToBalance;
 
   event NewUser(bytes16 username, address owner);
   event UpdatedUser(address owner, bytes ipfsHash);
@@ -28,40 +27,25 @@ contract User {
 
     // mappings are virtually initialized to zero values so we need to "waste" the first element of the arrays
     // instead of wasting it we use it to create a user for the contract itself
-    addresses.push(msg.sender);
-    usernames.push('self');
-    ipfsHashes.push('not-available');
     owner = msg.sender;
     shastaMarketAddress = _shastaMarketAddress;
     shastaMarket = ShastaMarket(shastaMarketAddress);
-
+    addresses.push(msg.sender);
+    usernames.push('self');
+    ipfsHashes.push('noIpfsHash');
   }
 
-  function withdraw(address from, uint amount) public onlyOwner returns(bool) {
-      
-      require(amount <= addressToBalance[from]);
-      addressToBalance[from] -= amount;
-      owner.transfer(amount);
-      return true;
-
-  }
-
-  function hasUser(address userAddress) public view returns(bool hasIndeed) 
+  function hasUser(address userAddress) public view returns(bool) 
   {
     return (addressToIndex[userAddress] > 0);
   }
-
-
-  function getBalance() public view returns (uint){
-    return addressToBalance[msg.sender];
-  }
   
-  function usernameTaken(bytes16 username) public view returns(bool takenIndeed) 
+  function usernameTaken(bytes16 username) public view returns(bool) 
   {
     return (usernameToIndex[username] > 0 || username == 'self');
   }
   
-  function createUser(bytes16 username, bytes ipfsHash) public returns(bool success)
+  function createUser(bytes16 username, bytes ipfsHash) public returns(bool)
   {
     require(!hasUser(msg.sender));
     require(!usernameTaken(username));
@@ -69,7 +53,6 @@ contract User {
     addresses.push(msg.sender);
     usernames.push(username);
     ipfsHashes.push(ipfsHash);
-    addressToBalance[msg.sender] = 0;
 
     addressToIndex[msg.sender] = addresses.length - 1;
     usernameToIndex[username] = addresses.length - 1;
@@ -78,21 +61,21 @@ contract User {
     return true;
   }
 
-function createBid(uint _value, bytes ipfsHash) public payable {
-       shastaMarket.createBid(_value, msg.sender);
+  function createOffer(uint _value, bytes ipfsHash) public payable {
+        shastaMarket.createOffer(_value, msg.sender);
         updateUser(ipfsHash);
+  }
+
+  function cancelOffer(uint _id, bytes ipfsHash) public payable {
+      shastaMarket.cancelOffer(_id, msg.sender);
+      updateUser(ipfsHash);
 }
 
-function createOffer(uint _value, bytes ipfsHash) public payable {
-       shastaMarket.createOffer(_value, msg.sender);
-        updateUser(ipfsHash);
-}
   function updateUser(bytes ipfsHash) public payable returns(bool success)
   {
     require(hasUser(msg.sender));
     
     ipfsHashes[addressToIndex[msg.sender]] = ipfsHash;
-    addressToBalance[msg.sender] += msg.value;
     
     emit UpdatedUser(msg.sender, ipfsHash);
     return true;
