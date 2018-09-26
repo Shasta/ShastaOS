@@ -1,9 +1,26 @@
-# ShastaOS Alpha
+# ShastaOS v0.1.0 Alpha
 This repository contains all the Shasta logic behind Shasta Core 0.1, implemented in Solidity smart contracts.
 
-:boom: All the smart contracts located in this repository are highly experimental and are not battle-tested, so please do not use in Ethereum mainnet, and if you do, we are not responsible of irreversible loss of funds.
+The current finality of Shasta OS 0.1.0 is to be able to show the core ideas about Shasta energy market.
+
+:boom: All the smart contracts located in this repository are highly experimental, are not battle-tested, so please do not use in Ethereum mainnet, and if you do, we are not responsible of irreversible loss of funds.
 
 Contributions are welcome! You can also open issues for reporting bugs, launch new ideas or for questions regarding ShastaOS. 
+
+# Content inside ShastaOS 0.1.0 Alpha
+
+- libraries/ShastaTypes.sol
+  Small library that contains structs for reuse by ShastaOS smart contracts
+- BillSystem.sol
+  The bill generator, generates a bill between a user and a producer, linked with an energy Contract. The bill system support any ERC20 token or Ether.
+- ContractRegistry.sol
+  Energy contract registry. The registry holds all the contracts between the energy consumer and the enery producer.
+- ShaLedger.sol
+  The current Shasta token, for testing purposes. Follows the ERC20 standard but have also implemented the approveAndCall function, making it possible to do some steps in only one tx.
+- ShastaMarket.sol
+  The ShastaMarket currently holds the producer offers logic. Allows energy producers to show the location of his energy production plant, and create an energy offer to Shasta.
+- User.sol
+  The contract manages the registry of users, and allows to add extra metadata via IPFS.
 
 # Install
 For installing ShastaOS locally, you need to clone the repository and run the following commands:
