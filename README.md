@@ -3,7 +3,7 @@ This repository contains all the Shasta logic behind Shasta Core 0.1, implemente
 
 :boom: All the smart contracts located in this repository are highly experimental and are not battle-tested, so please do not use in Ethereum mainnet, and if you do, we are not responsible of irreversible loss of funds.
 
-Contributions are welcome! You can also open issues for reporting bugs, launch new ideas or for questions regarding ShastaOS. :purple_heart:
+Contributions are welcome! You can also open issues for reporting bugs, launch new ideas or for questions regarding ShastaOS. 
 
 # Install
 For installing ShastaOS locally, you need to clone the repository and run the following commands:
