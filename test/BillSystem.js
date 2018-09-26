@@ -32,7 +32,7 @@ contract('BillSystem', function(accounts) {
     // the token used.
 
     // Initialize each contract data in Web3, instead of Truffle contract.
-    console.log("web3: ", web3.version)
+    console.log("\nWeb3 version: ", web3.version)
     const shaLedgerContract = await new web3.eth.Contract(ShaLedger.abi);
     const billSystemContract = await new web3.eth.Contract(BillSystem.abi);
     const contractRegistryContract = await new web3.eth.Contract(ContractRegistry.abi);
@@ -47,15 +47,7 @@ contract('BillSystem', function(accounts) {
 
     // Estimate gas for setting contract registry at billing and electric meter instances
     const setRegistryAtBillingGas = await billSystemInstance.methods.setContractRegistry(contractRegistryInstance.options.address).estimateGas({from: owner});
-    const setRegistryAtMeterGas = await electricMeterInstance.methods.setContractRegistry(contractRegistryInstance.options.address).estimateGas({from: consumer})
-
-    // Set the contract registry in both billing and electric meter instances
     await billSystemInstance.methods.setContractRegistry(contractRegistryInstance.options.address).send({from: owner, gas: setRegistryAtBillingGas});
-    await electricMeterInstance.methods.setContractRegistry(contractRegistryInstance.options.address).send({from: consumer, gas: setRegistryAtMeterGas})
-
-    // Set the billing instance in consumer electric meter hardware
-    const setBillGas = await electricMeterInstance.methods.setBillSystemAddress(billSystemInstance.options.address).estimateGas({from: consumer})
-    await electricMeterInstance.methods.setBillSystemAddress(billSystemInstance.options.address).send({from: consumer, gas: setBillGas})
 
     // Enable a contract between seller and consumer
     const contractParams = [
@@ -80,8 +72,6 @@ contract('BillSystem', function(accounts) {
 
   it('Should be able to generate a bill', async function() {
     const wattsHourConsumed = web3.utils.toBN(1.5 * 1000); // 1.5 kWh to watt Hour
-    const gas = await electricMeterInstance.methods.setEnergyContract(contractId).estimateGas({from: accounts[2]});
-    await electricMeterInstance.methods.setEnergyContract(contractId).send({from: accounts[2], gas});
 
     const energyConsumedGas = await billSystemInstance.methods.generateBill(wattsHourConsumed, contractId, ipfsHash).estimateGas({from: accounts[2]});
     const tx = await billSystemInstance.methods.generateBill(wattsHourConsumed, contractId, ipfsHash).send({from: accounts[2], gas: energyConsumedGas})

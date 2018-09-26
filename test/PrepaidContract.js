@@ -1,7 +1,6 @@
 const truffleAssert = require("truffle-assertions");
 const ShaLedger = artifacts.require("shasta-os/ShaLedger");
 const BillSystem = artifacts.require("shasta-os/BillSystem");
-const ConsumerElectricMeter = artifacts.require("shasta-os/ConsumerElectricMeter");
 const ContractRegistry = artifacts.require("shasta-os/ContractRegistry");
 const Promise = require("bluebird");
 
@@ -36,30 +35,19 @@ contract('PrepaidContract', function(accounts) {
     // Initialize each contract data in Web3, instead of Truffle contract.
     const shaLedgerContract = await new web3.eth.Contract(ShaLedger.abi);
     const billSystemContract = await new web3.eth.Contract(BillSystem.abi);
-    const electricMeterContract = await new web3.eth.Contract(ConsumerElectricMeter.abi);
     const contractRegistryContract = await new web3.eth.Contract(ContractRegistry.abi);
 
     const shaLedgerGas = await shaLedgerContract.deploy({ data: ShaLedger.bytecode }).estimateGas({from: owner});
     const billSystemGas = await billSystemContract.deploy({ data: BillSystem.bytecode }).estimateGas({from: owner});
-    const meterGas = await electricMeterContract.deploy({ data: ConsumerElectricMeter.bytecode }).estimateGas({from: accounts[2]})
     const contractRegistryGas = await contractRegistryContract.deploy({ data: ContractRegistry.bytecode }).estimateGas({from: owner})
 
     shaLedgerInstance = await shaLedgerContract.deploy({ data: ShaLedger.bytecode }).send({from: owner, gas: shaLedgerGas});
     billSystemInstance = await billSystemContract.deploy({ data: BillSystem.bytecode }).send({from: owner, gas: billSystemGas});
-    electricMeterInstance = await electricMeterContract.deploy({ data: ConsumerElectricMeter.bytecode }).send({from: accounts[2], gas: meterGas});
     contractRegistryInstance = await contractRegistryContract.deploy({ data: ContractRegistry.bytecode }).send({from: owner, gas: contractRegistryGas});
 
     // Estimate gas for setting contract registry at billing and electric meter instances
     const setRegistryAtBillingGas = await billSystemInstance.methods.setContractRegistry(contractRegistryInstance.options.address).estimateGas({from: owner});
-    const setRegistryAtMeterGas = await electricMeterInstance.methods.setContractRegistry(contractRegistryInstance.options.address).estimateGas({from: consumer})
-
-    // Set the contract registry in both billing and electric meter instances
     await billSystemInstance.methods.setContractRegistry(contractRegistryInstance.options.address).send({from: owner, gas: setRegistryAtBillingGas});
-    await electricMeterInstance.methods.setContractRegistry(contractRegistryInstance.options.address).send({from: consumer, gas: setRegistryAtMeterGas})
-
-    // Set the billing instance in consumer electric meter hardware
-    const setBillGas = await electricMeterInstance.methods.setBillSystemAddress(billSystemInstance.options.address).estimateGas({from: consumer})
-    await electricMeterInstance.methods.setBillSystemAddress(billSystemInstance.options.address).send({from: consumer, gas: setBillGas})
 
     // 100 "Sha" for each account, make it rain!
     tokenDecimals = await shaLedgerInstance.methods.decimals().call();
@@ -72,7 +60,6 @@ contract('PrepaidContract', function(accounts) {
     const rawPriceSha = web3.utils.toBN(web3.utils.toWei(priceSha, 'ether'));
     const monthlyWattsHour = web3.utils.toBN(200 * 1000); // 20kWh of monthly consumption
     const totalPrepaidShaCost = rawPriceSha.mul(monthlyWattsHour);
-    console.log(totalPrepaidShaCost)
     // Enable a contract between seller and consumer
     const contractParams = [
       shaLedgerInstance.options.address,
@@ -90,7 +77,6 @@ contract('PrepaidContract', function(accounts) {
       const newContractAbi = await billSystemInstance.methods.newPrepaidContract(...contractParams).encodeABI();
       const newContractPayment = await shaLedgerInstance.methods.approveAndCall(billSystemInstance.options.address, totalPrepaidShaCost, newContractAbi).send({gas: 3000000, from: consumer});
       const consumerBalanceAfter = await shaLedgerInstance.methods.balanceOf(consumer).call();
-      console.log(newContractPayment)
       console.log("prior balance", web3.utils.fromWei(consumerBalancePrior, 'ether'));
       console.log("after balance", web3.utils.fromWei(consumerBalanceAfter, 'ether'));
     } catch (err) {
@@ -104,7 +90,6 @@ contract('PrepaidContract', function(accounts) {
     const rawPriceSha = web3.utils.toBN(web3.utils.toWei(priceSha, 'ether'));
     const monthlyWattsHour = web3.utils.toBN(200 * 1000); // 20kWh of monthly consumption
     const totalPrepaidShaCost = rawPriceSha.mul(monthlyWattsHour);
-    console.log(totalPrepaidShaCost)
     // Enable a contract between seller and consumer
     const contractParams = [
       shaLedgerInstance.options.address,
