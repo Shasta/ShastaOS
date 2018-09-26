@@ -1,0 +1,11 @@
+Network name: 'rinkeby'
+Network id: 4
+
+Contract addresses deployed at Rinkeby:
+
+'Migrations': 0x272A9d97471D6bFe652fF37E967B5139dE9073A9
+'ShaLedger': 0x8a3214A7A7626487b59bC4d54539f50Ce7795934
+'BillSystem': 0x85D49ca656df46ab590Ff959737D7c86938F6B61
+'ContractRegistry': 0xFCbcB1A7945F84c7662a793Ec55c4f4a970A6eaC
+'ShastaMarket': 0x80FADb396Df1c6C8875C497e77a5f23cA23796aB
+'User': 0x4d5B02bEf33b4337D926af57fbe6A80741E932EF

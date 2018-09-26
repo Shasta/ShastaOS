@@ -14,7 +14,7 @@ scTopics
 
 # truffle build artifacts
 # abi/
-# build/
+build/
 bytecode/
 cat >  .gitignore <<EOF
 demoFile.json
