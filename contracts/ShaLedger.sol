@@ -26,7 +26,7 @@ contract ShaLedger is ERC20, Ownable, ERC20Burnable, ERC20Mintable {
     returns (bool)
   {
     uint user_balance = balanceOf(to);
-    require(user_balance < 300000000000000000000, "You can't mint more if you have an amount greater than 300 Shasta tokens");
+    require(user_balance < 1000000000000000000000, "You can't mint more if you have an amount greater than 1000 Shasta tokens");
     _mint(to, amount);
     return true;
   }
