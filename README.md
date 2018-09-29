@@ -1,4 +1,4 @@
-# ShastaOS v0.1 Alpha
+# ShastaOS 
 This repository contains all the Shasta logic behind Shasta Core 0.1, implemented in Solidity smart contracts.
 
 The current finality of Shasta OS 0.1 is to be able to show the core ideas about Shasta energy market.
@@ -7,7 +7,7 @@ The current finality of Shasta OS 0.1 is to be able to show the core ideas about
 
 Contributions are welcome! You can also open issues for reporting bugs, launch new ideas or for questions regarding ShastaOS. 
 
-# Content inside ShastaOS 0.1 Alpha
+# Content inside ShastaOS 
 
 - libraries/ShastaTypes.sol
   Small library that contains structs for reuse by ShastaOS smart contracts
