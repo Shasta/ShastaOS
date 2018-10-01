@@ -1,4 +1,5 @@
-# ShastaOS 
+# ShastaOS <img align="right" src="/logo.png" height="80px" />
+
 This repository contains all the Shasta logic behind Shasta Core 0.1, implemented in Solidity smart contracts.
 
 The current finality of Shasta OS 0.1 is to be able to show the core ideas about Shasta energy market.
