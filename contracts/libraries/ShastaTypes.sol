@@ -1,5 +1,8 @@
 pragma solidity ^0.4.24;
 
+/** @title ShastaTypes */
+
+/** Internal Shasta types, for code reuse */
 library ShastaTypes {
   
   struct EnergyContract {

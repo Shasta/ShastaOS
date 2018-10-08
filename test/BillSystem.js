@@ -66,7 +66,7 @@ contract('BillSystem', function(accounts) {
 
     // 100 "Sha" for each account, make it rain!
     tokenDecimals = await shaLedgerInstance.methods.decimals().call();
-    const initialBalance = (web3.utils.toBN(100)).pow(web3.utils.toBN(tokenDecimals));
+    const initialBalance = web3.utils.toWei('100', 'ether');
     await Promise.map([0, 1, 2], account => shaLedgerInstance.methods.mint(accounts[account], initialBalance).send({ from: accounts[0]}));
   });
 

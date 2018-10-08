@@ -3,6 +3,7 @@ pragma solidity ^0.4.24;
 import "openzeppelin-solidity/contracts/math/SafeMath.sol";
 import "./ShastaMarket.sol";
 
+/** @title User */
 contract User {
     
   mapping(address => uint) private addressToIndex;
@@ -35,16 +36,29 @@ contract User {
     ipfsHashes.push('noIpfsHash');
   }
 
+  /**
+    * @dev Check if the address belongs to a user
+    * @param userAddress The address to check if exists in the user registry.
+    */
   function hasUser(address userAddress) public view returns(bool) 
   {
     return (addressToIndex[userAddress] > 0);
   }
-  
+
+  /**
+    * @dev Check if the username belongs to a user
+    * @param username The username to check if exists in the user registry
+    */
   function usernameTaken(bytes16 username) public view returns(bool) 
   {
     return (usernameToIndex[username] > 0 || username == 'self');
   }
-  
+
+  /**
+    * @dev Create a new user
+    * @param username The organization name
+    * @param ipfsHash The IPFS hash string with more metadata
+    */
   function createUser(bytes16 username, bytes ipfsHash) public returns(bool)
   {
     require(!hasUser(msg.sender));
@@ -61,38 +75,55 @@ contract User {
     return true;
   }
 
+  /**
+    * @dev Create a new energy offer
+    * @param _value The amount of watts/hour available to sell
+    * @param ipfsHash The IPFS hash string with metadata
+    */
   function createOffer(uint _value, bytes ipfsHash) public payable {
-        shastaMarket.createOffer(_value, msg.sender);
-        updateUser(ipfsHash);
+    shastaMarket.createOffer(_value, msg.sender);
+    updateUser(ipfsHash);
   }
 
+  /**
+    * @dev Cancel a energy offer
+    * @param _id The ID of the the offer
+    * @param ipfsHash The IPFS hash string with metadata
+    */
   function cancelOffer(uint _id, bytes ipfsHash) public payable {
-      shastaMarket.cancelOffer(_id, msg.sender);
-      updateUser(ipfsHash);
-}
+    shastaMarket.cancelOffer(_id, msg.sender);
+    updateUser(ipfsHash);
+  }
 
+  /**
+    * @dev Update the user ipfs hash string
+    * @param ipfsHash The IPFS hash string to update
+    * @return success Returns true if succesful
+    */
   function updateUser(bytes ipfsHash) public payable returns(bool success)
   {
-    require(hasUser(msg.sender));
+    require(hasUser(msg.sender), 'Your ethereum address does not belong to any Shasta account.');
     
     ipfsHashes[addressToIndex[msg.sender]] = ipfsHash;
     
     emit UpdatedUser(msg.sender, ipfsHash);
     return true;
   }  
- 
+
+  /**
+    * @dev Get the user length
+    * @return count The number of current users registered in Shasta
+    */
   function getUserCount() public view returns(uint count)
   {
     return addresses.length;
   }
 
-  // get by index
-/*   function getUserByIndex(uint index) public view returns(address userAddress, bytes16 username, bytes ipfsHash) {
-    require(index < addresses.length);
-
-    return(addresses[index], usernames[index], ipfsHashes[index]);
-  } */
-
+  /**
+    * @dev Get the address of an user by user index
+    * @param index The user index
+    * @return userAddress the user address
+    */
   function getAddressByIndex(uint index) public view returns(address userAddress)
   {
     require(index < addresses.length);
@@ -100,62 +131,11 @@ contract User {
     return addresses[index];
   }
 
-/*   function getUsernameByIndex(uint index) public view returns(bytes16 username)
-  {
-    require(index < addresses.length);
-
-    return usernames[index];
-  } */
-
-  function getIpfsHashByIndex(uint index) public view returns(bytes ipfsHash)
-  {
-    require(index < addresses.length);
-
-    return ipfsHashes[index];
-  }
-
-  // get by address
-  function getUserByAddress(address userAddress) public view returns(uint index, bytes16 username, bytes ipfsHash) {
-    require(index < addresses.length);
-
-    return(addressToIndex[userAddress], usernames[addressToIndex[userAddress]], ipfsHashes[addressToIndex[userAddress]]);
-  }
-
-  function getIndexByAddress(address userAddress) public view returns(uint index)
-  {
-    require(hasUser(userAddress));
-
-    return addressToIndex[userAddress];
-  }
-
-  function getUsernameByAddress(address userAddress) public view returns(bytes16 username)
-  {
-    require(hasUser(userAddress));
-
-    return usernames[addressToIndex[userAddress]];
-  }
-
-  function getIpfsHashByAddress(address userAddress) public view returns(bytes ipfsHash)
-  {
-    require(hasUser(userAddress));
-
-    return ipfsHashes[addressToIndex[userAddress]];
-  }
-
-  // get by username
- /*  function getUserByUsername(bytes16 username) public view returns(uint index, address userAddress, bytes ipfsHash) {
-    require(index < addresses.length);
-
-    return(usernameToIndex[username], addresses[usernameToIndex[username]], ipfsHashes[usernameToIndex[username]]);
-  } */
-
-/*   function getIndexByUsername(bytes16 username) public view returns(uint index)
-  {
-    require(usernameTaken(username));
-
-    return usernameToIndex[username];
-  }   */
-
+  /**
+    * @dev Get the address of an user by username
+    * @param username The username in bytes16
+    * @return userAddress the user address
+    */
   function getAddressByUsername(bytes16 username) public view returns(address userAddress)
   {
     require(usernameTaken(username));
@@ -163,6 +143,60 @@ contract User {
     return addresses[usernameToIndex[username]];
   }  
 
+  /**
+    * @dev Get the user data by address
+    * @param userAddress The user address
+    * @return index The user index
+    * @return username The user name
+    * @return ipfsHash The ipfs hash where more metadata is stored in IPFS
+    */
+  function getUserByAddress(address userAddress) public view returns(uint index, bytes16 username, bytes ipfsHash) {
+    require(index < addresses.length);
+
+    return(addressToIndex[userAddress], usernames[addressToIndex[userAddress]], ipfsHashes[addressToIndex[userAddress]]);
+  }
+
+
+  /**
+    * @dev Get the username by address
+    * @param userAddress The user address
+    * @return username The user name
+    */
+  function getUsernameByAddress(address userAddress) public view returns(bytes16 username)
+  {
+    require(hasUser(userAddress));
+
+    return usernames[addressToIndex[userAddress]];
+  }
+
+  /**
+    * @dev Get the IPFS hash by index
+    * @param index The user index
+    * @return ipfsHash The ipfs hash where more metadata is stored in IPFS
+    */
+  function getIpfsHashByIndex(uint index) public view returns(bytes ipfsHash)
+  {
+    require(index < addresses.length);
+
+    return ipfsHashes[index];
+  }
+  /**
+    * @dev Get the IPFS hash by address
+    * @param userAddress The user address
+    * @return ipfsHash The ipfs hash where more metadata is stored in IPFS
+    */
+  function getIpfsHashByAddress(address userAddress) public view returns(bytes ipfsHash)
+  {
+    require(hasUser(userAddress));
+
+    return ipfsHashes[addressToIndex[userAddress]];
+  }
+
+  /**
+    * @dev Get the IPFS hash by username
+    * @param username The user name
+    * @return ipfsHash The ipfs hash where more metadata is stored in IPFS
+    */
   function getIpfsHashByUsername(bytes16 username) public view returns(bytes ipfsHash)
   {
     require(usernameTaken(username), "Username does not exists.");
@@ -170,4 +204,15 @@ contract User {
     return ipfsHashes[usernameToIndex[username]];
   }
 
+  /**
+    * @dev Get the user index by address
+    * @param userAddress The user address
+    * @return index The user index
+    */
+  function getIndexByAddress(address userAddress) public view returns(uint index)
+  {
+    require(hasUser(userAddress));
+
+    return addressToIndex[userAddress];
+  }
 }
