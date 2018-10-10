@@ -59,7 +59,7 @@ truffle test
 
 You can import Shasta solidity contracts in your own Solidity smart contracts to add new functionalities or interact with Shasta OS with your front-end. For importing ShastaOS you need to install it using NPM.
 ```
-npm install git+ssh://git@github.com/alexsicart/ShastaOS.git#v0.1.0
+npm install git+ssh://git@github.com/Shasta/ShastaOS.git#v0.1.0
 ```
 
 Then, you can import a ShastaOS solidity contract via the following way, to use in your contract or interact with a deployed smart contract:
