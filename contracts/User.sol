@@ -9,6 +9,8 @@ contract User {
   mapping(address => uint) private addressToIndex;
   mapping(bytes16 => uint) private usernameToIndex;
 
+  mapping(address => string[]) public addressToOrganization;
+
   event NewUser(bytes16 username, address owner);
   event UpdatedUser(address owner, bytes ipfsHash);
 
@@ -34,6 +36,33 @@ contract User {
     addresses.push(msg.sender);
     usernames.push('self');
     ipfsHashes.push('noIpfsHash');
+  }
+
+  /**
+    * @dev Get the current aragon organizations length
+    * @param user The user address to check
+    */
+  function addressOrganizationLength(address user) public view returns(uint) {
+    return addressToOrganization[user].length;
+  }
+
+  /**
+    * @dev Save an ENS Aragon organization
+    * @param ensName The domain to save to the current Shasta user
+    */
+  function saveOrganizationName(string ensName) public returns(bool) {
+    addressToOrganization[msg.sender].push(ensName);
+    return true;
+  }
+
+  /**
+    * @dev Disable an aragon organization. The indexes will keep the same, but the value will be false.
+    * @dev In frontend the client can filter false values.
+    * @param index The user address to check
+    */
+  function deleteOrganizationName(uint index) public returns(bool) {
+    delete addressToOrganization[msg.sender][index];
+    return true;
   }
 
   /**
