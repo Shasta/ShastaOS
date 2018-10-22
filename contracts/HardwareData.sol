@@ -17,4 +17,8 @@ contract HardwareData {
         emit newHash(ipfsHash);
     }
 
+    function getHashesCount() public view returns (uint count) {
+        return ipfsHashes.length;
+    }
+
 }
