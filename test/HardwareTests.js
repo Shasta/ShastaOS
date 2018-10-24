@@ -8,7 +8,8 @@ const Promise = require("bluebird");
 contract('HardwareTests', function (accounts) {
 
     const owner = accounts[0];
-    const user = accounts[1]
+    const user = accounts[1];
+    const user2 = accounts[2];
     let HardwareInstance;
     let UserInstance;
     let randomHash = web3.utils.utf8ToHex("aRandomHash");
@@ -21,13 +22,13 @@ contract('HardwareTests', function (accounts) {
         const marketGas = await MarketContract.deploy({ data: ShastaMarket.bytecode }).estimateGas({ from: owner });
         MarketInstance = await MarketContract.deploy({ data: ShastaMarket.bytecode }).send({ from: owner, gas: marketGas });
 
-        const HardwareContract = await new web3.eth.Contract(HardwareData.abi);
-        const hardwareGas = await HardwareContract.deploy({ data: HardwareData.bytecode }).estimateGas({ from: owner });
-        HardwareInstance = await HardwareContract.deploy({ data: HardwareData.bytecode }).send({ from: owner, gas: hardwareGas });
-        
         const UserContract = await new web3.eth.Contract(User.abi);
         const userGas = await UserContract.deploy({ data: User.bytecode, arguments: [MarketInstance.options.address] }).estimateGas({ from: owner });
         UserInstance = await UserContract.deploy({ data: User.bytecode, arguments: [MarketInstance.options.address] }).send({ from: owner, gas: userGas });
+
+        const HardwareContract = await new web3.eth.Contract(HardwareData.abi);
+        const hardwareGas = await HardwareContract.deploy({ data: HardwareData.bytecode, arguments: [UserInstance.options.address]  }).estimateGas({ from: owner });
+        HardwareInstance = await HardwareContract.deploy({ data: HardwareData.bytecode, arguments: [UserInstance.options.address]  }).send({ from: owner, gas: hardwareGas });       
        
     });
 
@@ -45,6 +46,19 @@ contract('HardwareTests', function (accounts) {
         const hardwareId = await HardwareInstance.methods.getHardwareIdFromSender().call({ from: user });
         assert.equal(randomHardwareId, hardwareId);
     })
+
+    it('Should fail because the user tries to add a hardware but is not registered', async function() {
+
+        try {
+         //Add new hardware to the created user
+         const hardwareGas = await HardwareInstance.methods.addNewHardwareId(randomHardwareId).estimateGas({ from: user2 });
+         await HardwareInstance.methods.addNewHardwareId(randomHardwareId).send({ from: user2, gas: hardwareGas });
+         throw "Test not passed"
+        } catch (e) {
+            assert.include(e.message, "You need to have a user for calling this function")
+        }
+
+    });
 
 
     it('Should add a hash to the smart contract and check it exists', async function () {

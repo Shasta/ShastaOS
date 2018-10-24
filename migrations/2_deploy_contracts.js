@@ -5,10 +5,14 @@ var ContractRegistry = artifacts.require('shasta-os/ContractRegistry');
 var HardwareData = artifacts.require('shasta-os/HardwareData');
 
 module.exports = function(deployer) {
-  deployer.deploy(HardwareData);
   deployer.deploy(BillSystem);
   deployer.deploy(ContractRegistry);
   deployer.deploy(ShastaMarket).then(function() {
-    return deployer.deploy(User, ShastaMarket.address);
+    
+    deployer.deploy(User, ShastaMarket.address).then(function() {
+      
+      return deployer.deploy(HardwareData, User.address);
+      
+    })
   })
 };

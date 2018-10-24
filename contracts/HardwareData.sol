@@ -11,6 +11,12 @@ contract HardwareData {
     event newHash(bytes ipfsHash);
     mapping(address => bytes) public addressToHardwareId;
 
+    constructor(address _userAddress) public {
+
+        user = User(_userAddress);        
+
+    }
+
    /**
     * @dev Throws if non-user is trying to interact with the contract method.
     */
@@ -34,7 +40,7 @@ contract HardwareData {
         return ipfsHashes.length;
     }
 
-    function addNewHardwareId(bytes hardware_id) public {
+    function addNewHardwareId(bytes hardware_id) public onlyUser() {
         addressToHardwareId[msg.sender] = hardware_id;
     }
 
