@@ -226,15 +226,15 @@
       "constant": true,
       "inputs": [
         {
-          "name": "index",
-          "type": "uint256"
+          "name": "username",
+          "type": "bytes16"
         }
       ],
-      "name": "getIpfsHashByIndex",
+      "name": "getAddressByUsername",
       "outputs": [
         {
-          "name": "ipfsHash",
-          "type": "bytes"
+          "name": "userAddress",
+          "type": "address"
         }
       ],
       "payable": false,
@@ -276,11 +276,11 @@
           "type": "address"
         }
       ],
-      "name": "getIndexByAddress",
+      "name": "getUsernameByAddress",
       "outputs": [
         {
-          "name": "index",
-          "type": "uint256"
+          "name": "username",
+          "type": "bytes16"
         }
       ],
       "payable": false,
@@ -291,15 +291,15 @@
       "constant": true,
       "inputs": [
         {
-          "name": "userAddress",
-          "type": "address"
+          "name": "index",
+          "type": "uint256"
         }
       ],
-      "name": "getUsernameByAddress",
+      "name": "getIpfsHashByIndex",
       "outputs": [
         {
-          "name": "username",
-          "type": "bytes16"
+          "name": "ipfsHash",
+          "type": "bytes"
         }
       ],
       "payable": false,
@@ -333,11 +333,11 @@
           "type": "bytes16"
         }
       ],
-      "name": "getAddressByUsername",
+      "name": "getIpfsHashByUsername",
       "outputs": [
         {
-          "name": "userAddress",
-          "type": "address"
+          "name": "ipfsHash",
+          "type": "bytes"
         }
       ],
       "payable": false,
@@ -348,15 +348,15 @@
       "constant": true,
       "inputs": [
         {
-          "name": "username",
-          "type": "bytes16"
+          "name": "userAddress",
+          "type": "address"
         }
       ],
-      "name": "getIpfsHashByUsername",
+      "name": "getIndexByAddress",
       "outputs": [
         {
-          "name": "ipfsHash",
-          "type": "bytes"
+          "name": "index",
+          "type": "uint256"
         }
       ],
       "payable": false,

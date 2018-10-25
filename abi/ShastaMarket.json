@@ -328,29 +328,6 @@
       "payable": false,
       "stateMutability": "view",
       "type": "function"
-    },
-    {
-      "constant": false,
-      "inputs": [
-        {
-          "name": "username",
-          "type": "bytes16"
-        },
-        {
-          "name": "ipfsHash",
-          "type": "bytes"
-        }
-      ],
-      "name": "createUser",
-      "outputs": [
-        {
-          "name": "success",
-          "type": "bool"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "function"
     }
   ]
 }

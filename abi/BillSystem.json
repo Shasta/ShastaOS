@@ -507,18 +507,6 @@
       "constant": false,
       "inputs": [
         {
-          "name": "tokenAddress",
-          "type": "address"
-        },
-        {
-          "name": "consumer",
-          "type": "address"
-        },
-        {
-          "name": "amount",
-          "type": "uint256"
-        },
-        {
           "name": "billIndex",
           "type": "uint256"
         }
