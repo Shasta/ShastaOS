@@ -6,7 +6,7 @@ import "./User.sol";
 
 contract HardwareData {
 
-    User private user;
+    User public user;
     bytes[] public ipfsHashes;
     event newHash(bytes ipfsHash);
     mapping(address => bytes) public addressToHardwareId;
@@ -40,7 +40,7 @@ contract HardwareData {
         return ipfsHashes.length;
     }
 
-    function addNewHardwareId(bytes hardware_id) public onlyUser() {
+    function addNewHardwareId(bytes hardware_id) public {
         addressToHardwareId[msg.sender] = hardware_id;
     }
 
