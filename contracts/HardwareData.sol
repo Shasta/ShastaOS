@@ -44,6 +44,10 @@ contract HardwareData {
         addressToHardwareId[msg.sender] = hardware_id;
     }
 
+    function removeHadwareId() public {
+        delete addressToHardwareId[msg.sender];
+    }
+
     function getHardwareIdFromSender() public view returns (bytes hardwareId){
         return addressToHardwareId[msg.sender];
     }

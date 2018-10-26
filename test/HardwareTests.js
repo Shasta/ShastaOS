@@ -45,6 +45,16 @@ contract('HardwareTests', function (accounts) {
         //Check the hardware exists for the created user
         const hardwareId = await HardwareInstance.methods.getHardwareIdFromSender().call({ from: user });
         assert.equal(randomHardwareId, hardwareId);
+
+        //Remove hardware
+        const removeGas = await HardwareInstance.methods.removeHadwareId().estimateGas({ from: user });
+        await HardwareInstance.methods.removeHadwareId().send({ from: user, gas: removeGas });
+
+         //Check the hardware doesn't for the created user
+         const noHardwareId = await HardwareInstance.methods.getHardwareIdFromSender().call({ from: user });
+         console.log("hola: ", noHardwareId)
+         assert.isFalse(!!noHardwareId);
+ 
     })
 
     it('Should fail because the user tries to add a hardware but is not registered', async function() {
@@ -53,7 +63,6 @@ contract('HardwareTests', function (accounts) {
          //Add new hardware to the created user
          const hardwareGas = await HardwareInstance.methods.addNewHardwareId(randomHardwareId).estimateGas({ from: user2 });
          await HardwareInstance.methods.addNewHardwareId(randomHardwareId).send({ from: user2, gas: hardwareGas });
-         throw "Test not passed"
         } catch (e) {
             assert.include(e.message, "You need to have a user for calling this function")
         }

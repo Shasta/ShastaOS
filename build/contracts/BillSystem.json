@@ -579,7 +579,7 @@
         "id": 2,
         "nodeType": "ImportDirective",
         "scope": 585,
-        "sourceUnit": 2340,
+        "sourceUnit": 2348,
         "src": "26:63:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -590,7 +590,7 @@
         "id": 3,
         "nodeType": "ImportDirective",
         "scope": 585,
-        "sourceUnit": 2995,
+        "sourceUnit": 3003,
         "src": "90:64:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -601,7 +601,7 @@
         "id": 4,
         "nodeType": "ImportDirective",
         "scope": 585,
-        "sourceUnit": 3091,
+        "sourceUnit": 3099,
         "src": "155:53:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -612,7 +612,7 @@
         "id": 5,
         "nodeType": "ImportDirective",
         "scope": 585,
-        "sourceUnit": 1768,
+        "sourceUnit": 1776,
         "src": "209:37:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -637,10 +637,10 @@
               "id": 7,
               "name": "Ownable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2339,
+              "referencedDeclaration": 2347,
               "src": "333:7:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Ownable_$2339",
+                "typeIdentifier": "t_contract$_Ownable_$2347",
                 "typeString": "contract Ownable"
               }
             },
@@ -655,10 +655,10 @@
               "id": 9,
               "name": "Migratable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 3090,
+              "referencedDeclaration": 3098,
               "src": "342:10:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Migratable_$3090",
+                "typeIdentifier": "t_contract$_Migratable_$3098",
                 "typeString": "contract Migratable"
               }
             },
@@ -668,8 +668,8 @@
           }
         ],
         "contractDependencies": [
-          2339,
-          3090
+          2347,
+          3098
         ],
         "contractKind": "contract",
         "documentation": "@title BillSystem",
@@ -677,8 +677,8 @@
         "id": 584,
         "linearizedBaseContracts": [
           584,
-          3090,
-          2339
+          3098,
+          2347
         ],
         "name": "BillSystem",
         "nodeType": "ContractDefinition",
@@ -747,7 +747,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_array$_t_struct$_Bill_$1766_storage_$dyn_storage",
+              "typeIdentifier": "t_array$_t_struct$_Bill_$1774_storage_$dyn_storage",
               "typeString": "struct ShastaTypes.Bill[]"
             },
             "typeName": {
@@ -756,10 +756,10 @@
                 "id": 15,
                 "name": "ShastaTypes.Bill",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 1766,
+                "referencedDeclaration": 1774,
                 "src": "438:16:0",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Bill_$1766_storage_ptr",
+                  "typeIdentifier": "t_struct$_Bill_$1774_storage_ptr",
                   "typeString": "struct ShastaTypes.Bill"
                 }
               },
@@ -768,7 +768,7 @@
               "nodeType": "ArrayTypeName",
               "src": "438:18:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_array$_t_struct$_Bill_$1766_storage_$dyn_storage_ptr",
+                "typeIdentifier": "t_array$_t_struct$_Bill_$1774_storage_$dyn_storage_ptr",
                 "typeString": "struct ShastaTypes.Bill[]"
               }
             },
@@ -1332,7 +1332,7 @@
                   "name": "isInitializer",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 3037,
+                  "referencedDeclaration": 3045,
                   "src": "1081:13:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$_t_string_memory_ptr_$_t_string_memory_ptr_$",
@@ -1575,7 +1575,7 @@
                       "stateVariable": false,
                       "storageLocation": "storage",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Bill_$1766_storage_ptr",
+                        "typeIdentifier": "t_struct$_Bill_$1774_storage_ptr",
                         "typeString": "struct ShastaTypes.Bill"
                       },
                       "typeName": {
@@ -1583,10 +1583,10 @@
                         "id": 106,
                         "name": "ShastaTypes.Bill",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 1766,
+                        "referencedDeclaration": 1774,
                         "src": "2194:16:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Bill_$1766_storage_ptr",
+                          "typeIdentifier": "t_struct$_Bill_$1774_storage_ptr",
                           "typeString": "struct ShastaTypes.Bill"
                         }
                       },
@@ -1606,7 +1606,7 @@
                       "referencedDeclaration": 17,
                       "src": "2226:5:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_array$_t_struct$_Bill_$1766_storage_$dyn_storage",
+                        "typeIdentifier": "t_array$_t_struct$_Bill_$1774_storage_$dyn_storage",
                         "typeString": "struct ShastaTypes.Bill storage ref[] storage ref"
                       }
                     },
@@ -1631,7 +1631,7 @@
                     "nodeType": "IndexAccess",
                     "src": "2226:12:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_Bill_$1766_storage",
+                      "typeIdentifier": "t_struct$_Bill_$1774_storage",
                       "typeString": "struct ShastaTypes.Bill storage ref"
                     }
                   },
@@ -1672,7 +1672,7 @@
                         "referencedDeclaration": 107,
                         "src": "2258:4:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Bill_$1766_storage_ptr",
+                          "typeIdentifier": "t_struct$_Bill_$1774_storage_ptr",
                           "typeString": "struct ShastaTypes.Bill storage pointer"
                         }
                       },
@@ -1683,7 +1683,7 @@
                       "lValueRequested": false,
                       "memberName": "whConsumed",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1753,
+                      "referencedDeclaration": 1761,
                       "src": "2258:15:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1734,7 +1734,7 @@
                         "referencedDeclaration": 107,
                         "src": "2294:4:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Bill_$1766_storage_ptr",
+                          "typeIdentifier": "t_struct$_Bill_$1774_storage_ptr",
                           "typeString": "struct ShastaTypes.Bill storage pointer"
                         }
                       },
@@ -1745,7 +1745,7 @@
                       "lValueRequested": false,
                       "memberName": "tokenAddress",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1755,
+                      "referencedDeclaration": 1763,
                       "src": "2294:17:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -1796,7 +1796,7 @@
                         "referencedDeclaration": 107,
                         "src": "2326:4:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Bill_$1766_storage_ptr",
+                          "typeIdentifier": "t_struct$_Bill_$1774_storage_ptr",
                           "typeString": "struct ShastaTypes.Bill storage pointer"
                         }
                       },
@@ -1807,7 +1807,7 @@
                       "lValueRequested": false,
                       "memberName": "seller",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1757,
+                      "referencedDeclaration": 1765,
                       "src": "2326:11:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -1858,7 +1858,7 @@
                         "referencedDeclaration": 107,
                         "src": "2354:4:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Bill_$1766_storage_ptr",
+                          "typeIdentifier": "t_struct$_Bill_$1774_storage_ptr",
                           "typeString": "struct ShastaTypes.Bill storage pointer"
                         }
                       },
@@ -1869,7 +1869,7 @@
                       "lValueRequested": false,
                       "memberName": "consumer",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1759,
+                      "referencedDeclaration": 1767,
                       "src": "2354:13:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -1920,7 +1920,7 @@
                         "referencedDeclaration": 107,
                         "src": "2381:4:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Bill_$1766_storage_ptr",
+                          "typeIdentifier": "t_struct$_Bill_$1774_storage_ptr",
                           "typeString": "struct ShastaTypes.Bill storage pointer"
                         }
                       },
@@ -1931,7 +1931,7 @@
                       "lValueRequested": false,
                       "memberName": "price",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1761,
+                      "referencedDeclaration": 1769,
                       "src": "2381:10:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1982,7 +1982,7 @@
                         "referencedDeclaration": 107,
                         "src": "2406:4:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Bill_$1766_storage_ptr",
+                          "typeIdentifier": "t_struct$_Bill_$1774_storage_ptr",
                           "typeString": "struct ShastaTypes.Bill storage pointer"
                         }
                       },
@@ -1993,7 +1993,7 @@
                       "lValueRequested": false,
                       "memberName": "amount",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1763,
+                      "referencedDeclaration": 1771,
                       "src": "2406:11:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -2044,7 +2044,7 @@
                         "referencedDeclaration": 107,
                         "src": "2438:4:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Bill_$1766_storage_ptr",
+                          "typeIdentifier": "t_struct$_Bill_$1774_storage_ptr",
                           "typeString": "struct ShastaTypes.Bill storage pointer"
                         }
                       },
@@ -2055,7 +2055,7 @@
                       "lValueRequested": false,
                       "memberName": "ipfsMetadata",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1765,
+                      "referencedDeclaration": 1773,
                       "src": "2438:17:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_storage",
@@ -2351,7 +2351,7 @@
                         "referencedDeclaration": 17,
                         "src": "2624:5:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_struct$_Bill_$1766_storage_$dyn_storage",
+                          "typeIdentifier": "t_array$_t_struct$_Bill_$1774_storage_$dyn_storage",
                           "typeString": "struct ShastaTypes.Bill storage ref[] storage ref"
                         }
                       },
@@ -3965,10 +3965,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3108,
-                        3109
+                        3116,
+                        3117
                       ],
-                      "referencedDeclaration": 3109,
+                      "referencedDeclaration": 3117,
                       "src": "5268:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -4194,10 +4194,10 @@
                                 "name": "ShastaTypes",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 1767,
+                                "referencedDeclaration": 1775,
                                 "src": "5355:11:0",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_type$_t_contract$_ShastaTypes_$1767_$",
+                                  "typeIdentifier": "t_type$_t_contract$_ShastaTypes_$1775_$",
                                   "typeString": "type(library ShastaTypes)"
                                 }
                               },
@@ -4208,10 +4208,10 @@
                               "lValueRequested": false,
                               "memberName": "Bill",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 1766,
+                              "referencedDeclaration": 1774,
                               "src": "5355:16:0",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_type$_t_struct$_Bill_$1766_storage_ptr_$",
+                                "typeIdentifier": "t_type$_t_struct$_Bill_$1774_storage_ptr_$",
                                 "typeString": "type(struct ShastaTypes.Bill storage pointer)"
                               }
                             },
@@ -4225,7 +4225,7 @@
                             "nodeType": "FunctionCall",
                             "src": "5355:181:0",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_Bill_$1766_memory",
+                              "typeIdentifier": "t_struct$_Bill_$1774_memory",
                               "typeString": "struct ShastaTypes.Bill memory"
                             }
                           }
@@ -4233,7 +4233,7 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_struct$_Bill_$1766_memory",
+                              "typeIdentifier": "t_struct$_Bill_$1774_memory",
                               "typeString": "struct ShastaTypes.Bill memory"
                             }
                           ],
@@ -4246,7 +4246,7 @@
                             "referencedDeclaration": 17,
                             "src": "5337:5:0",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_array$_t_struct$_Bill_$1766_storage_$dyn_storage",
+                              "typeIdentifier": "t_array$_t_struct$_Bill_$1774_storage_$dyn_storage",
                               "typeString": "struct ShastaTypes.Bill storage ref[] storage ref"
                             }
                           },
@@ -4260,7 +4260,7 @@
                           "referencedDeclaration": null,
                           "src": "5337:10:0",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_Bill_$1766_storage_$returns$_t_uint256_$",
+                            "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_Bill_$1774_storage_$returns$_t_uint256_$",
                             "typeString": "function (struct ShastaTypes.Bill storage ref) returns (uint256)"
                           }
                         },
@@ -4864,7 +4864,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3105,
+                        "referencedDeclaration": 3113,
                         "src": "5937:3:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -4987,10 +4987,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3108,
-                        3109
+                        3116,
+                        3117
                       ],
-                      "referencedDeclaration": 3109,
+                      "referencedDeclaration": 3117,
                       "src": "5954:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -5117,7 +5117,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3105,
+                          "referencedDeclaration": 3113,
                           "src": "6025:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -5212,7 +5212,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3105,
+                          "referencedDeclaration": 3113,
                           "src": "6046:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -5426,10 +5426,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3108,
-                        3109
+                        3116,
+                        3117
                       ],
-                      "referencedDeclaration": 3109,
+                      "referencedDeclaration": 3117,
                       "src": "6338:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -5538,7 +5538,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3105,
+                        "referencedDeclaration": 3113,
                         "src": "6484:3:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -5661,10 +5661,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3108,
-                        3109
+                        3116,
+                        3117
                       ],
-                      "referencedDeclaration": 3109,
+                      "referencedDeclaration": 3117,
                       "src": "6501:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -5748,7 +5748,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3105,
+                          "referencedDeclaration": 3113,
                           "src": "6574:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -5825,7 +5825,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 3105,
+                              "referencedDeclaration": 3113,
                               "src": "6633:3:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -5899,10 +5899,10 @@
                               "name": "IERC20",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 2994,
+                              "referencedDeclaration": 3002,
                               "src": "6603:6:0",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_type$_t_contract$_IERC20_$2994_$",
+                                "typeIdentifier": "t_type$_t_contract$_IERC20_$3002_$",
                                 "typeString": "type(contract IERC20)"
                               }
                             },
@@ -5916,7 +5916,7 @@
                             "nodeType": "FunctionCall",
                             "src": "6603:20:0",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_IERC20_$2994",
+                              "typeIdentifier": "t_contract$_IERC20_$3002",
                               "typeString": "contract IERC20"
                             }
                           },
@@ -5927,7 +5927,7 @@
                           "lValueRequested": false,
                           "memberName": "transfer",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 2957,
+                          "referencedDeclaration": 2965,
                           "src": "6603:29:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_uint256_$returns$_t_bool_$",
@@ -5982,10 +5982,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3108,
-                        3109
+                        3116,
+                        3117
                       ],
-                      "referencedDeclaration": 3109,
+                      "referencedDeclaration": 3117,
                       "src": "6595:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -6087,7 +6087,7 @@
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Bill_$1766_memory_ptr",
+                        "typeIdentifier": "t_struct$_Bill_$1774_memory_ptr",
                         "typeString": "struct ShastaTypes.Bill"
                       },
                       "typeName": {
@@ -6095,10 +6095,10 @@
                         "id": 428,
                         "name": "ShastaTypes.Bill",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 1766,
+                        "referencedDeclaration": 1774,
                         "src": "6854:16:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Bill_$1766_storage_ptr",
+                          "typeIdentifier": "t_struct$_Bill_$1774_storage_ptr",
                           "typeString": "struct ShastaTypes.Bill"
                         }
                       },
@@ -6118,7 +6118,7 @@
                       "referencedDeclaration": 17,
                       "src": "6885:5:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_array$_t_struct$_Bill_$1766_storage_$dyn_storage",
+                        "typeIdentifier": "t_array$_t_struct$_Bill_$1774_storage_$dyn_storage",
                         "typeString": "struct ShastaTypes.Bill storage ref[] storage ref"
                       }
                     },
@@ -6143,7 +6143,7 @@
                     "nodeType": "IndexAccess",
                     "src": "6885:16:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_Bill_$1766_storage",
+                      "typeIdentifier": "t_struct$_Bill_$1774_storage",
                       "typeString": "struct ShastaTypes.Bill storage ref"
                     }
                   },
@@ -6176,7 +6176,7 @@
                             "referencedDeclaration": 429,
                             "src": "6915:4:0",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_Bill_$1766_memory_ptr",
+                              "typeIdentifier": "t_struct$_Bill_$1774_memory_ptr",
                               "typeString": "struct ShastaTypes.Bill memory"
                             }
                           },
@@ -6187,7 +6187,7 @@
                           "lValueRequested": false,
                           "memberName": "tokenAddress",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 1755,
+                          "referencedDeclaration": 1763,
                           "src": "6915:17:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -6292,10 +6292,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3108,
-                        3109
+                        3116,
+                        3117
                       ],
-                      "referencedDeclaration": 3109,
+                      "referencedDeclaration": 3117,
                       "src": "6907:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -6346,7 +6346,7 @@
                             "referencedDeclaration": 429,
                             "src": "7024:4:0",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_Bill_$1766_memory_ptr",
+                              "typeIdentifier": "t_struct$_Bill_$1774_memory_ptr",
                               "typeString": "struct ShastaTypes.Bill memory"
                             }
                           },
@@ -6357,7 +6357,7 @@
                           "lValueRequested": false,
                           "memberName": "consumer",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 1759,
+                          "referencedDeclaration": 1767,
                           "src": "7024:13:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -6374,7 +6374,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3105,
+                            "referencedDeclaration": 3113,
                             "src": "7041:3:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -6435,10 +6435,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3108,
-                        3109
+                        3116,
+                        3117
                       ],
-                      "referencedDeclaration": 3109,
+                      "referencedDeclaration": 3117,
                       "src": "7016:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -6489,7 +6489,7 @@
                             "referencedDeclaration": 429,
                             "src": "7091:4:0",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_Bill_$1766_memory_ptr",
+                              "typeIdentifier": "t_struct$_Bill_$1774_memory_ptr",
                               "typeString": "struct ShastaTypes.Bill memory"
                             }
                           },
@@ -6500,7 +6500,7 @@
                           "lValueRequested": false,
                           "memberName": "amount",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 1763,
+                          "referencedDeclaration": 1771,
                           "src": "7091:11:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -6567,10 +6567,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3108,
-                        3109
+                        3116,
+                        3117
                       ],
-                      "referencedDeclaration": 3109,
+                      "referencedDeclaration": 3117,
                       "src": "7083:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -6621,7 +6621,7 @@
                             "referencedDeclaration": 429,
                             "src": "7145:4:0",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_Bill_$1766_memory_ptr",
+                              "typeIdentifier": "t_struct$_Bill_$1774_memory_ptr",
                               "typeString": "struct ShastaTypes.Bill memory"
                             }
                           },
@@ -6632,7 +6632,7 @@
                           "lValueRequested": false,
                           "memberName": "amount",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 1763,
+                          "referencedDeclaration": 1771,
                           "src": "7145:11:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -6649,7 +6649,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3105,
+                            "referencedDeclaration": 3113,
                             "src": "7160:3:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -6710,10 +6710,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3108,
-                        3109
+                        3116,
+                        3117
                       ],
-                      "referencedDeclaration": 3109,
+                      "referencedDeclaration": 3117,
                       "src": "7137:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -6853,10 +6853,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3108,
-                        3109
+                        3116,
+                        3117
                       ],
-                      "referencedDeclaration": 3109,
+                      "referencedDeclaration": 3117,
                       "src": "7231:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -7064,7 +7064,7 @@
                           "referencedDeclaration": 429,
                           "src": "7356:4:0",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Bill_$1766_memory_ptr",
+                            "typeIdentifier": "t_struct$_Bill_$1774_memory_ptr",
                             "typeString": "struct ShastaTypes.Bill memory"
                           }
                         },
@@ -7075,7 +7075,7 @@
                         "lValueRequested": false,
                         "memberName": "seller",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 1757,
+                        "referencedDeclaration": 1765,
                         "src": "7356:11:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -7103,7 +7103,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3105,
+                        "referencedDeclaration": 3113,
                         "src": "7372:3:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -7211,7 +7211,7 @@
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Bill_$1766_memory_ptr",
+                        "typeIdentifier": "t_struct$_Bill_$1774_memory_ptr",
                         "typeString": "struct ShastaTypes.Bill"
                       },
                       "typeName": {
@@ -7219,10 +7219,10 @@
                         "id": 505,
                         "name": "ShastaTypes.Bill",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 1766,
+                        "referencedDeclaration": 1774,
                         "src": "7621:16:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Bill_$1766_storage_ptr",
+                          "typeIdentifier": "t_struct$_Bill_$1774_storage_ptr",
                           "typeString": "struct ShastaTypes.Bill"
                         }
                       },
@@ -7242,7 +7242,7 @@
                       "referencedDeclaration": 17,
                       "src": "7652:5:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_array$_t_struct$_Bill_$1766_storage_$dyn_storage",
+                        "typeIdentifier": "t_array$_t_struct$_Bill_$1774_storage_$dyn_storage",
                         "typeString": "struct ShastaTypes.Bill storage ref[] storage ref"
                       }
                     },
@@ -7267,7 +7267,7 @@
                     "nodeType": "IndexAccess",
                     "src": "7652:16:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_Bill_$1766_storage",
+                      "typeIdentifier": "t_struct$_Bill_$1774_storage",
                       "typeString": "struct ShastaTypes.Bill storage ref"
                     }
                   },
@@ -7300,7 +7300,7 @@
                             "referencedDeclaration": 506,
                             "src": "7682:4:0",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_Bill_$1766_memory_ptr",
+                              "typeIdentifier": "t_struct$_Bill_$1774_memory_ptr",
                               "typeString": "struct ShastaTypes.Bill memory"
                             }
                           },
@@ -7311,7 +7311,7 @@
                           "lValueRequested": false,
                           "memberName": "amount",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 1763,
+                          "referencedDeclaration": 1771,
                           "src": "7682:11:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -7378,10 +7378,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3108,
-                        3109
+                        3116,
+                        3117
                       ],
-                      "referencedDeclaration": 3109,
+                      "referencedDeclaration": 3117,
                       "src": "7674:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -7432,7 +7432,7 @@
                             "referencedDeclaration": 506,
                             "src": "7736:4:0",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_Bill_$1766_memory_ptr",
+                              "typeIdentifier": "t_struct$_Bill_$1774_memory_ptr",
                               "typeString": "struct ShastaTypes.Bill memory"
                             }
                           },
@@ -7443,7 +7443,7 @@
                           "lValueRequested": false,
                           "memberName": "tokenAddress",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 1755,
+                          "referencedDeclaration": 1763,
                           "src": "7736:17:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -7548,10 +7548,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3108,
-                        3109
+                        3116,
+                        3117
                       ],
-                      "referencedDeclaration": 3109,
+                      "referencedDeclaration": 3117,
                       "src": "7728:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -7691,10 +7691,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3108,
-                        3109
+                        3116,
+                        3117
                       ],
-                      "referencedDeclaration": 3109,
+                      "referencedDeclaration": 3117,
                       "src": "7819:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -7734,7 +7734,7 @@
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_IERC20_$2994",
+                        "typeIdentifier": "t_contract$_IERC20_$3002",
                         "typeString": "contract IERC20"
                       },
                       "typeName": {
@@ -7742,10 +7742,10 @@
                         "id": 538,
                         "name": "IERC20",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 2994,
+                        "referencedDeclaration": 3002,
                         "src": "7889:6:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_IERC20_$2994",
+                          "typeIdentifier": "t_contract$_IERC20_$3002",
                           "typeString": "contract IERC20"
                         }
                       },
@@ -7768,7 +7768,7 @@
                           "referencedDeclaration": 506,
                           "src": "7919:4:0",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Bill_$1766_memory_ptr",
+                            "typeIdentifier": "t_struct$_Bill_$1774_memory_ptr",
                             "typeString": "struct ShastaTypes.Bill memory"
                           }
                         },
@@ -7779,7 +7779,7 @@
                         "lValueRequested": false,
                         "memberName": "tokenAddress",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 1755,
+                        "referencedDeclaration": 1763,
                         "src": "7919:17:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -7798,10 +7798,10 @@
                       "name": "IERC20",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2994,
+                      "referencedDeclaration": 3002,
                       "src": "7912:6:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_type$_t_contract$_IERC20_$2994_$",
+                        "typeIdentifier": "t_type$_t_contract$_IERC20_$3002_$",
                         "typeString": "type(contract IERC20)"
                       }
                     },
@@ -7815,7 +7815,7 @@
                     "nodeType": "FunctionCall",
                     "src": "7912:25:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IERC20_$2994",
+                      "typeIdentifier": "t_contract$_IERC20_$3002",
                       "typeString": "contract IERC20"
                     }
                   },
@@ -7837,7 +7837,7 @@
                           "referencedDeclaration": 506,
                           "src": "8035:4:0",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Bill_$1766_memory_ptr",
+                            "typeIdentifier": "t_struct$_Bill_$1774_memory_ptr",
                             "typeString": "struct ShastaTypes.Bill memory"
                           }
                         },
@@ -7848,7 +7848,7 @@
                         "lValueRequested": false,
                         "memberName": "consumer",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 1759,
+                        "referencedDeclaration": 1767,
                         "src": "8035:13:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -7864,7 +7864,7 @@
                             "name": "this",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3128,
+                            "referencedDeclaration": 3136,
                             "src": "8058:4:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_contract$_BillSystem_$584",
@@ -7917,7 +7917,7 @@
                           "referencedDeclaration": 506,
                           "src": "8065:4:0",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Bill_$1766_memory_ptr",
+                            "typeIdentifier": "t_struct$_Bill_$1774_memory_ptr",
                             "typeString": "struct ShastaTypes.Bill memory"
                           }
                         },
@@ -7928,7 +7928,7 @@
                         "lValueRequested": false,
                         "memberName": "amount",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 1763,
+                        "referencedDeclaration": 1771,
                         "src": "8065:11:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -7960,7 +7960,7 @@
                         "referencedDeclaration": 539,
                         "src": "8008:13:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_IERC20_$2994",
+                          "typeIdentifier": "t_contract$_IERC20_$3002",
                           "typeString": "contract IERC20"
                         }
                       },
@@ -7971,7 +7971,7 @@
                       "lValueRequested": false,
                       "memberName": "transferFrom",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2977,
+                      "referencedDeclaration": 2985,
                       "src": "8008:26:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$_t_bool_$",
@@ -8111,7 +8111,7 @@
                             "referencedDeclaration": 506,
                             "src": "8126:4:0",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_Bill_$1766_memory_ptr",
+                              "typeIdentifier": "t_struct$_Bill_$1774_memory_ptr",
                               "typeString": "struct ShastaTypes.Bill memory"
                             }
                           },
@@ -8122,7 +8122,7 @@
                           "lValueRequested": false,
                           "memberName": "tokenAddress",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 1755,
+                          "referencedDeclaration": 1763,
                           "src": "8126:17:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -8152,7 +8152,7 @@
                           "referencedDeclaration": 506,
                           "src": "8145:4:0",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Bill_$1766_memory_ptr",
+                            "typeIdentifier": "t_struct$_Bill_$1774_memory_ptr",
                             "typeString": "struct ShastaTypes.Bill memory"
                           }
                         },
@@ -8163,7 +8163,7 @@
                         "lValueRequested": false,
                         "memberName": "seller",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 1757,
+                        "referencedDeclaration": 1765,
                         "src": "8145:11:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -8194,7 +8194,7 @@
                         "referencedDeclaration": 506,
                         "src": "8161:4:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Bill_$1766_memory_ptr",
+                          "typeIdentifier": "t_struct$_Bill_$1774_memory_ptr",
                           "typeString": "struct ShastaTypes.Bill memory"
                         }
                       },
@@ -8205,7 +8205,7 @@
                       "lValueRequested": false,
                       "memberName": "amount",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1763,
+                      "referencedDeclaration": 1771,
                       "src": "8161:11:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -8250,7 +8250,7 @@
                           "referencedDeclaration": 506,
                           "src": "8203:4:0",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Bill_$1766_memory_ptr",
+                            "typeIdentifier": "t_struct$_Bill_$1774_memory_ptr",
                             "typeString": "struct ShastaTypes.Bill memory"
                           }
                         },
@@ -8261,7 +8261,7 @@
                         "lValueRequested": false,
                         "memberName": "consumer",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 1759,
+                        "referencedDeclaration": 1767,
                         "src": "8203:13:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -8279,7 +8279,7 @@
                           "referencedDeclaration": 506,
                           "src": "8218:4:0",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Bill_$1766_memory_ptr",
+                            "typeIdentifier": "t_struct$_Bill_$1774_memory_ptr",
                             "typeString": "struct ShastaTypes.Bill memory"
                           }
                         },
@@ -8290,7 +8290,7 @@
                         "lValueRequested": false,
                         "memberName": "seller",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 1757,
+                        "referencedDeclaration": 1765,
                         "src": "8218:11:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -8432,7 +8432,7 @@
         "id": 2,
         "nodeType": "ImportDirective",
         "scope": 585,
-        "sourceUnit": 2340,
+        "sourceUnit": 2348,
         "src": "26:63:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -8443,7 +8443,7 @@
         "id": 3,
         "nodeType": "ImportDirective",
         "scope": 585,
-        "sourceUnit": 2995,
+        "sourceUnit": 3003,
         "src": "90:64:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -8454,7 +8454,7 @@
         "id": 4,
         "nodeType": "ImportDirective",
         "scope": 585,
-        "sourceUnit": 3091,
+        "sourceUnit": 3099,
         "src": "155:53:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -8465,7 +8465,7 @@
         "id": 5,
         "nodeType": "ImportDirective",
         "scope": 585,
-        "sourceUnit": 1768,
+        "sourceUnit": 1776,
         "src": "209:37:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -8490,10 +8490,10 @@
               "id": 7,
               "name": "Ownable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2339,
+              "referencedDeclaration": 2347,
               "src": "333:7:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Ownable_$2339",
+                "typeIdentifier": "t_contract$_Ownable_$2347",
                 "typeString": "contract Ownable"
               }
             },
@@ -8508,10 +8508,10 @@
               "id": 9,
               "name": "Migratable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 3090,
+              "referencedDeclaration": 3098,
               "src": "342:10:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Migratable_$3090",
+                "typeIdentifier": "t_contract$_Migratable_$3098",
                 "typeString": "contract Migratable"
               }
             },
@@ -8521,8 +8521,8 @@
           }
         ],
         "contractDependencies": [
-          2339,
-          3090
+          2347,
+          3098
         ],
         "contractKind": "contract",
         "documentation": "@title BillSystem",
@@ -8530,8 +8530,8 @@
         "id": 584,
         "linearizedBaseContracts": [
           584,
-          3090,
-          2339
+          3098,
+          2347
         ],
         "name": "BillSystem",
         "nodeType": "ContractDefinition",
@@ -8600,7 +8600,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_array$_t_struct$_Bill_$1766_storage_$dyn_storage",
+              "typeIdentifier": "t_array$_t_struct$_Bill_$1774_storage_$dyn_storage",
               "typeString": "struct ShastaTypes.Bill[]"
             },
             "typeName": {
@@ -8609,10 +8609,10 @@
                 "id": 15,
                 "name": "ShastaTypes.Bill",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 1766,
+                "referencedDeclaration": 1774,
                 "src": "438:16:0",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Bill_$1766_storage_ptr",
+                  "typeIdentifier": "t_struct$_Bill_$1774_storage_ptr",
                   "typeString": "struct ShastaTypes.Bill"
                 }
               },
@@ -8621,7 +8621,7 @@
               "nodeType": "ArrayTypeName",
               "src": "438:18:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_array$_t_struct$_Bill_$1766_storage_$dyn_storage_ptr",
+                "typeIdentifier": "t_array$_t_struct$_Bill_$1774_storage_$dyn_storage_ptr",
                 "typeString": "struct ShastaTypes.Bill[]"
               }
             },
@@ -9185,7 +9185,7 @@
                   "name": "isInitializer",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 3037,
+                  "referencedDeclaration": 3045,
                   "src": "1081:13:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$_t_string_memory_ptr_$_t_string_memory_ptr_$",
@@ -9428,7 +9428,7 @@
                       "stateVariable": false,
                       "storageLocation": "storage",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Bill_$1766_storage_ptr",
+                        "typeIdentifier": "t_struct$_Bill_$1774_storage_ptr",
                         "typeString": "struct ShastaTypes.Bill"
                       },
                       "typeName": {
@@ -9436,10 +9436,10 @@
                         "id": 106,
                         "name": "ShastaTypes.Bill",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 1766,
+                        "referencedDeclaration": 1774,
                         "src": "2194:16:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Bill_$1766_storage_ptr",
+                          "typeIdentifier": "t_struct$_Bill_$1774_storage_ptr",
                           "typeString": "struct ShastaTypes.Bill"
                         }
                       },
@@ -9459,7 +9459,7 @@
                       "referencedDeclaration": 17,
                       "src": "2226:5:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_array$_t_struct$_Bill_$1766_storage_$dyn_storage",
+                        "typeIdentifier": "t_array$_t_struct$_Bill_$1774_storage_$dyn_storage",
                         "typeString": "struct ShastaTypes.Bill storage ref[] storage ref"
                       }
                     },
@@ -9484,7 +9484,7 @@
                     "nodeType": "IndexAccess",
                     "src": "2226:12:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_Bill_$1766_storage",
+                      "typeIdentifier": "t_struct$_Bill_$1774_storage",
                       "typeString": "struct ShastaTypes.Bill storage ref"
                     }
                   },
@@ -9525,7 +9525,7 @@
                         "referencedDeclaration": 107,
                         "src": "2258:4:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Bill_$1766_storage_ptr",
+                          "typeIdentifier": "t_struct$_Bill_$1774_storage_ptr",
                           "typeString": "struct ShastaTypes.Bill storage pointer"
                         }
                       },
@@ -9536,7 +9536,7 @@
                       "lValueRequested": false,
                       "memberName": "whConsumed",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1753,
+                      "referencedDeclaration": 1761,
                       "src": "2258:15:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -9587,7 +9587,7 @@
                         "referencedDeclaration": 107,
                         "src": "2294:4:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Bill_$1766_storage_ptr",
+                          "typeIdentifier": "t_struct$_Bill_$1774_storage_ptr",
                           "typeString": "struct ShastaTypes.Bill storage pointer"
                         }
                       },
@@ -9598,7 +9598,7 @@
                       "lValueRequested": false,
                       "memberName": "tokenAddress",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1755,
+                      "referencedDeclaration": 1763,
                       "src": "2294:17:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -9649,7 +9649,7 @@
                         "referencedDeclaration": 107,
                         "src": "2326:4:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Bill_$1766_storage_ptr",
+                          "typeIdentifier": "t_struct$_Bill_$1774_storage_ptr",
                           "typeString": "struct ShastaTypes.Bill storage pointer"
                         }
                       },
@@ -9660,7 +9660,7 @@
                       "lValueRequested": false,
                       "memberName": "seller",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1757,
+                      "referencedDeclaration": 1765,
                       "src": "2326:11:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -9711,7 +9711,7 @@
                         "referencedDeclaration": 107,
                         "src": "2354:4:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Bill_$1766_storage_ptr",
+                          "typeIdentifier": "t_struct$_Bill_$1774_storage_ptr",
                           "typeString": "struct ShastaTypes.Bill storage pointer"
                         }
                       },
@@ -9722,7 +9722,7 @@
                       "lValueRequested": false,
                       "memberName": "consumer",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1759,
+                      "referencedDeclaration": 1767,
                       "src": "2354:13:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -9773,7 +9773,7 @@
                         "referencedDeclaration": 107,
                         "src": "2381:4:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Bill_$1766_storage_ptr",
+                          "typeIdentifier": "t_struct$_Bill_$1774_storage_ptr",
                           "typeString": "struct ShastaTypes.Bill storage pointer"
                         }
                       },
@@ -9784,7 +9784,7 @@
                       "lValueRequested": false,
                       "memberName": "price",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1761,
+                      "referencedDeclaration": 1769,
                       "src": "2381:10:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -9835,7 +9835,7 @@
                         "referencedDeclaration": 107,
                         "src": "2406:4:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Bill_$1766_storage_ptr",
+                          "typeIdentifier": "t_struct$_Bill_$1774_storage_ptr",
                           "typeString": "struct ShastaTypes.Bill storage pointer"
                         }
                       },
@@ -9846,7 +9846,7 @@
                       "lValueRequested": false,
                       "memberName": "amount",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1763,
+                      "referencedDeclaration": 1771,
                       "src": "2406:11:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -9897,7 +9897,7 @@
                         "referencedDeclaration": 107,
                         "src": "2438:4:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Bill_$1766_storage_ptr",
+                          "typeIdentifier": "t_struct$_Bill_$1774_storage_ptr",
                           "typeString": "struct ShastaTypes.Bill storage pointer"
                         }
                       },
@@ -9908,7 +9908,7 @@
                       "lValueRequested": false,
                       "memberName": "ipfsMetadata",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1765,
+                      "referencedDeclaration": 1773,
                       "src": "2438:17:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_storage",
@@ -10204,7 +10204,7 @@
                         "referencedDeclaration": 17,
                         "src": "2624:5:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_struct$_Bill_$1766_storage_$dyn_storage",
+                          "typeIdentifier": "t_array$_t_struct$_Bill_$1774_storage_$dyn_storage",
                           "typeString": "struct ShastaTypes.Bill storage ref[] storage ref"
                         }
                       },
@@ -11818,10 +11818,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3108,
-                        3109
+                        3116,
+                        3117
                       ],
-                      "referencedDeclaration": 3109,
+                      "referencedDeclaration": 3117,
                       "src": "5268:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -12047,10 +12047,10 @@
                                 "name": "ShastaTypes",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 1767,
+                                "referencedDeclaration": 1775,
                                 "src": "5355:11:0",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_type$_t_contract$_ShastaTypes_$1767_$",
+                                  "typeIdentifier": "t_type$_t_contract$_ShastaTypes_$1775_$",
                                   "typeString": "type(library ShastaTypes)"
                                 }
                               },
@@ -12061,10 +12061,10 @@
                               "lValueRequested": false,
                               "memberName": "Bill",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 1766,
+                              "referencedDeclaration": 1774,
                               "src": "5355:16:0",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_type$_t_struct$_Bill_$1766_storage_ptr_$",
+                                "typeIdentifier": "t_type$_t_struct$_Bill_$1774_storage_ptr_$",
                                 "typeString": "type(struct ShastaTypes.Bill storage pointer)"
                               }
                             },
@@ -12078,7 +12078,7 @@
                             "nodeType": "FunctionCall",
                             "src": "5355:181:0",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_Bill_$1766_memory",
+                              "typeIdentifier": "t_struct$_Bill_$1774_memory",
                               "typeString": "struct ShastaTypes.Bill memory"
                             }
                           }
@@ -12086,7 +12086,7 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_struct$_Bill_$1766_memory",
+                              "typeIdentifier": "t_struct$_Bill_$1774_memory",
                               "typeString": "struct ShastaTypes.Bill memory"
                             }
                           ],
@@ -12099,7 +12099,7 @@
                             "referencedDeclaration": 17,
                             "src": "5337:5:0",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_array$_t_struct$_Bill_$1766_storage_$dyn_storage",
+                              "typeIdentifier": "t_array$_t_struct$_Bill_$1774_storage_$dyn_storage",
                               "typeString": "struct ShastaTypes.Bill storage ref[] storage ref"
                             }
                           },
@@ -12113,7 +12113,7 @@
                           "referencedDeclaration": null,
                           "src": "5337:10:0",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_Bill_$1766_storage_$returns$_t_uint256_$",
+                            "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_Bill_$1774_storage_$returns$_t_uint256_$",
                             "typeString": "function (struct ShastaTypes.Bill storage ref) returns (uint256)"
                           }
                         },
@@ -12717,7 +12717,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3105,
+                        "referencedDeclaration": 3113,
                         "src": "5937:3:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -12840,10 +12840,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3108,
-                        3109
+                        3116,
+                        3117
                       ],
-                      "referencedDeclaration": 3109,
+                      "referencedDeclaration": 3117,
                       "src": "5954:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -12970,7 +12970,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3105,
+                          "referencedDeclaration": 3113,
                           "src": "6025:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -13065,7 +13065,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3105,
+                          "referencedDeclaration": 3113,
                           "src": "6046:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -13279,10 +13279,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3108,
-                        3109
+                        3116,
+                        3117
                       ],
-                      "referencedDeclaration": 3109,
+                      "referencedDeclaration": 3117,
                       "src": "6338:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -13391,7 +13391,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3105,
+                        "referencedDeclaration": 3113,
                         "src": "6484:3:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -13514,10 +13514,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3108,
-                        3109
+                        3116,
+                        3117
                       ],
-                      "referencedDeclaration": 3109,
+                      "referencedDeclaration": 3117,
                       "src": "6501:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -13601,7 +13601,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3105,
+                          "referencedDeclaration": 3113,
                           "src": "6574:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -13678,7 +13678,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 3105,
+                              "referencedDeclaration": 3113,
                               "src": "6633:3:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -13752,10 +13752,10 @@
                               "name": "IERC20",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 2994,
+                              "referencedDeclaration": 3002,
                               "src": "6603:6:0",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_type$_t_contract$_IERC20_$2994_$",
+                                "typeIdentifier": "t_type$_t_contract$_IERC20_$3002_$",
                                 "typeString": "type(contract IERC20)"
                               }
                             },
@@ -13769,7 +13769,7 @@
                             "nodeType": "FunctionCall",
                             "src": "6603:20:0",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_IERC20_$2994",
+                              "typeIdentifier": "t_contract$_IERC20_$3002",
                               "typeString": "contract IERC20"
                             }
                           },
@@ -13780,7 +13780,7 @@
                           "lValueRequested": false,
                           "memberName": "transfer",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 2957,
+                          "referencedDeclaration": 2965,
                           "src": "6603:29:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_uint256_$returns$_t_bool_$",
@@ -13835,10 +13835,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3108,
-                        3109
+                        3116,
+                        3117
                       ],
-                      "referencedDeclaration": 3109,
+                      "referencedDeclaration": 3117,
                       "src": "6595:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -13940,7 +13940,7 @@
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Bill_$1766_memory_ptr",
+                        "typeIdentifier": "t_struct$_Bill_$1774_memory_ptr",
                         "typeString": "struct ShastaTypes.Bill"
                       },
                       "typeName": {
@@ -13948,10 +13948,10 @@
                         "id": 428,
                         "name": "ShastaTypes.Bill",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 1766,
+                        "referencedDeclaration": 1774,
                         "src": "6854:16:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Bill_$1766_storage_ptr",
+                          "typeIdentifier": "t_struct$_Bill_$1774_storage_ptr",
                           "typeString": "struct ShastaTypes.Bill"
                         }
                       },
@@ -13971,7 +13971,7 @@
                       "referencedDeclaration": 17,
                       "src": "6885:5:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_array$_t_struct$_Bill_$1766_storage_$dyn_storage",
+                        "typeIdentifier": "t_array$_t_struct$_Bill_$1774_storage_$dyn_storage",
                         "typeString": "struct ShastaTypes.Bill storage ref[] storage ref"
                       }
                     },
@@ -13996,7 +13996,7 @@
                     "nodeType": "IndexAccess",
                     "src": "6885:16:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_Bill_$1766_storage",
+                      "typeIdentifier": "t_struct$_Bill_$1774_storage",
                       "typeString": "struct ShastaTypes.Bill storage ref"
                     }
                   },
@@ -14029,7 +14029,7 @@
                             "referencedDeclaration": 429,
                             "src": "6915:4:0",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_Bill_$1766_memory_ptr",
+                              "typeIdentifier": "t_struct$_Bill_$1774_memory_ptr",
                               "typeString": "struct ShastaTypes.Bill memory"
                             }
                           },
@@ -14040,7 +14040,7 @@
                           "lValueRequested": false,
                           "memberName": "tokenAddress",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 1755,
+                          "referencedDeclaration": 1763,
                           "src": "6915:17:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -14145,10 +14145,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3108,
-                        3109
+                        3116,
+                        3117
                       ],
-                      "referencedDeclaration": 3109,
+                      "referencedDeclaration": 3117,
                       "src": "6907:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -14199,7 +14199,7 @@
                             "referencedDeclaration": 429,
                             "src": "7024:4:0",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_Bill_$1766_memory_ptr",
+                              "typeIdentifier": "t_struct$_Bill_$1774_memory_ptr",
                               "typeString": "struct ShastaTypes.Bill memory"
                             }
                           },
@@ -14210,7 +14210,7 @@
                           "lValueRequested": false,
                           "memberName": "consumer",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 1759,
+                          "referencedDeclaration": 1767,
                           "src": "7024:13:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -14227,7 +14227,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3105,
+                            "referencedDeclaration": 3113,
                             "src": "7041:3:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -14288,10 +14288,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3108,
-                        3109
+                        3116,
+                        3117
                       ],
-                      "referencedDeclaration": 3109,
+                      "referencedDeclaration": 3117,
                       "src": "7016:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -14342,7 +14342,7 @@
                             "referencedDeclaration": 429,
                             "src": "7091:4:0",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_Bill_$1766_memory_ptr",
+                              "typeIdentifier": "t_struct$_Bill_$1774_memory_ptr",
                               "typeString": "struct ShastaTypes.Bill memory"
                             }
                           },
@@ -14353,7 +14353,7 @@
                           "lValueRequested": false,
                           "memberName": "amount",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 1763,
+                          "referencedDeclaration": 1771,
                           "src": "7091:11:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -14420,10 +14420,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3108,
-                        3109
+                        3116,
+                        3117
                       ],
-                      "referencedDeclaration": 3109,
+                      "referencedDeclaration": 3117,
                       "src": "7083:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -14474,7 +14474,7 @@
                             "referencedDeclaration": 429,
                             "src": "7145:4:0",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_Bill_$1766_memory_ptr",
+                              "typeIdentifier": "t_struct$_Bill_$1774_memory_ptr",
                               "typeString": "struct ShastaTypes.Bill memory"
                             }
                           },
@@ -14485,7 +14485,7 @@
                           "lValueRequested": false,
                           "memberName": "amount",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 1763,
+                          "referencedDeclaration": 1771,
                           "src": "7145:11:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -14502,7 +14502,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3105,
+                            "referencedDeclaration": 3113,
                             "src": "7160:3:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -14563,10 +14563,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3108,
-                        3109
+                        3116,
+                        3117
                       ],
-                      "referencedDeclaration": 3109,
+                      "referencedDeclaration": 3117,
                       "src": "7137:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -14706,10 +14706,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3108,
-                        3109
+                        3116,
+                        3117
                       ],
-                      "referencedDeclaration": 3109,
+                      "referencedDeclaration": 3117,
                       "src": "7231:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -14917,7 +14917,7 @@
                           "referencedDeclaration": 429,
                           "src": "7356:4:0",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Bill_$1766_memory_ptr",
+                            "typeIdentifier": "t_struct$_Bill_$1774_memory_ptr",
                             "typeString": "struct ShastaTypes.Bill memory"
                           }
                         },
@@ -14928,7 +14928,7 @@
                         "lValueRequested": false,
                         "memberName": "seller",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 1757,
+                        "referencedDeclaration": 1765,
                         "src": "7356:11:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -14956,7 +14956,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3105,
+                        "referencedDeclaration": 3113,
                         "src": "7372:3:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -15064,7 +15064,7 @@
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Bill_$1766_memory_ptr",
+                        "typeIdentifier": "t_struct$_Bill_$1774_memory_ptr",
                         "typeString": "struct ShastaTypes.Bill"
                       },
                       "typeName": {
@@ -15072,10 +15072,10 @@
                         "id": 505,
                         "name": "ShastaTypes.Bill",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 1766,
+                        "referencedDeclaration": 1774,
                         "src": "7621:16:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Bill_$1766_storage_ptr",
+                          "typeIdentifier": "t_struct$_Bill_$1774_storage_ptr",
                           "typeString": "struct ShastaTypes.Bill"
                         }
                       },
@@ -15095,7 +15095,7 @@
                       "referencedDeclaration": 17,
                       "src": "7652:5:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_array$_t_struct$_Bill_$1766_storage_$dyn_storage",
+                        "typeIdentifier": "t_array$_t_struct$_Bill_$1774_storage_$dyn_storage",
                         "typeString": "struct ShastaTypes.Bill storage ref[] storage ref"
                       }
                     },
@@ -15120,7 +15120,7 @@
                     "nodeType": "IndexAccess",
                     "src": "7652:16:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_Bill_$1766_storage",
+                      "typeIdentifier": "t_struct$_Bill_$1774_storage",
                       "typeString": "struct ShastaTypes.Bill storage ref"
                     }
                   },
@@ -15153,7 +15153,7 @@
                             "referencedDeclaration": 506,
                             "src": "7682:4:0",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_Bill_$1766_memory_ptr",
+                              "typeIdentifier": "t_struct$_Bill_$1774_memory_ptr",
                               "typeString": "struct ShastaTypes.Bill memory"
                             }
                           },
@@ -15164,7 +15164,7 @@
                           "lValueRequested": false,
                           "memberName": "amount",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 1763,
+                          "referencedDeclaration": 1771,
                           "src": "7682:11:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -15231,10 +15231,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3108,
-                        3109
+                        3116,
+                        3117
                       ],
-                      "referencedDeclaration": 3109,
+                      "referencedDeclaration": 3117,
                       "src": "7674:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -15285,7 +15285,7 @@
                             "referencedDeclaration": 506,
                             "src": "7736:4:0",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_Bill_$1766_memory_ptr",
+                              "typeIdentifier": "t_struct$_Bill_$1774_memory_ptr",
                               "typeString": "struct ShastaTypes.Bill memory"
                             }
                           },
@@ -15296,7 +15296,7 @@
                           "lValueRequested": false,
                           "memberName": "tokenAddress",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 1755,
+                          "referencedDeclaration": 1763,
                           "src": "7736:17:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -15401,10 +15401,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3108,
-                        3109
+                        3116,
+                        3117
                       ],
-                      "referencedDeclaration": 3109,
+                      "referencedDeclaration": 3117,
                       "src": "7728:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -15544,10 +15544,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3108,
-                        3109
+                        3116,
+                        3117
                       ],
-                      "referencedDeclaration": 3109,
+                      "referencedDeclaration": 3117,
                       "src": "7819:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -15587,7 +15587,7 @@
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_IERC20_$2994",
+                        "typeIdentifier": "t_contract$_IERC20_$3002",
                         "typeString": "contract IERC20"
                       },
                       "typeName": {
@@ -15595,10 +15595,10 @@
                         "id": 538,
                         "name": "IERC20",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 2994,
+                        "referencedDeclaration": 3002,
                         "src": "7889:6:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_IERC20_$2994",
+                          "typeIdentifier": "t_contract$_IERC20_$3002",
                           "typeString": "contract IERC20"
                         }
                       },
@@ -15621,7 +15621,7 @@
                           "referencedDeclaration": 506,
                           "src": "7919:4:0",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Bill_$1766_memory_ptr",
+                            "typeIdentifier": "t_struct$_Bill_$1774_memory_ptr",
                             "typeString": "struct ShastaTypes.Bill memory"
                           }
                         },
@@ -15632,7 +15632,7 @@
                         "lValueRequested": false,
                         "memberName": "tokenAddress",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 1755,
+                        "referencedDeclaration": 1763,
                         "src": "7919:17:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -15651,10 +15651,10 @@
                       "name": "IERC20",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2994,
+                      "referencedDeclaration": 3002,
                       "src": "7912:6:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_type$_t_contract$_IERC20_$2994_$",
+                        "typeIdentifier": "t_type$_t_contract$_IERC20_$3002_$",
                         "typeString": "type(contract IERC20)"
                       }
                     },
@@ -15668,7 +15668,7 @@
                     "nodeType": "FunctionCall",
                     "src": "7912:25:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IERC20_$2994",
+                      "typeIdentifier": "t_contract$_IERC20_$3002",
                       "typeString": "contract IERC20"
                     }
                   },
@@ -15690,7 +15690,7 @@
                           "referencedDeclaration": 506,
                           "src": "8035:4:0",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Bill_$1766_memory_ptr",
+                            "typeIdentifier": "t_struct$_Bill_$1774_memory_ptr",
                             "typeString": "struct ShastaTypes.Bill memory"
                           }
                         },
@@ -15701,7 +15701,7 @@
                         "lValueRequested": false,
                         "memberName": "consumer",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 1759,
+                        "referencedDeclaration": 1767,
                         "src": "8035:13:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -15717,7 +15717,7 @@
                             "name": "this",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3128,
+                            "referencedDeclaration": 3136,
                             "src": "8058:4:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_contract$_BillSystem_$584",
@@ -15770,7 +15770,7 @@
                           "referencedDeclaration": 506,
                           "src": "8065:4:0",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Bill_$1766_memory_ptr",
+                            "typeIdentifier": "t_struct$_Bill_$1774_memory_ptr",
                             "typeString": "struct ShastaTypes.Bill memory"
                           }
                         },
@@ -15781,7 +15781,7 @@
                         "lValueRequested": false,
                         "memberName": "amount",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 1763,
+                        "referencedDeclaration": 1771,
                         "src": "8065:11:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -15813,7 +15813,7 @@
                         "referencedDeclaration": 539,
                         "src": "8008:13:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_IERC20_$2994",
+                          "typeIdentifier": "t_contract$_IERC20_$3002",
                           "typeString": "contract IERC20"
                         }
                       },
@@ -15824,7 +15824,7 @@
                       "lValueRequested": false,
                       "memberName": "transferFrom",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2977,
+                      "referencedDeclaration": 2985,
                       "src": "8008:26:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$_t_bool_$",
@@ -15964,7 +15964,7 @@
                             "referencedDeclaration": 506,
                             "src": "8126:4:0",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_Bill_$1766_memory_ptr",
+                              "typeIdentifier": "t_struct$_Bill_$1774_memory_ptr",
                               "typeString": "struct ShastaTypes.Bill memory"
                             }
                           },
@@ -15975,7 +15975,7 @@
                           "lValueRequested": false,
                           "memberName": "tokenAddress",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 1755,
+                          "referencedDeclaration": 1763,
                           "src": "8126:17:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -16005,7 +16005,7 @@
                           "referencedDeclaration": 506,
                           "src": "8145:4:0",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Bill_$1766_memory_ptr",
+                            "typeIdentifier": "t_struct$_Bill_$1774_memory_ptr",
                             "typeString": "struct ShastaTypes.Bill memory"
                           }
                         },
@@ -16016,7 +16016,7 @@
                         "lValueRequested": false,
                         "memberName": "seller",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 1757,
+                        "referencedDeclaration": 1765,
                         "src": "8145:11:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -16047,7 +16047,7 @@
                         "referencedDeclaration": 506,
                         "src": "8161:4:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Bill_$1766_memory_ptr",
+                          "typeIdentifier": "t_struct$_Bill_$1774_memory_ptr",
                           "typeString": "struct ShastaTypes.Bill memory"
                         }
                       },
@@ -16058,7 +16058,7 @@
                       "lValueRequested": false,
                       "memberName": "amount",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1763,
+                      "referencedDeclaration": 1771,
                       "src": "8161:11:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -16103,7 +16103,7 @@
                           "referencedDeclaration": 506,
                           "src": "8203:4:0",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Bill_$1766_memory_ptr",
+                            "typeIdentifier": "t_struct$_Bill_$1774_memory_ptr",
                             "typeString": "struct ShastaTypes.Bill memory"
                           }
                         },
@@ -16114,7 +16114,7 @@
                         "lValueRequested": false,
                         "memberName": "consumer",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 1759,
+                        "referencedDeclaration": 1767,
                         "src": "8203:13:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -16132,7 +16132,7 @@
                           "referencedDeclaration": 506,
                           "src": "8218:4:0",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Bill_$1766_memory_ptr",
+                            "typeIdentifier": "t_struct$_Bill_$1774_memory_ptr",
                             "typeString": "struct ShastaTypes.Bill memory"
                           }
                         },
@@ -16143,7 +16143,7 @@
                         "lValueRequested": false,
                         "memberName": "seller",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 1757,
+                        "referencedDeclaration": 1765,
                         "src": "8218:11:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -16272,10 +16272,10 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x357034397FbddA6c47Fe360fEd10F2fE9A380F1b",
-      "transactionHash": "0xdbe85281866390961344db250eb6692c66087a55d4508f74e5cbadba4e7c409e"
+      "address": "0x6B33837d4257eed2bB96DC4aFb02aa590CBEA0bd",
+      "transactionHash": "0x5c74b1bb00e459ceb48db71a8ee902c6ad1ca65f256ebb4fa440c719e8b7b0a2"
     }
   },
   "schemaVersion": "3.0.0-beta.0",
-  "updatedAt": "2018-10-25T11:25:13.886Z"
+  "updatedAt": "2018-10-26T09:46:19.409Z"
 }

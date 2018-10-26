@@ -365,14 +365,14 @@
     "absolutePath": "/home/ignasi/Documents/projects/ShastaOS/contracts/ShastaMarket.sol",
     "exportedSymbols": {
       "ShastaMarket": [
-        1285
+        1293
       ]
     },
-    "id": 1286,
+    "id": 1294,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1094,
+        "id": 1102,
         "literals": [
           "solidity",
           "^",
@@ -385,10 +385,10 @@
       {
         "absolutePath": "openzeppelin-solidity/contracts/ownership/Ownable.sol",
         "file": "openzeppelin-solidity/contracts/ownership/Ownable.sol",
-        "id": 1095,
+        "id": 1103,
         "nodeType": "ImportDirective",
-        "scope": 1286,
-        "sourceUnit": 2340,
+        "scope": 1294,
+        "sourceUnit": 2348,
         "src": "26:63:5",
         "symbolAliases": [],
         "unitAlias": ""
@@ -396,10 +396,10 @@
       {
         "absolutePath": "openzeppelin-solidity/contracts/lifecycle/Pausable.sol",
         "file": "openzeppelin-solidity/contracts/lifecycle/Pausable.sol",
-        "id": 1096,
+        "id": 1104,
         "nodeType": "ImportDirective",
-        "scope": 1286,
-        "sourceUnit": 2109,
+        "scope": 1294,
+        "sourceUnit": 2117,
         "src": "90:64:5",
         "symbolAliases": [],
         "unitAlias": ""
@@ -407,10 +407,10 @@
       {
         "absolutePath": "/home/ignasi/Documents/projects/ShastaOS/contracts/User.sol",
         "file": "./User.sol",
-        "id": 1097,
+        "id": 1105,
         "nodeType": "ImportDirective",
-        "scope": 1286,
-        "sourceUnit": 1735,
+        "scope": 1294,
+        "sourceUnit": 1743,
         "src": "156:20:5",
         "symbolAliases": [],
         "unitAlias": ""
@@ -421,17 +421,17 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 1098,
+              "id": 1106,
               "name": "Ownable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2339,
+              "referencedDeclaration": 2347,
               "src": "286:7:5",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Ownable_$2339",
+                "typeIdentifier": "t_contract$_Ownable_$2347",
                 "typeString": "contract Ownable"
               }
             },
-            "id": 1099,
+            "id": 1107,
             "nodeType": "InheritanceSpecifier",
             "src": "286:7:5"
           },
@@ -439,61 +439,61 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 1100,
+              "id": 1108,
               "name": "Pausable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2108,
+              "referencedDeclaration": 2116,
               "src": "295:8:5",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Pausable_$2108",
+                "typeIdentifier": "t_contract$_Pausable_$2116",
                 "typeString": "contract Pausable"
               }
             },
-            "id": 1101,
+            "id": 1109,
             "nodeType": "InheritanceSpecifier",
             "src": "295:8:5"
           }
         ],
         "contractDependencies": [
-          2040,
-          2108,
-          2339
+          2048,
+          2116,
+          2347
         ],
         "contractKind": "contract",
         "documentation": "@title ShastaMarketplace\nManage the storage of energy offers\n  ",
         "fullyImplemented": true,
-        "id": 1285,
+        "id": 1293,
         "linearizedBaseContracts": [
-          1285,
-          2108,
-          2040,
-          2339
+          1293,
+          2116,
+          2048,
+          2347
         ],
         "name": "ShastaMarket",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 1103,
+            "id": 1111,
             "name": "userStorage",
             "nodeType": "VariableDeclaration",
-            "scope": 1285,
+            "scope": 1293,
             "src": "310:23:5",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_User_$1734",
+              "typeIdentifier": "t_contract$_User_$1742",
               "typeString": "contract User"
             },
             "typeName": {
               "contractScope": null,
-              "id": 1102,
+              "id": 1110,
               "name": "User",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1734,
+              "referencedDeclaration": 1742,
               "src": "310:4:5",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_User_$1734",
+                "typeIdentifier": "t_contract$_User_$1742",
                 "typeString": "contract User"
               }
             },
@@ -502,10 +502,10 @@
           },
           {
             "constant": false,
-            "id": 1108,
+            "id": 1116,
             "name": "addressToOffersIndex",
             "nodeType": "VariableDeclaration",
-            "scope": 1285,
+            "scope": 1293,
             "src": "339:55:5",
             "stateVariable": true,
             "storageLocation": "default",
@@ -514,9 +514,9 @@
               "typeString": "mapping(address => uint256[])"
             },
             "typeName": {
-              "id": 1107,
+              "id": 1115,
               "keyType": {
-                "id": 1104,
+                "id": 1112,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "347:7:5",
@@ -533,7 +533,7 @@
               },
               "valueType": {
                 "baseType": {
-                  "id": 1105,
+                  "id": 1113,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
                   "src": "358:4:5",
@@ -542,7 +542,7 @@
                     "typeString": "uint256"
                   }
                 },
-                "id": 1106,
+                "id": 1114,
                 "length": null,
                 "nodeType": "ArrayTypeName",
                 "src": "358:6:5",
@@ -557,36 +557,36 @@
           },
           {
             "constant": false,
-            "id": 1111,
+            "id": 1119,
             "name": "offersList",
             "nodeType": "VariableDeclaration",
-            "scope": 1285,
+            "scope": 1293,
             "src": "400:26:5",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_array$_t_struct$_Offer_$1120_storage_$dyn_storage",
+              "typeIdentifier": "t_array$_t_struct$_Offer_$1128_storage_$dyn_storage",
               "typeString": "struct ShastaMarket.Offer[]"
             },
             "typeName": {
               "baseType": {
                 "contractScope": null,
-                "id": 1109,
+                "id": 1117,
                 "name": "Offer",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 1120,
+                "referencedDeclaration": 1128,
                 "src": "400:5:5",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Offer_$1120_storage_ptr",
+                  "typeIdentifier": "t_struct$_Offer_$1128_storage_ptr",
                   "typeString": "struct ShastaMarket.Offer"
                 }
               },
-              "id": 1110,
+              "id": 1118,
               "length": null,
               "nodeType": "ArrayTypeName",
               "src": "400:7:5",
               "typeDescriptions": {
-                "typeIdentifier": "t_array$_t_struct$_Offer_$1120_storage_$dyn_storage_ptr",
+                "typeIdentifier": "t_array$_t_struct$_Offer_$1128_storage_$dyn_storage_ptr",
                 "typeString": "struct ShastaMarket.Offer[]"
               }
             },
@@ -595,10 +595,10 @@
           },
           {
             "constant": false,
-            "id": 1113,
+            "id": 1121,
             "name": "owner",
             "nodeType": "VariableDeclaration",
-            "scope": 1285,
+            "scope": 1293,
             "src": "432:20:5",
             "stateVariable": true,
             "storageLocation": "default",
@@ -607,7 +607,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 1112,
+              "id": 1120,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "432:7:5",
@@ -621,14 +621,14 @@
           },
           {
             "canonicalName": "ShastaMarket.Offer",
-            "id": 1120,
+            "id": 1128,
             "members": [
               {
                 "constant": false,
-                "id": 1115,
+                "id": 1123,
                 "name": "seller",
                 "nodeType": "VariableDeclaration",
-                "scope": 1120,
+                "scope": 1128,
                 "src": "482:14:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -637,7 +637,7 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 1114,
+                  "id": 1122,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "482:7:5",
@@ -651,10 +651,10 @@
               },
               {
                 "constant": false,
-                "id": 1117,
+                "id": 1125,
                 "name": "value",
                 "nodeType": "VariableDeclaration",
-                "scope": 1120,
+                "scope": 1128,
                 "src": "506:10:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -663,7 +663,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 1116,
+                  "id": 1124,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
                   "src": "506:4:5",
@@ -677,10 +677,10 @@
               },
               {
                 "constant": false,
-                "id": 1119,
+                "id": 1127,
                 "name": "isActive",
                 "nodeType": "VariableDeclaration",
-                "scope": 1120,
+                "scope": 1128,
                 "src": "526:13:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -689,7 +689,7 @@
                   "typeString": "bool"
                 },
                 "typeName": {
-                  "id": 1118,
+                  "id": 1126,
                   "name": "bool",
                   "nodeType": "ElementaryTypeName",
                   "src": "526:4:5",
@@ -704,27 +704,27 @@
             ],
             "name": "Offer",
             "nodeType": "StructDefinition",
-            "scope": 1285,
+            "scope": 1293,
             "src": "459:87:5",
             "visibility": "public"
           },
           {
             "anonymous": false,
             "documentation": null,
-            "id": 1126,
+            "id": 1134,
             "name": "newOffer",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 1125,
+              "id": 1133,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1122,
+                  "id": 1130,
                   "indexed": false,
                   "name": "seller",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1126,
+                  "scope": 1134,
                   "src": "567:14:5",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -733,7 +733,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1121,
+                    "id": 1129,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "567:7:5",
@@ -747,11 +747,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 1124,
+                  "id": 1132,
                   "indexed": false,
                   "name": "value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1126,
+                  "scope": 1134,
                   "src": "583:10:5",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -760,7 +760,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1123,
+                    "id": 1131,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "583:4:5",
@@ -780,20 +780,20 @@
           {
             "anonymous": false,
             "documentation": null,
-            "id": 1132,
+            "id": 1140,
             "name": "cancelOfferEvent",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 1131,
+              "id": 1139,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1128,
+                  "id": 1136,
                   "indexed": false,
                   "name": "seller",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1132,
+                  "scope": 1140,
                   "src": "623:14:5",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -802,7 +802,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1127,
+                    "id": 1135,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "623:7:5",
@@ -816,11 +816,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 1130,
+                  "id": 1138,
                   "indexed": false,
                   "name": "value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1132,
+                  "scope": 1140,
                   "src": "639:10:5",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -829,7 +829,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1129,
+                    "id": 1137,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "639:4:5",
@@ -848,7 +848,7 @@
           },
           {
             "body": {
-              "id": 1143,
+              "id": 1151,
               "nodeType": "Block",
               "src": "770:68:5",
               "statements": [
@@ -863,18 +863,18 @@
                             "argumentTypes": null,
                             "expression": {
                               "argumentTypes": null,
-                              "id": 1137,
+                              "id": 1145,
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 3105,
+                              "referencedDeclaration": 3113,
                               "src": "808:3:5",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
                                 "typeString": "msg"
                               }
                             },
-                            "id": 1138,
+                            "id": 1146,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -898,32 +898,32 @@
                           ],
                           "expression": {
                             "argumentTypes": null,
-                            "id": 1135,
+                            "id": 1143,
                             "name": "userStorage",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1103,
+                            "referencedDeclaration": 1111,
                             "src": "788:11:5",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_User_$1734",
+                              "typeIdentifier": "t_contract$_User_$1742",
                               "typeString": "contract User"
                             }
                           },
-                          "id": 1136,
+                          "id": 1144,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "memberName": "hasUser",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 1390,
+                          "referencedDeclaration": 1398,
                           "src": "788:19:5",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_bool_$",
                             "typeString": "function (address) view external returns (bool)"
                           }
                         },
-                        "id": 1139,
+                        "id": 1147,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -945,21 +945,21 @@
                           "typeString": "bool"
                         }
                       ],
-                      "id": 1134,
+                      "id": 1142,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3108,
-                        3109
+                        3116,
+                        3117
                       ],
-                      "referencedDeclaration": 3108,
+                      "referencedDeclaration": 3116,
                       "src": "780:7:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
                         "typeString": "function (bool) pure"
                       }
                     },
-                    "id": 1140,
+                    "id": 1148,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -973,23 +973,23 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1141,
+                  "id": 1149,
                   "nodeType": "ExpressionStatement",
                   "src": "780:40:5"
                 },
                 {
-                  "id": 1142,
+                  "id": 1150,
                   "nodeType": "PlaceholderStatement",
                   "src": "830:1:5"
                 }
               ]
             },
             "documentation": "@dev Throws if non-user is trying to interact with the contract method.",
-            "id": 1144,
+            "id": 1152,
             "name": "onlyUser",
             "nodeType": "ModifierDefinition",
             "parameters": {
-              "id": 1133,
+              "id": 1141,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "767:2:5"
@@ -999,7 +999,7 @@
           },
           {
             "body": {
-              "id": 1195,
+              "id": 1203,
               "nodeType": "Block",
               "src": "1079:279:5",
               "statements": [
@@ -1008,26 +1008,26 @@
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 1154,
+                      "id": 1162,
                       "name": "myOffer",
                       "nodeType": "VariableDeclaration",
-                      "scope": 1196,
+                      "scope": 1204,
                       "src": "1089:20:5",
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Offer_$1120_memory_ptr",
+                        "typeIdentifier": "t_struct$_Offer_$1128_memory_ptr",
                         "typeString": "struct ShastaMarket.Offer"
                       },
                       "typeName": {
                         "contractScope": null,
-                        "id": 1153,
+                        "id": 1161,
                         "name": "Offer",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 1120,
+                        "referencedDeclaration": 1128,
                         "src": "1089:5:5",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Offer_$1120_storage_ptr",
+                          "typeIdentifier": "t_struct$_Offer_$1128_storage_ptr",
                           "typeString": "struct ShastaMarket.Offer"
                         }
                       },
@@ -1035,7 +1035,7 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 1155,
+                  "id": 1163,
                   "initialValue": null,
                   "nodeType": "VariableDeclarationStatement",
                   "src": "1089:20:5"
@@ -1043,7 +1043,7 @@
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 1160,
+                    "id": 1168,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1052,25 +1052,25 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 1156,
+                        "id": 1164,
                         "name": "myOffer",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1154,
+                        "referencedDeclaration": 1162,
                         "src": "1119:7:5",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Offer_$1120_memory_ptr",
+                          "typeIdentifier": "t_struct$_Offer_$1128_memory_ptr",
                           "typeString": "struct ShastaMarket.Offer memory"
                         }
                       },
-                      "id": 1158,
+                      "id": 1166,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "seller",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1115,
+                      "referencedDeclaration": 1123,
                       "src": "1119:14:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -1081,11 +1081,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 1159,
+                      "id": 1167,
                       "name": "_seller",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1148,
+                      "referencedDeclaration": 1156,
                       "src": "1136:7:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -1098,14 +1098,14 @@
                       "typeString": "address"
                     }
                   },
-                  "id": 1161,
+                  "id": 1169,
                   "nodeType": "ExpressionStatement",
                   "src": "1119:24:5"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 1166,
+                    "id": 1174,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1114,25 +1114,25 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 1162,
+                        "id": 1170,
                         "name": "myOffer",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1154,
+                        "referencedDeclaration": 1162,
                         "src": "1153:7:5",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Offer_$1120_memory_ptr",
+                          "typeIdentifier": "t_struct$_Offer_$1128_memory_ptr",
                           "typeString": "struct ShastaMarket.Offer memory"
                         }
                       },
-                      "id": 1164,
+                      "id": 1172,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "value",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1117,
+                      "referencedDeclaration": 1125,
                       "src": "1153:13:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1143,11 +1143,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 1165,
+                      "id": 1173,
                       "name": "_value",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1146,
+                      "referencedDeclaration": 1154,
                       "src": "1169:6:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1160,14 +1160,14 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 1167,
+                  "id": 1175,
                   "nodeType": "ExpressionStatement",
                   "src": "1153:22:5"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 1172,
+                    "id": 1180,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1176,25 +1176,25 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 1168,
+                        "id": 1176,
                         "name": "myOffer",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1154,
+                        "referencedDeclaration": 1162,
                         "src": "1185:7:5",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Offer_$1120_memory_ptr",
+                          "typeIdentifier": "t_struct$_Offer_$1128_memory_ptr",
                           "typeString": "struct ShastaMarket.Offer memory"
                         }
                       },
-                      "id": 1170,
+                      "id": 1178,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "isActive",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1119,
+                      "referencedDeclaration": 1127,
                       "src": "1185:16:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -1206,7 +1206,7 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "74727565",
-                      "id": 1171,
+                      "id": 1179,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -1227,21 +1227,21 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 1173,
+                  "id": 1181,
                   "nodeType": "ExpressionStatement",
                   "src": "1185:23:5"
                 },
                 {
                   "assignments": [
-                    1175
+                    1183
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 1175,
+                      "id": 1183,
                       "name": "index",
                       "nodeType": "VariableDeclaration",
-                      "scope": 1196,
+                      "scope": 1204,
                       "src": "1219:10:5",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -1250,7 +1250,7 @@
                         "typeString": "uint256"
                       },
                       "typeName": {
-                        "id": 1174,
+                        "id": 1182,
                         "name": "uint",
                         "nodeType": "ElementaryTypeName",
                         "src": "1219:4:5",
@@ -1263,14 +1263,14 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 1182,
+                  "id": 1190,
                   "initialValue": {
                     "argumentTypes": null,
                     "commonType": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 1181,
+                    "id": 1189,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1280,14 +1280,14 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "id": 1178,
+                          "id": 1186,
                           "name": "myOffer",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1154,
+                          "referencedDeclaration": 1162,
                           "src": "1248:7:5",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Offer_$1120_memory_ptr",
+                            "typeIdentifier": "t_struct$_Offer_$1128_memory_ptr",
                             "typeString": "struct ShastaMarket.Offer memory"
                           }
                         }
@@ -1295,24 +1295,24 @@
                       "expression": {
                         "argumentTypes": [
                           {
-                            "typeIdentifier": "t_struct$_Offer_$1120_memory_ptr",
+                            "typeIdentifier": "t_struct$_Offer_$1128_memory_ptr",
                             "typeString": "struct ShastaMarket.Offer memory"
                           }
                         ],
                         "expression": {
                           "argumentTypes": null,
-                          "id": 1176,
+                          "id": 1184,
                           "name": "offersList",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1111,
+                          "referencedDeclaration": 1119,
                           "src": "1232:10:5",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_array$_t_struct$_Offer_$1120_storage_$dyn_storage",
+                            "typeIdentifier": "t_array$_t_struct$_Offer_$1128_storage_$dyn_storage",
                             "typeString": "struct ShastaMarket.Offer storage ref[] storage ref"
                           }
                         },
-                        "id": 1177,
+                        "id": 1185,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1322,11 +1322,11 @@
                         "referencedDeclaration": null,
                         "src": "1232:15:5",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_Offer_$1120_storage_$returns$_t_uint256_$",
+                          "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_Offer_$1128_storage_$returns$_t_uint256_$",
                           "typeString": "function (struct ShastaMarket.Offer storage ref) returns (uint256)"
                         }
                       },
-                      "id": 1179,
+                      "id": 1187,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1345,7 +1345,7 @@
                     "rightExpression": {
                       "argumentTypes": null,
                       "hexValue": "31",
-                      "id": 1180,
+                      "id": 1188,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -1375,11 +1375,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1187,
+                        "id": 1195,
                         "name": "index",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1175,
+                        "referencedDeclaration": 1183,
                         "src": "1305:5:5",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -1398,25 +1398,25 @@
                         "argumentTypes": null,
                         "baseExpression": {
                           "argumentTypes": null,
-                          "id": 1183,
+                          "id": 1191,
                           "name": "addressToOffersIndex",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1108,
+                          "referencedDeclaration": 1116,
                           "src": "1270:20:5",
                           "typeDescriptions": {
                             "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_uint256_$dyn_storage_$",
                             "typeString": "mapping(address => uint256[] storage ref)"
                           }
                         },
-                        "id": 1185,
+                        "id": 1193,
                         "indexExpression": {
                           "argumentTypes": null,
-                          "id": 1184,
+                          "id": 1192,
                           "name": "_seller",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1148,
+                          "referencedDeclaration": 1156,
                           "src": "1291:7:5",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -1434,7 +1434,7 @@
                           "typeString": "uint256[] storage ref"
                         }
                       },
-                      "id": 1186,
+                      "id": 1194,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1448,7 +1448,7 @@
                         "typeString": "function (uint256) returns (uint256)"
                       }
                     },
-                    "id": 1188,
+                    "id": 1196,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1462,7 +1462,7 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 1189,
+                  "id": 1197,
                   "nodeType": "ExpressionStatement",
                   "src": "1270:41:5"
                 },
@@ -1472,11 +1472,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1191,
+                        "id": 1199,
                         "name": "_seller",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1148,
+                        "referencedDeclaration": 1156,
                         "src": "1335:7:5",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1485,11 +1485,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1192,
+                        "id": 1200,
                         "name": "_value",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1146,
+                        "referencedDeclaration": 1154,
                         "src": "1344:6:5",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -1508,18 +1508,18 @@
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 1190,
+                      "id": 1198,
                       "name": "newOffer",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1126,
+                      "referencedDeclaration": 1134,
                       "src": "1326:8:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_uint256_$returns$__$",
                         "typeString": "function (address,uint256)"
                       }
                     },
-                    "id": 1193,
+                    "id": 1201,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1533,28 +1533,28 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1194,
+                  "id": 1202,
                   "nodeType": "EmitStatement",
                   "src": "1321:30:5"
                 }
               ]
             },
             "documentation": "@dev Save a new energy offer.\n@param _value the price of the unit of energy\n@param _seller the address of the energy producer",
-            "id": 1196,
+            "id": 1204,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
             "modifiers": [
               {
                 "arguments": null,
-                "id": 1151,
+                "id": 1159,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 1150,
+                  "id": 1158,
                   "name": "whenNotPaused",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 2069,
+                  "referencedDeclaration": 2077,
                   "src": "1065:13:5",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -1568,15 +1568,15 @@
             "name": "createOffer",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1149,
+              "id": 1157,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1146,
+                  "id": 1154,
                   "name": "_value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1196,
+                  "scope": 1204,
                   "src": "1028:11:5",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1585,7 +1585,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1145,
+                    "id": 1153,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "1028:4:5",
@@ -1599,10 +1599,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1148,
+                  "id": 1156,
                   "name": "_seller",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1196,
+                  "scope": 1204,
                   "src": "1041:15:5",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1611,7 +1611,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1147,
+                    "id": 1155,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1041:7:5",
@@ -1628,12 +1628,12 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 1152,
+              "id": 1160,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1079:0:5"
             },
-            "scope": 1285,
+            "scope": 1293,
             "src": "1007:351:5",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1641,7 +1641,7 @@
           },
           {
             "body": {
-              "id": 1229,
+              "id": 1237,
               "nodeType": "Block",
               "src": "1563:171:5",
               "statements": [
@@ -1655,7 +1655,7 @@
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         },
-                        "id": 1211,
+                        "id": 1219,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1666,25 +1666,25 @@
                             "argumentTypes": null,
                             "baseExpression": {
                               "argumentTypes": null,
-                              "id": 1206,
+                              "id": 1214,
                               "name": "offersList",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1111,
+                              "referencedDeclaration": 1119,
                               "src": "1581:10:5",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_array$_t_struct$_Offer_$1120_storage_$dyn_storage",
+                                "typeIdentifier": "t_array$_t_struct$_Offer_$1128_storage_$dyn_storage",
                                 "typeString": "struct ShastaMarket.Offer storage ref[] storage ref"
                               }
                             },
-                            "id": 1208,
+                            "id": 1216,
                             "indexExpression": {
                               "argumentTypes": null,
-                              "id": 1207,
+                              "id": 1215,
                               "name": "_id",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1198,
+                              "referencedDeclaration": 1206,
                               "src": "1592:3:5",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
@@ -1698,18 +1698,18 @@
                             "nodeType": "IndexAccess",
                             "src": "1581:15:5",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_Offer_$1120_storage",
+                              "typeIdentifier": "t_struct$_Offer_$1128_storage",
                               "typeString": "struct ShastaMarket.Offer storage ref"
                             }
                           },
-                          "id": 1209,
+                          "id": 1217,
                           "isConstant": false,
                           "isLValue": true,
                           "isPure": false,
                           "lValueRequested": false,
                           "memberName": "seller",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 1115,
+                          "referencedDeclaration": 1123,
                           "src": "1581:22:5",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -1720,11 +1720,11 @@
                         "operator": "==",
                         "rightExpression": {
                           "argumentTypes": null,
-                          "id": 1210,
+                          "id": 1218,
                           "name": "sender",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1200,
+                          "referencedDeclaration": 1208,
                           "src": "1607:6:5",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -1745,21 +1745,21 @@
                           "typeString": "bool"
                         }
                       ],
-                      "id": 1205,
+                      "id": 1213,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3108,
-                        3109
+                        3116,
+                        3117
                       ],
-                      "referencedDeclaration": 3108,
+                      "referencedDeclaration": 3116,
                       "src": "1573:7:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
                         "typeString": "function (bool) pure"
                       }
                     },
-                    "id": 1212,
+                    "id": 1220,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1773,14 +1773,14 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1213,
+                  "id": 1221,
                   "nodeType": "ExpressionStatement",
                   "src": "1573:41:5"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 1219,
+                    "id": 1227,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1791,25 +1791,25 @@
                         "argumentTypes": null,
                         "baseExpression": {
                           "argumentTypes": null,
-                          "id": 1214,
+                          "id": 1222,
                           "name": "offersList",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1111,
+                          "referencedDeclaration": 1119,
                           "src": "1624:10:5",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_array$_t_struct$_Offer_$1120_storage_$dyn_storage",
+                            "typeIdentifier": "t_array$_t_struct$_Offer_$1128_storage_$dyn_storage",
                             "typeString": "struct ShastaMarket.Offer storage ref[] storage ref"
                           }
                         },
-                        "id": 1216,
+                        "id": 1224,
                         "indexExpression": {
                           "argumentTypes": null,
-                          "id": 1215,
+                          "id": 1223,
                           "name": "_id",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1198,
+                          "referencedDeclaration": 1206,
                           "src": "1635:3:5",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -1823,18 +1823,18 @@
                         "nodeType": "IndexAccess",
                         "src": "1624:15:5",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Offer_$1120_storage",
+                          "typeIdentifier": "t_struct$_Offer_$1128_storage",
                           "typeString": "struct ShastaMarket.Offer storage ref"
                         }
                       },
-                      "id": 1217,
+                      "id": 1225,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "isActive",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1119,
+                      "referencedDeclaration": 1127,
                       "src": "1624:24:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -1846,7 +1846,7 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "66616c7365",
-                      "id": 1218,
+                      "id": 1226,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -1867,7 +1867,7 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 1220,
+                  "id": 1228,
                   "nodeType": "ExpressionStatement",
                   "src": "1624:32:5"
                 },
@@ -1877,11 +1877,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1222,
+                        "id": 1230,
                         "name": "sender",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1200,
+                        "referencedDeclaration": 1208,
                         "src": "1688:6:5",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1894,25 +1894,25 @@
                           "argumentTypes": null,
                           "baseExpression": {
                             "argumentTypes": null,
-                            "id": 1223,
+                            "id": 1231,
                             "name": "offersList",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1111,
+                            "referencedDeclaration": 1119,
                             "src": "1696:10:5",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_array$_t_struct$_Offer_$1120_storage_$dyn_storage",
+                              "typeIdentifier": "t_array$_t_struct$_Offer_$1128_storage_$dyn_storage",
                               "typeString": "struct ShastaMarket.Offer storage ref[] storage ref"
                             }
                           },
-                          "id": 1225,
+                          "id": 1233,
                           "indexExpression": {
                             "argumentTypes": null,
-                            "id": 1224,
+                            "id": 1232,
                             "name": "_id",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1198,
+                            "referencedDeclaration": 1206,
                             "src": "1707:3:5",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -1926,18 +1926,18 @@
                           "nodeType": "IndexAccess",
                           "src": "1696:15:5",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Offer_$1120_storage",
+                            "typeIdentifier": "t_struct$_Offer_$1128_storage",
                             "typeString": "struct ShastaMarket.Offer storage ref"
                           }
                         },
-                        "id": 1226,
+                        "id": 1234,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "value",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 1117,
+                        "referencedDeclaration": 1125,
                         "src": "1696:21:5",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -1956,18 +1956,18 @@
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 1221,
+                      "id": 1229,
                       "name": "cancelOfferEvent",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1132,
+                      "referencedDeclaration": 1140,
                       "src": "1671:16:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_uint256_$returns$__$",
                         "typeString": "function (address,uint256)"
                       }
                     },
-                    "id": 1227,
+                    "id": 1235,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1981,28 +1981,28 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1228,
+                  "id": 1236,
                   "nodeType": "EmitStatement",
                   "src": "1666:52:5"
                 }
               ]
             },
             "documentation": "@dev Cancel an offer. Only offer owners can cancel their offer\n@param _id The id of the offer to cancel",
-            "id": 1230,
+            "id": 1238,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
             "modifiers": [
               {
                 "arguments": null,
-                "id": 1203,
+                "id": 1211,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 1202,
+                  "id": 1210,
                   "name": "whenNotPaused",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 2069,
+                  "referencedDeclaration": 2077,
                   "src": "1549:13:5",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -2016,15 +2016,15 @@
             "name": "cancelOffer",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1201,
+              "id": 1209,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1198,
+                  "id": 1206,
                   "name": "_id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1230,
+                  "scope": 1238,
                   "src": "1516:8:5",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2033,7 +2033,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1197,
+                    "id": 1205,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "1516:4:5",
@@ -2047,10 +2047,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1200,
+                  "id": 1208,
                   "name": "sender",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1230,
+                  "scope": 1238,
                   "src": "1526:14:5",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2059,7 +2059,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1199,
+                    "id": 1207,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1526:7:5",
@@ -2076,12 +2076,12 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 1204,
+              "id": 1212,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1563:0:5"
             },
-            "scope": 1285,
+            "scope": 1293,
             "src": "1495:239:5",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -2089,7 +2089,7 @@
           },
           {
             "body": {
-              "id": 1262,
+              "id": 1270,
               "nodeType": "Block",
               "src": "2040:151:5",
               "statements": [
@@ -2103,7 +2103,7 @@
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         },
-                        "id": 1245,
+                        "id": 1253,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -2112,18 +2112,18 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 1242,
+                            "id": 1250,
                             "name": "offersList",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1111,
+                            "referencedDeclaration": 1119,
                             "src": "2058:10:5",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_array$_t_struct$_Offer_$1120_storage_$dyn_storage",
+                              "typeIdentifier": "t_array$_t_struct$_Offer_$1128_storage_$dyn_storage",
                               "typeString": "struct ShastaMarket.Offer storage ref[] storage ref"
                             }
                           },
-                          "id": 1243,
+                          "id": 1251,
                           "isConstant": false,
                           "isLValue": true,
                           "isPure": false,
@@ -2141,11 +2141,11 @@
                         "operator": ">",
                         "rightExpression": {
                           "argumentTypes": null,
-                          "id": 1244,
+                          "id": 1252,
                           "name": "_index",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1232,
+                          "referencedDeclaration": 1240,
                           "src": "2078:6:5",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -2166,21 +2166,21 @@
                           "typeString": "bool"
                         }
                       ],
-                      "id": 1241,
+                      "id": 1249,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3108,
-                        3109
+                        3116,
+                        3117
                       ],
-                      "referencedDeclaration": 3108,
+                      "referencedDeclaration": 3116,
                       "src": "2050:7:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
                         "typeString": "function (bool) pure"
                       }
                     },
-                    "id": 1246,
+                    "id": 1254,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2194,7 +2194,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1247,
+                  "id": 1255,
                   "nodeType": "ExpressionStatement",
                   "src": "2050:35:5"
                 },
@@ -2208,25 +2208,25 @@
                           "argumentTypes": null,
                           "baseExpression": {
                             "argumentTypes": null,
-                            "id": 1248,
+                            "id": 1256,
                             "name": "offersList",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1111,
+                            "referencedDeclaration": 1119,
                             "src": "2103:10:5",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_array$_t_struct$_Offer_$1120_storage_$dyn_storage",
+                              "typeIdentifier": "t_array$_t_struct$_Offer_$1128_storage_$dyn_storage",
                               "typeString": "struct ShastaMarket.Offer storage ref[] storage ref"
                             }
                           },
-                          "id": 1250,
+                          "id": 1258,
                           "indexExpression": {
                             "argumentTypes": null,
-                            "id": 1249,
+                            "id": 1257,
                             "name": "_index",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1232,
+                            "referencedDeclaration": 1240,
                             "src": "2114:6:5",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -2240,18 +2240,18 @@
                           "nodeType": "IndexAccess",
                           "src": "2103:18:5",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Offer_$1120_storage",
+                            "typeIdentifier": "t_struct$_Offer_$1128_storage",
                             "typeString": "struct ShastaMarket.Offer storage ref"
                           }
                         },
-                        "id": 1251,
+                        "id": 1259,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "value",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 1117,
+                        "referencedDeclaration": 1125,
                         "src": "2103:24:5",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -2264,25 +2264,25 @@
                           "argumentTypes": null,
                           "baseExpression": {
                             "argumentTypes": null,
-                            "id": 1252,
+                            "id": 1260,
                             "name": "offersList",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1111,
+                            "referencedDeclaration": 1119,
                             "src": "2129:10:5",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_array$_t_struct$_Offer_$1120_storage_$dyn_storage",
+                              "typeIdentifier": "t_array$_t_struct$_Offer_$1128_storage_$dyn_storage",
                               "typeString": "struct ShastaMarket.Offer storage ref[] storage ref"
                             }
                           },
-                          "id": 1254,
+                          "id": 1262,
                           "indexExpression": {
                             "argumentTypes": null,
-                            "id": 1253,
+                            "id": 1261,
                             "name": "_index",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1232,
+                            "referencedDeclaration": 1240,
                             "src": "2140:6:5",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -2296,18 +2296,18 @@
                           "nodeType": "IndexAccess",
                           "src": "2129:18:5",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Offer_$1120_storage",
+                            "typeIdentifier": "t_struct$_Offer_$1128_storage",
                             "typeString": "struct ShastaMarket.Offer storage ref"
                           }
                         },
-                        "id": 1255,
+                        "id": 1263,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "seller",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 1115,
+                        "referencedDeclaration": 1123,
                         "src": "2129:25:5",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -2320,25 +2320,25 @@
                           "argumentTypes": null,
                           "baseExpression": {
                             "argumentTypes": null,
-                            "id": 1256,
+                            "id": 1264,
                             "name": "offersList",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1111,
+                            "referencedDeclaration": 1119,
                             "src": "2156:10:5",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_array$_t_struct$_Offer_$1120_storage_$dyn_storage",
+                              "typeIdentifier": "t_array$_t_struct$_Offer_$1128_storage_$dyn_storage",
                               "typeString": "struct ShastaMarket.Offer storage ref[] storage ref"
                             }
                           },
-                          "id": 1258,
+                          "id": 1266,
                           "indexExpression": {
                             "argumentTypes": null,
-                            "id": 1257,
+                            "id": 1265,
                             "name": "_index",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1232,
+                            "referencedDeclaration": 1240,
                             "src": "2167:6:5",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -2352,18 +2352,18 @@
                           "nodeType": "IndexAccess",
                           "src": "2156:18:5",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Offer_$1120_storage",
+                            "typeIdentifier": "t_struct$_Offer_$1128_storage",
                             "typeString": "struct ShastaMarket.Offer storage ref"
                           }
                         },
-                        "id": 1259,
+                        "id": 1267,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "isActive",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 1119,
+                        "referencedDeclaration": 1127,
                         "src": "2156:27:5",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
@@ -2371,7 +2371,7 @@
                         }
                       }
                     ],
-                    "id": 1260,
+                    "id": 1268,
                     "isConstant": false,
                     "isInlineArray": false,
                     "isLValue": false,
@@ -2384,15 +2384,15 @@
                       "typeString": "tuple(uint256,address,bool)"
                     }
                   },
-                  "functionReturnParameters": 1240,
-                  "id": 1261,
+                  "functionReturnParameters": 1248,
+                  "id": 1269,
                   "nodeType": "Return",
                   "src": "2095:89:5"
                 }
               ]
             },
             "documentation": "@dev Get offer by index\n@param _index The index the offer to cancel\n@return uint The energy unit price\n@return address The seller address\n@return bool The state of the offer",
-            "id": 1263,
+            "id": 1271,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -2400,15 +2400,15 @@
             "name": "getOfferFromIndex",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1233,
+              "id": 1241,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1232,
+                  "id": 1240,
                   "name": "_index",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1263,
+                  "scope": 1271,
                   "src": "1986:11:5",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2417,7 +2417,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1231,
+                    "id": 1239,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "1986:4:5",
@@ -2434,15 +2434,15 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 1240,
+              "id": 1248,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1235,
+                  "id": 1243,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1263,
+                  "scope": 1271,
                   "src": "2019:4:5",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2451,7 +2451,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1234,
+                    "id": 1242,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "2019:4:5",
@@ -2465,10 +2465,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1237,
+                  "id": 1245,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1263,
+                  "scope": 1271,
                   "src": "2025:7:5",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2477,7 +2477,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1236,
+                    "id": 1244,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "2025:7:5",
@@ -2491,10 +2491,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1239,
+                  "id": 1247,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1263,
+                  "scope": 1271,
                   "src": "2034:4:5",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2503,7 +2503,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 1238,
+                    "id": 1246,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "2034:4:5",
@@ -2518,7 +2518,7 @@
               ],
               "src": "2018:21:5"
             },
-            "scope": 1285,
+            "scope": 1293,
             "src": "1959:232:5",
             "stateMutability": "view",
             "superFunction": null,
@@ -2526,7 +2526,7 @@
           },
           {
             "body": {
-              "id": 1274,
+              "id": 1282,
               "nodeType": "Block",
               "src": "2361:56:5",
               "statements": [
@@ -2535,34 +2535,34 @@
                     "argumentTypes": null,
                     "baseExpression": {
                       "argumentTypes": null,
-                      "id": 1269,
+                      "id": 1277,
                       "name": "addressToOffersIndex",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1108,
+                      "referencedDeclaration": 1116,
                       "src": "2378:20:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_uint256_$dyn_storage_$",
                         "typeString": "mapping(address => uint256[] storage ref)"
                       }
                     },
-                    "id": 1272,
+                    "id": 1280,
                     "indexExpression": {
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 1270,
+                        "id": 1278,
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3105,
+                        "referencedDeclaration": 3113,
                         "src": "2399:3:5",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
                           "typeString": "msg"
                         }
                       },
-                      "id": 1271,
+                      "id": 1279,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -2587,15 +2587,15 @@
                       "typeString": "uint256[] storage ref"
                     }
                   },
-                  "functionReturnParameters": 1268,
-                  "id": 1273,
+                  "functionReturnParameters": 1276,
+                  "id": 1281,
                   "nodeType": "Return",
                   "src": "2371:39:5"
                 }
               ]
             },
             "documentation": "@dev Get user offer indexes\n@return uint[bool] The list of indexes",
-            "id": 1275,
+            "id": 1283,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -2603,22 +2603,22 @@
             "name": "getOfferIndexesFromAddress",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1264,
+              "id": 1272,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2330:2:5"
             },
             "payable": false,
             "returnParameters": {
-              "id": 1268,
+              "id": 1276,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1267,
+                  "id": 1275,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1275,
+                  "scope": 1283,
                   "src": "2353:6:5",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2628,7 +2628,7 @@
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 1265,
+                      "id": 1273,
                       "name": "uint",
                       "nodeType": "ElementaryTypeName",
                       "src": "2353:4:5",
@@ -2637,7 +2637,7 @@
                         "typeString": "uint256"
                       }
                     },
-                    "id": 1266,
+                    "id": 1274,
                     "length": null,
                     "nodeType": "ArrayTypeName",
                     "src": "2353:6:5",
@@ -2652,7 +2652,7 @@
               ],
               "src": "2352:8:5"
             },
-            "scope": 1285,
+            "scope": 1293,
             "src": "2295:122:5",
             "stateMutability": "view",
             "superFunction": null,
@@ -2660,7 +2660,7 @@
           },
           {
             "body": {
-              "id": 1283,
+              "id": 1291,
               "nodeType": "Block",
               "src": "2569:41:5",
               "statements": [
@@ -2669,18 +2669,18 @@
                     "argumentTypes": null,
                     "expression": {
                       "argumentTypes": null,
-                      "id": 1280,
+                      "id": 1288,
                       "name": "offersList",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1111,
+                      "referencedDeclaration": 1119,
                       "src": "2586:10:5",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_array$_t_struct$_Offer_$1120_storage_$dyn_storage",
+                        "typeIdentifier": "t_array$_t_struct$_Offer_$1128_storage_$dyn_storage",
                         "typeString": "struct ShastaMarket.Offer storage ref[] storage ref"
                       }
                     },
-                    "id": 1281,
+                    "id": 1289,
                     "isConstant": false,
                     "isLValue": true,
                     "isPure": false,
@@ -2694,15 +2694,15 @@
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 1279,
-                  "id": 1282,
+                  "functionReturnParameters": 1287,
+                  "id": 1290,
                   "nodeType": "Return",
                   "src": "2579:24:5"
                 }
               ]
             },
             "documentation": "@dev Get offers length\n@return bool The length of the offers list",
-            "id": 1284,
+            "id": 1292,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -2710,22 +2710,22 @@
             "name": "getOffersLength",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1276,
+              "id": 1284,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2540:2:5"
             },
             "payable": false,
             "returnParameters": {
-              "id": 1279,
+              "id": 1287,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1278,
+                  "id": 1286,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1284,
+                  "scope": 1292,
                   "src": "2563:4:5",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2734,7 +2734,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1277,
+                    "id": 1285,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "2563:4:5",
@@ -2749,14 +2749,14 @@
               ],
               "src": "2562:6:5"
             },
-            "scope": 1285,
+            "scope": 1293,
             "src": "2516:94:5",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 1286,
+        "scope": 1294,
         "src": "261:2351:5"
       }
     ],
@@ -2766,14 +2766,14 @@
     "absolutePath": "/home/ignasi/Documents/projects/ShastaOS/contracts/ShastaMarket.sol",
     "exportedSymbols": {
       "ShastaMarket": [
-        1285
+        1293
       ]
     },
-    "id": 1286,
+    "id": 1294,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1094,
+        "id": 1102,
         "literals": [
           "solidity",
           "^",
@@ -2786,10 +2786,10 @@
       {
         "absolutePath": "openzeppelin-solidity/contracts/ownership/Ownable.sol",
         "file": "openzeppelin-solidity/contracts/ownership/Ownable.sol",
-        "id": 1095,
+        "id": 1103,
         "nodeType": "ImportDirective",
-        "scope": 1286,
-        "sourceUnit": 2340,
+        "scope": 1294,
+        "sourceUnit": 2348,
         "src": "26:63:5",
         "symbolAliases": [],
         "unitAlias": ""
@@ -2797,10 +2797,10 @@
       {
         "absolutePath": "openzeppelin-solidity/contracts/lifecycle/Pausable.sol",
         "file": "openzeppelin-solidity/contracts/lifecycle/Pausable.sol",
-        "id": 1096,
+        "id": 1104,
         "nodeType": "ImportDirective",
-        "scope": 1286,
-        "sourceUnit": 2109,
+        "scope": 1294,
+        "sourceUnit": 2117,
         "src": "90:64:5",
         "symbolAliases": [],
         "unitAlias": ""
@@ -2808,10 +2808,10 @@
       {
         "absolutePath": "/home/ignasi/Documents/projects/ShastaOS/contracts/User.sol",
         "file": "./User.sol",
-        "id": 1097,
+        "id": 1105,
         "nodeType": "ImportDirective",
-        "scope": 1286,
-        "sourceUnit": 1735,
+        "scope": 1294,
+        "sourceUnit": 1743,
         "src": "156:20:5",
         "symbolAliases": [],
         "unitAlias": ""
@@ -2822,17 +2822,17 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 1098,
+              "id": 1106,
               "name": "Ownable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2339,
+              "referencedDeclaration": 2347,
               "src": "286:7:5",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Ownable_$2339",
+                "typeIdentifier": "t_contract$_Ownable_$2347",
                 "typeString": "contract Ownable"
               }
             },
-            "id": 1099,
+            "id": 1107,
             "nodeType": "InheritanceSpecifier",
             "src": "286:7:5"
           },
@@ -2840,61 +2840,61 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 1100,
+              "id": 1108,
               "name": "Pausable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2108,
+              "referencedDeclaration": 2116,
               "src": "295:8:5",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Pausable_$2108",
+                "typeIdentifier": "t_contract$_Pausable_$2116",
                 "typeString": "contract Pausable"
               }
             },
-            "id": 1101,
+            "id": 1109,
             "nodeType": "InheritanceSpecifier",
             "src": "295:8:5"
           }
         ],
         "contractDependencies": [
-          2040,
-          2108,
-          2339
+          2048,
+          2116,
+          2347
         ],
         "contractKind": "contract",
         "documentation": "@title ShastaMarketplace\nManage the storage of energy offers\n  ",
         "fullyImplemented": true,
-        "id": 1285,
+        "id": 1293,
         "linearizedBaseContracts": [
-          1285,
-          2108,
-          2040,
-          2339
+          1293,
+          2116,
+          2048,
+          2347
         ],
         "name": "ShastaMarket",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 1103,
+            "id": 1111,
             "name": "userStorage",
             "nodeType": "VariableDeclaration",
-            "scope": 1285,
+            "scope": 1293,
             "src": "310:23:5",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_User_$1734",
+              "typeIdentifier": "t_contract$_User_$1742",
               "typeString": "contract User"
             },
             "typeName": {
               "contractScope": null,
-              "id": 1102,
+              "id": 1110,
               "name": "User",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1734,
+              "referencedDeclaration": 1742,
               "src": "310:4:5",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_User_$1734",
+                "typeIdentifier": "t_contract$_User_$1742",
                 "typeString": "contract User"
               }
             },
@@ -2903,10 +2903,10 @@
           },
           {
             "constant": false,
-            "id": 1108,
+            "id": 1116,
             "name": "addressToOffersIndex",
             "nodeType": "VariableDeclaration",
-            "scope": 1285,
+            "scope": 1293,
             "src": "339:55:5",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2915,9 +2915,9 @@
               "typeString": "mapping(address => uint256[])"
             },
             "typeName": {
-              "id": 1107,
+              "id": 1115,
               "keyType": {
-                "id": 1104,
+                "id": 1112,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "347:7:5",
@@ -2934,7 +2934,7 @@
               },
               "valueType": {
                 "baseType": {
-                  "id": 1105,
+                  "id": 1113,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
                   "src": "358:4:5",
@@ -2943,7 +2943,7 @@
                     "typeString": "uint256"
                   }
                 },
-                "id": 1106,
+                "id": 1114,
                 "length": null,
                 "nodeType": "ArrayTypeName",
                 "src": "358:6:5",
@@ -2958,36 +2958,36 @@
           },
           {
             "constant": false,
-            "id": 1111,
+            "id": 1119,
             "name": "offersList",
             "nodeType": "VariableDeclaration",
-            "scope": 1285,
+            "scope": 1293,
             "src": "400:26:5",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_array$_t_struct$_Offer_$1120_storage_$dyn_storage",
+              "typeIdentifier": "t_array$_t_struct$_Offer_$1128_storage_$dyn_storage",
               "typeString": "struct ShastaMarket.Offer[]"
             },
             "typeName": {
               "baseType": {
                 "contractScope": null,
-                "id": 1109,
+                "id": 1117,
                 "name": "Offer",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 1120,
+                "referencedDeclaration": 1128,
                 "src": "400:5:5",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Offer_$1120_storage_ptr",
+                  "typeIdentifier": "t_struct$_Offer_$1128_storage_ptr",
                   "typeString": "struct ShastaMarket.Offer"
                 }
               },
-              "id": 1110,
+              "id": 1118,
               "length": null,
               "nodeType": "ArrayTypeName",
               "src": "400:7:5",
               "typeDescriptions": {
-                "typeIdentifier": "t_array$_t_struct$_Offer_$1120_storage_$dyn_storage_ptr",
+                "typeIdentifier": "t_array$_t_struct$_Offer_$1128_storage_$dyn_storage_ptr",
                 "typeString": "struct ShastaMarket.Offer[]"
               }
             },
@@ -2996,10 +2996,10 @@
           },
           {
             "constant": false,
-            "id": 1113,
+            "id": 1121,
             "name": "owner",
             "nodeType": "VariableDeclaration",
-            "scope": 1285,
+            "scope": 1293,
             "src": "432:20:5",
             "stateVariable": true,
             "storageLocation": "default",
@@ -3008,7 +3008,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 1112,
+              "id": 1120,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "432:7:5",
@@ -3022,14 +3022,14 @@
           },
           {
             "canonicalName": "ShastaMarket.Offer",
-            "id": 1120,
+            "id": 1128,
             "members": [
               {
                 "constant": false,
-                "id": 1115,
+                "id": 1123,
                 "name": "seller",
                 "nodeType": "VariableDeclaration",
-                "scope": 1120,
+                "scope": 1128,
                 "src": "482:14:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -3038,7 +3038,7 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 1114,
+                  "id": 1122,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "482:7:5",
@@ -3052,10 +3052,10 @@
               },
               {
                 "constant": false,
-                "id": 1117,
+                "id": 1125,
                 "name": "value",
                 "nodeType": "VariableDeclaration",
-                "scope": 1120,
+                "scope": 1128,
                 "src": "506:10:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -3064,7 +3064,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 1116,
+                  "id": 1124,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
                   "src": "506:4:5",
@@ -3078,10 +3078,10 @@
               },
               {
                 "constant": false,
-                "id": 1119,
+                "id": 1127,
                 "name": "isActive",
                 "nodeType": "VariableDeclaration",
-                "scope": 1120,
+                "scope": 1128,
                 "src": "526:13:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -3090,7 +3090,7 @@
                   "typeString": "bool"
                 },
                 "typeName": {
-                  "id": 1118,
+                  "id": 1126,
                   "name": "bool",
                   "nodeType": "ElementaryTypeName",
                   "src": "526:4:5",
@@ -3105,27 +3105,27 @@
             ],
             "name": "Offer",
             "nodeType": "StructDefinition",
-            "scope": 1285,
+            "scope": 1293,
             "src": "459:87:5",
             "visibility": "public"
           },
           {
             "anonymous": false,
             "documentation": null,
-            "id": 1126,
+            "id": 1134,
             "name": "newOffer",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 1125,
+              "id": 1133,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1122,
+                  "id": 1130,
                   "indexed": false,
                   "name": "seller",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1126,
+                  "scope": 1134,
                   "src": "567:14:5",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3134,7 +3134,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1121,
+                    "id": 1129,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "567:7:5",
@@ -3148,11 +3148,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 1124,
+                  "id": 1132,
                   "indexed": false,
                   "name": "value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1126,
+                  "scope": 1134,
                   "src": "583:10:5",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3161,7 +3161,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1123,
+                    "id": 1131,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "583:4:5",
@@ -3181,20 +3181,20 @@
           {
             "anonymous": false,
             "documentation": null,
-            "id": 1132,
+            "id": 1140,
             "name": "cancelOfferEvent",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 1131,
+              "id": 1139,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1128,
+                  "id": 1136,
                   "indexed": false,
                   "name": "seller",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1132,
+                  "scope": 1140,
                   "src": "623:14:5",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3203,7 +3203,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1127,
+                    "id": 1135,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "623:7:5",
@@ -3217,11 +3217,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 1130,
+                  "id": 1138,
                   "indexed": false,
                   "name": "value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1132,
+                  "scope": 1140,
                   "src": "639:10:5",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3230,7 +3230,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1129,
+                    "id": 1137,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "639:4:5",
@@ -3249,7 +3249,7 @@
           },
           {
             "body": {
-              "id": 1143,
+              "id": 1151,
               "nodeType": "Block",
               "src": "770:68:5",
               "statements": [
@@ -3264,18 +3264,18 @@
                             "argumentTypes": null,
                             "expression": {
                               "argumentTypes": null,
-                              "id": 1137,
+                              "id": 1145,
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 3105,
+                              "referencedDeclaration": 3113,
                               "src": "808:3:5",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
                                 "typeString": "msg"
                               }
                             },
-                            "id": 1138,
+                            "id": 1146,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -3299,32 +3299,32 @@
                           ],
                           "expression": {
                             "argumentTypes": null,
-                            "id": 1135,
+                            "id": 1143,
                             "name": "userStorage",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1103,
+                            "referencedDeclaration": 1111,
                             "src": "788:11:5",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_User_$1734",
+                              "typeIdentifier": "t_contract$_User_$1742",
                               "typeString": "contract User"
                             }
                           },
-                          "id": 1136,
+                          "id": 1144,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "memberName": "hasUser",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 1390,
+                          "referencedDeclaration": 1398,
                           "src": "788:19:5",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_bool_$",
                             "typeString": "function (address) view external returns (bool)"
                           }
                         },
-                        "id": 1139,
+                        "id": 1147,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -3346,21 +3346,21 @@
                           "typeString": "bool"
                         }
                       ],
-                      "id": 1134,
+                      "id": 1142,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3108,
-                        3109
+                        3116,
+                        3117
                       ],
-                      "referencedDeclaration": 3108,
+                      "referencedDeclaration": 3116,
                       "src": "780:7:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
                         "typeString": "function (bool) pure"
                       }
                     },
-                    "id": 1140,
+                    "id": 1148,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3374,23 +3374,23 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1141,
+                  "id": 1149,
                   "nodeType": "ExpressionStatement",
                   "src": "780:40:5"
                 },
                 {
-                  "id": 1142,
+                  "id": 1150,
                   "nodeType": "PlaceholderStatement",
                   "src": "830:1:5"
                 }
               ]
             },
             "documentation": "@dev Throws if non-user is trying to interact with the contract method.",
-            "id": 1144,
+            "id": 1152,
             "name": "onlyUser",
             "nodeType": "ModifierDefinition",
             "parameters": {
-              "id": 1133,
+              "id": 1141,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "767:2:5"
@@ -3400,7 +3400,7 @@
           },
           {
             "body": {
-              "id": 1195,
+              "id": 1203,
               "nodeType": "Block",
               "src": "1079:279:5",
               "statements": [
@@ -3409,26 +3409,26 @@
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 1154,
+                      "id": 1162,
                       "name": "myOffer",
                       "nodeType": "VariableDeclaration",
-                      "scope": 1196,
+                      "scope": 1204,
                       "src": "1089:20:5",
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Offer_$1120_memory_ptr",
+                        "typeIdentifier": "t_struct$_Offer_$1128_memory_ptr",
                         "typeString": "struct ShastaMarket.Offer"
                       },
                       "typeName": {
                         "contractScope": null,
-                        "id": 1153,
+                        "id": 1161,
                         "name": "Offer",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 1120,
+                        "referencedDeclaration": 1128,
                         "src": "1089:5:5",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Offer_$1120_storage_ptr",
+                          "typeIdentifier": "t_struct$_Offer_$1128_storage_ptr",
                           "typeString": "struct ShastaMarket.Offer"
                         }
                       },
@@ -3436,7 +3436,7 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 1155,
+                  "id": 1163,
                   "initialValue": null,
                   "nodeType": "VariableDeclarationStatement",
                   "src": "1089:20:5"
@@ -3444,7 +3444,7 @@
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 1160,
+                    "id": 1168,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3453,25 +3453,25 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 1156,
+                        "id": 1164,
                         "name": "myOffer",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1154,
+                        "referencedDeclaration": 1162,
                         "src": "1119:7:5",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Offer_$1120_memory_ptr",
+                          "typeIdentifier": "t_struct$_Offer_$1128_memory_ptr",
                           "typeString": "struct ShastaMarket.Offer memory"
                         }
                       },
-                      "id": 1158,
+                      "id": 1166,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "seller",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1115,
+                      "referencedDeclaration": 1123,
                       "src": "1119:14:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -3482,11 +3482,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 1159,
+                      "id": 1167,
                       "name": "_seller",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1148,
+                      "referencedDeclaration": 1156,
                       "src": "1136:7:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -3499,14 +3499,14 @@
                       "typeString": "address"
                     }
                   },
-                  "id": 1161,
+                  "id": 1169,
                   "nodeType": "ExpressionStatement",
                   "src": "1119:24:5"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 1166,
+                    "id": 1174,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3515,25 +3515,25 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 1162,
+                        "id": 1170,
                         "name": "myOffer",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1154,
+                        "referencedDeclaration": 1162,
                         "src": "1153:7:5",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Offer_$1120_memory_ptr",
+                          "typeIdentifier": "t_struct$_Offer_$1128_memory_ptr",
                           "typeString": "struct ShastaMarket.Offer memory"
                         }
                       },
-                      "id": 1164,
+                      "id": 1172,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "value",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1117,
+                      "referencedDeclaration": 1125,
                       "src": "1153:13:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -3544,11 +3544,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 1165,
+                      "id": 1173,
                       "name": "_value",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1146,
+                      "referencedDeclaration": 1154,
                       "src": "1169:6:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -3561,14 +3561,14 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 1167,
+                  "id": 1175,
                   "nodeType": "ExpressionStatement",
                   "src": "1153:22:5"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 1172,
+                    "id": 1180,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3577,25 +3577,25 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 1168,
+                        "id": 1176,
                         "name": "myOffer",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1154,
+                        "referencedDeclaration": 1162,
                         "src": "1185:7:5",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Offer_$1120_memory_ptr",
+                          "typeIdentifier": "t_struct$_Offer_$1128_memory_ptr",
                           "typeString": "struct ShastaMarket.Offer memory"
                         }
                       },
-                      "id": 1170,
+                      "id": 1178,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "isActive",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1119,
+                      "referencedDeclaration": 1127,
                       "src": "1185:16:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -3607,7 +3607,7 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "74727565",
-                      "id": 1171,
+                      "id": 1179,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -3628,21 +3628,21 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 1173,
+                  "id": 1181,
                   "nodeType": "ExpressionStatement",
                   "src": "1185:23:5"
                 },
                 {
                   "assignments": [
-                    1175
+                    1183
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 1175,
+                      "id": 1183,
                       "name": "index",
                       "nodeType": "VariableDeclaration",
-                      "scope": 1196,
+                      "scope": 1204,
                       "src": "1219:10:5",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -3651,7 +3651,7 @@
                         "typeString": "uint256"
                       },
                       "typeName": {
-                        "id": 1174,
+                        "id": 1182,
                         "name": "uint",
                         "nodeType": "ElementaryTypeName",
                         "src": "1219:4:5",
@@ -3664,14 +3664,14 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 1182,
+                  "id": 1190,
                   "initialValue": {
                     "argumentTypes": null,
                     "commonType": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 1181,
+                    "id": 1189,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3681,14 +3681,14 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "id": 1178,
+                          "id": 1186,
                           "name": "myOffer",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1154,
+                          "referencedDeclaration": 1162,
                           "src": "1248:7:5",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Offer_$1120_memory_ptr",
+                            "typeIdentifier": "t_struct$_Offer_$1128_memory_ptr",
                             "typeString": "struct ShastaMarket.Offer memory"
                           }
                         }
@@ -3696,24 +3696,24 @@
                       "expression": {
                         "argumentTypes": [
                           {
-                            "typeIdentifier": "t_struct$_Offer_$1120_memory_ptr",
+                            "typeIdentifier": "t_struct$_Offer_$1128_memory_ptr",
                             "typeString": "struct ShastaMarket.Offer memory"
                           }
                         ],
                         "expression": {
                           "argumentTypes": null,
-                          "id": 1176,
+                          "id": 1184,
                           "name": "offersList",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1111,
+                          "referencedDeclaration": 1119,
                           "src": "1232:10:5",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_array$_t_struct$_Offer_$1120_storage_$dyn_storage",
+                            "typeIdentifier": "t_array$_t_struct$_Offer_$1128_storage_$dyn_storage",
                             "typeString": "struct ShastaMarket.Offer storage ref[] storage ref"
                           }
                         },
-                        "id": 1177,
+                        "id": 1185,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -3723,11 +3723,11 @@
                         "referencedDeclaration": null,
                         "src": "1232:15:5",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_Offer_$1120_storage_$returns$_t_uint256_$",
+                          "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_Offer_$1128_storage_$returns$_t_uint256_$",
                           "typeString": "function (struct ShastaMarket.Offer storage ref) returns (uint256)"
                         }
                       },
-                      "id": 1179,
+                      "id": 1187,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -3746,7 +3746,7 @@
                     "rightExpression": {
                       "argumentTypes": null,
                       "hexValue": "31",
-                      "id": 1180,
+                      "id": 1188,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -3776,11 +3776,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1187,
+                        "id": 1195,
                         "name": "index",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1175,
+                        "referencedDeclaration": 1183,
                         "src": "1305:5:5",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -3799,25 +3799,25 @@
                         "argumentTypes": null,
                         "baseExpression": {
                           "argumentTypes": null,
-                          "id": 1183,
+                          "id": 1191,
                           "name": "addressToOffersIndex",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1108,
+                          "referencedDeclaration": 1116,
                           "src": "1270:20:5",
                           "typeDescriptions": {
                             "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_uint256_$dyn_storage_$",
                             "typeString": "mapping(address => uint256[] storage ref)"
                           }
                         },
-                        "id": 1185,
+                        "id": 1193,
                         "indexExpression": {
                           "argumentTypes": null,
-                          "id": 1184,
+                          "id": 1192,
                           "name": "_seller",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1148,
+                          "referencedDeclaration": 1156,
                           "src": "1291:7:5",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -3835,7 +3835,7 @@
                           "typeString": "uint256[] storage ref"
                         }
                       },
-                      "id": 1186,
+                      "id": 1194,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -3849,7 +3849,7 @@
                         "typeString": "function (uint256) returns (uint256)"
                       }
                     },
-                    "id": 1188,
+                    "id": 1196,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3863,7 +3863,7 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 1189,
+                  "id": 1197,
                   "nodeType": "ExpressionStatement",
                   "src": "1270:41:5"
                 },
@@ -3873,11 +3873,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1191,
+                        "id": 1199,
                         "name": "_seller",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1148,
+                        "referencedDeclaration": 1156,
                         "src": "1335:7:5",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -3886,11 +3886,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1192,
+                        "id": 1200,
                         "name": "_value",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1146,
+                        "referencedDeclaration": 1154,
                         "src": "1344:6:5",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -3909,18 +3909,18 @@
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 1190,
+                      "id": 1198,
                       "name": "newOffer",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1126,
+                      "referencedDeclaration": 1134,
                       "src": "1326:8:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_uint256_$returns$__$",
                         "typeString": "function (address,uint256)"
                       }
                     },
-                    "id": 1193,
+                    "id": 1201,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3934,28 +3934,28 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1194,
+                  "id": 1202,
                   "nodeType": "EmitStatement",
                   "src": "1321:30:5"
                 }
               ]
             },
             "documentation": "@dev Save a new energy offer.\n@param _value the price of the unit of energy\n@param _seller the address of the energy producer",
-            "id": 1196,
+            "id": 1204,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
             "modifiers": [
               {
                 "arguments": null,
-                "id": 1151,
+                "id": 1159,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 1150,
+                  "id": 1158,
                   "name": "whenNotPaused",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 2069,
+                  "referencedDeclaration": 2077,
                   "src": "1065:13:5",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -3969,15 +3969,15 @@
             "name": "createOffer",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1149,
+              "id": 1157,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1146,
+                  "id": 1154,
                   "name": "_value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1196,
+                  "scope": 1204,
                   "src": "1028:11:5",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3986,7 +3986,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1145,
+                    "id": 1153,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "1028:4:5",
@@ -4000,10 +4000,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1148,
+                  "id": 1156,
                   "name": "_seller",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1196,
+                  "scope": 1204,
                   "src": "1041:15:5",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4012,7 +4012,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1147,
+                    "id": 1155,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1041:7:5",
@@ -4029,12 +4029,12 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 1152,
+              "id": 1160,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1079:0:5"
             },
-            "scope": 1285,
+            "scope": 1293,
             "src": "1007:351:5",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -4042,7 +4042,7 @@
           },
           {
             "body": {
-              "id": 1229,
+              "id": 1237,
               "nodeType": "Block",
               "src": "1563:171:5",
               "statements": [
@@ -4056,7 +4056,7 @@
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         },
-                        "id": 1211,
+                        "id": 1219,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -4067,25 +4067,25 @@
                             "argumentTypes": null,
                             "baseExpression": {
                               "argumentTypes": null,
-                              "id": 1206,
+                              "id": 1214,
                               "name": "offersList",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1111,
+                              "referencedDeclaration": 1119,
                               "src": "1581:10:5",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_array$_t_struct$_Offer_$1120_storage_$dyn_storage",
+                                "typeIdentifier": "t_array$_t_struct$_Offer_$1128_storage_$dyn_storage",
                                 "typeString": "struct ShastaMarket.Offer storage ref[] storage ref"
                               }
                             },
-                            "id": 1208,
+                            "id": 1216,
                             "indexExpression": {
                               "argumentTypes": null,
-                              "id": 1207,
+                              "id": 1215,
                               "name": "_id",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1198,
+                              "referencedDeclaration": 1206,
                               "src": "1592:3:5",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
@@ -4099,18 +4099,18 @@
                             "nodeType": "IndexAccess",
                             "src": "1581:15:5",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_Offer_$1120_storage",
+                              "typeIdentifier": "t_struct$_Offer_$1128_storage",
                               "typeString": "struct ShastaMarket.Offer storage ref"
                             }
                           },
-                          "id": 1209,
+                          "id": 1217,
                           "isConstant": false,
                           "isLValue": true,
                           "isPure": false,
                           "lValueRequested": false,
                           "memberName": "seller",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 1115,
+                          "referencedDeclaration": 1123,
                           "src": "1581:22:5",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -4121,11 +4121,11 @@
                         "operator": "==",
                         "rightExpression": {
                           "argumentTypes": null,
-                          "id": 1210,
+                          "id": 1218,
                           "name": "sender",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1200,
+                          "referencedDeclaration": 1208,
                           "src": "1607:6:5",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -4146,21 +4146,21 @@
                           "typeString": "bool"
                         }
                       ],
-                      "id": 1205,
+                      "id": 1213,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3108,
-                        3109
+                        3116,
+                        3117
                       ],
-                      "referencedDeclaration": 3108,
+                      "referencedDeclaration": 3116,
                       "src": "1573:7:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
                         "typeString": "function (bool) pure"
                       }
                     },
-                    "id": 1212,
+                    "id": 1220,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -4174,14 +4174,14 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1213,
+                  "id": 1221,
                   "nodeType": "ExpressionStatement",
                   "src": "1573:41:5"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 1219,
+                    "id": 1227,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -4192,25 +4192,25 @@
                         "argumentTypes": null,
                         "baseExpression": {
                           "argumentTypes": null,
-                          "id": 1214,
+                          "id": 1222,
                           "name": "offersList",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1111,
+                          "referencedDeclaration": 1119,
                           "src": "1624:10:5",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_array$_t_struct$_Offer_$1120_storage_$dyn_storage",
+                            "typeIdentifier": "t_array$_t_struct$_Offer_$1128_storage_$dyn_storage",
                             "typeString": "struct ShastaMarket.Offer storage ref[] storage ref"
                           }
                         },
-                        "id": 1216,
+                        "id": 1224,
                         "indexExpression": {
                           "argumentTypes": null,
-                          "id": 1215,
+                          "id": 1223,
                           "name": "_id",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1198,
+                          "referencedDeclaration": 1206,
                           "src": "1635:3:5",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -4224,18 +4224,18 @@
                         "nodeType": "IndexAccess",
                         "src": "1624:15:5",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Offer_$1120_storage",
+                          "typeIdentifier": "t_struct$_Offer_$1128_storage",
                           "typeString": "struct ShastaMarket.Offer storage ref"
                         }
                       },
-                      "id": 1217,
+                      "id": 1225,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "isActive",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1119,
+                      "referencedDeclaration": 1127,
                       "src": "1624:24:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -4247,7 +4247,7 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "66616c7365",
-                      "id": 1218,
+                      "id": 1226,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -4268,7 +4268,7 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 1220,
+                  "id": 1228,
                   "nodeType": "ExpressionStatement",
                   "src": "1624:32:5"
                 },
@@ -4278,11 +4278,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1222,
+                        "id": 1230,
                         "name": "sender",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1200,
+                        "referencedDeclaration": 1208,
                         "src": "1688:6:5",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -4295,25 +4295,25 @@
                           "argumentTypes": null,
                           "baseExpression": {
                             "argumentTypes": null,
-                            "id": 1223,
+                            "id": 1231,
                             "name": "offersList",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1111,
+                            "referencedDeclaration": 1119,
                             "src": "1696:10:5",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_array$_t_struct$_Offer_$1120_storage_$dyn_storage",
+                              "typeIdentifier": "t_array$_t_struct$_Offer_$1128_storage_$dyn_storage",
                               "typeString": "struct ShastaMarket.Offer storage ref[] storage ref"
                             }
                           },
-                          "id": 1225,
+                          "id": 1233,
                           "indexExpression": {
                             "argumentTypes": null,
-                            "id": 1224,
+                            "id": 1232,
                             "name": "_id",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1198,
+                            "referencedDeclaration": 1206,
                             "src": "1707:3:5",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -4327,18 +4327,18 @@
                           "nodeType": "IndexAccess",
                           "src": "1696:15:5",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Offer_$1120_storage",
+                            "typeIdentifier": "t_struct$_Offer_$1128_storage",
                             "typeString": "struct ShastaMarket.Offer storage ref"
                           }
                         },
-                        "id": 1226,
+                        "id": 1234,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "value",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 1117,
+                        "referencedDeclaration": 1125,
                         "src": "1696:21:5",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -4357,18 +4357,18 @@
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 1221,
+                      "id": 1229,
                       "name": "cancelOfferEvent",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1132,
+                      "referencedDeclaration": 1140,
                       "src": "1671:16:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_uint256_$returns$__$",
                         "typeString": "function (address,uint256)"
                       }
                     },
-                    "id": 1227,
+                    "id": 1235,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -4382,28 +4382,28 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1228,
+                  "id": 1236,
                   "nodeType": "EmitStatement",
                   "src": "1666:52:5"
                 }
               ]
             },
             "documentation": "@dev Cancel an offer. Only offer owners can cancel their offer\n@param _id The id of the offer to cancel",
-            "id": 1230,
+            "id": 1238,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
             "modifiers": [
               {
                 "arguments": null,
-                "id": 1203,
+                "id": 1211,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 1202,
+                  "id": 1210,
                   "name": "whenNotPaused",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 2069,
+                  "referencedDeclaration": 2077,
                   "src": "1549:13:5",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -4417,15 +4417,15 @@
             "name": "cancelOffer",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1201,
+              "id": 1209,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1198,
+                  "id": 1206,
                   "name": "_id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1230,
+                  "scope": 1238,
                   "src": "1516:8:5",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4434,7 +4434,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1197,
+                    "id": 1205,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "1516:4:5",
@@ -4448,10 +4448,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1200,
+                  "id": 1208,
                   "name": "sender",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1230,
+                  "scope": 1238,
                   "src": "1526:14:5",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4460,7 +4460,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1199,
+                    "id": 1207,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1526:7:5",
@@ -4477,12 +4477,12 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 1204,
+              "id": 1212,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1563:0:5"
             },
-            "scope": 1285,
+            "scope": 1293,
             "src": "1495:239:5",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -4490,7 +4490,7 @@
           },
           {
             "body": {
-              "id": 1262,
+              "id": 1270,
               "nodeType": "Block",
               "src": "2040:151:5",
               "statements": [
@@ -4504,7 +4504,7 @@
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         },
-                        "id": 1245,
+                        "id": 1253,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -4513,18 +4513,18 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 1242,
+                            "id": 1250,
                             "name": "offersList",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1111,
+                            "referencedDeclaration": 1119,
                             "src": "2058:10:5",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_array$_t_struct$_Offer_$1120_storage_$dyn_storage",
+                              "typeIdentifier": "t_array$_t_struct$_Offer_$1128_storage_$dyn_storage",
                               "typeString": "struct ShastaMarket.Offer storage ref[] storage ref"
                             }
                           },
-                          "id": 1243,
+                          "id": 1251,
                           "isConstant": false,
                           "isLValue": true,
                           "isPure": false,
@@ -4542,11 +4542,11 @@
                         "operator": ">",
                         "rightExpression": {
                           "argumentTypes": null,
-                          "id": 1244,
+                          "id": 1252,
                           "name": "_index",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1232,
+                          "referencedDeclaration": 1240,
                           "src": "2078:6:5",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -4567,21 +4567,21 @@
                           "typeString": "bool"
                         }
                       ],
-                      "id": 1241,
+                      "id": 1249,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3108,
-                        3109
+                        3116,
+                        3117
                       ],
-                      "referencedDeclaration": 3108,
+                      "referencedDeclaration": 3116,
                       "src": "2050:7:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
                         "typeString": "function (bool) pure"
                       }
                     },
-                    "id": 1246,
+                    "id": 1254,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -4595,7 +4595,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1247,
+                  "id": 1255,
                   "nodeType": "ExpressionStatement",
                   "src": "2050:35:5"
                 },
@@ -4609,25 +4609,25 @@
                           "argumentTypes": null,
                           "baseExpression": {
                             "argumentTypes": null,
-                            "id": 1248,
+                            "id": 1256,
                             "name": "offersList",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1111,
+                            "referencedDeclaration": 1119,
                             "src": "2103:10:5",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_array$_t_struct$_Offer_$1120_storage_$dyn_storage",
+                              "typeIdentifier": "t_array$_t_struct$_Offer_$1128_storage_$dyn_storage",
                               "typeString": "struct ShastaMarket.Offer storage ref[] storage ref"
                             }
                           },
-                          "id": 1250,
+                          "id": 1258,
                           "indexExpression": {
                             "argumentTypes": null,
-                            "id": 1249,
+                            "id": 1257,
                             "name": "_index",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1232,
+                            "referencedDeclaration": 1240,
                             "src": "2114:6:5",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -4641,18 +4641,18 @@
                           "nodeType": "IndexAccess",
                           "src": "2103:18:5",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Offer_$1120_storage",
+                            "typeIdentifier": "t_struct$_Offer_$1128_storage",
                             "typeString": "struct ShastaMarket.Offer storage ref"
                           }
                         },
-                        "id": 1251,
+                        "id": 1259,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "value",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 1117,
+                        "referencedDeclaration": 1125,
                         "src": "2103:24:5",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -4665,25 +4665,25 @@
                           "argumentTypes": null,
                           "baseExpression": {
                             "argumentTypes": null,
-                            "id": 1252,
+                            "id": 1260,
                             "name": "offersList",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1111,
+                            "referencedDeclaration": 1119,
                             "src": "2129:10:5",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_array$_t_struct$_Offer_$1120_storage_$dyn_storage",
+                              "typeIdentifier": "t_array$_t_struct$_Offer_$1128_storage_$dyn_storage",
                               "typeString": "struct ShastaMarket.Offer storage ref[] storage ref"
                             }
                           },
-                          "id": 1254,
+                          "id": 1262,
                           "indexExpression": {
                             "argumentTypes": null,
-                            "id": 1253,
+                            "id": 1261,
                             "name": "_index",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1232,
+                            "referencedDeclaration": 1240,
                             "src": "2140:6:5",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -4697,18 +4697,18 @@
                           "nodeType": "IndexAccess",
                           "src": "2129:18:5",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Offer_$1120_storage",
+                            "typeIdentifier": "t_struct$_Offer_$1128_storage",
                             "typeString": "struct ShastaMarket.Offer storage ref"
                           }
                         },
-                        "id": 1255,
+                        "id": 1263,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "seller",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 1115,
+                        "referencedDeclaration": 1123,
                         "src": "2129:25:5",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -4721,25 +4721,25 @@
                           "argumentTypes": null,
                           "baseExpression": {
                             "argumentTypes": null,
-                            "id": 1256,
+                            "id": 1264,
                             "name": "offersList",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1111,
+                            "referencedDeclaration": 1119,
                             "src": "2156:10:5",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_array$_t_struct$_Offer_$1120_storage_$dyn_storage",
+                              "typeIdentifier": "t_array$_t_struct$_Offer_$1128_storage_$dyn_storage",
                               "typeString": "struct ShastaMarket.Offer storage ref[] storage ref"
                             }
                           },
-                          "id": 1258,
+                          "id": 1266,
                           "indexExpression": {
                             "argumentTypes": null,
-                            "id": 1257,
+                            "id": 1265,
                             "name": "_index",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1232,
+                            "referencedDeclaration": 1240,
                             "src": "2167:6:5",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -4753,18 +4753,18 @@
                           "nodeType": "IndexAccess",
                           "src": "2156:18:5",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Offer_$1120_storage",
+                            "typeIdentifier": "t_struct$_Offer_$1128_storage",
                             "typeString": "struct ShastaMarket.Offer storage ref"
                           }
                         },
-                        "id": 1259,
+                        "id": 1267,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "isActive",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 1119,
+                        "referencedDeclaration": 1127,
                         "src": "2156:27:5",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
@@ -4772,7 +4772,7 @@
                         }
                       }
                     ],
-                    "id": 1260,
+                    "id": 1268,
                     "isConstant": false,
                     "isInlineArray": false,
                     "isLValue": false,
@@ -4785,15 +4785,15 @@
                       "typeString": "tuple(uint256,address,bool)"
                     }
                   },
-                  "functionReturnParameters": 1240,
-                  "id": 1261,
+                  "functionReturnParameters": 1248,
+                  "id": 1269,
                   "nodeType": "Return",
                   "src": "2095:89:5"
                 }
               ]
             },
             "documentation": "@dev Get offer by index\n@param _index The index the offer to cancel\n@return uint The energy unit price\n@return address The seller address\n@return bool The state of the offer",
-            "id": 1263,
+            "id": 1271,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -4801,15 +4801,15 @@
             "name": "getOfferFromIndex",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1233,
+              "id": 1241,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1232,
+                  "id": 1240,
                   "name": "_index",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1263,
+                  "scope": 1271,
                   "src": "1986:11:5",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4818,7 +4818,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1231,
+                    "id": 1239,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "1986:4:5",
@@ -4835,15 +4835,15 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 1240,
+              "id": 1248,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1235,
+                  "id": 1243,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1263,
+                  "scope": 1271,
                   "src": "2019:4:5",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4852,7 +4852,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1234,
+                    "id": 1242,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "2019:4:5",
@@ -4866,10 +4866,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1237,
+                  "id": 1245,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1263,
+                  "scope": 1271,
                   "src": "2025:7:5",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4878,7 +4878,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1236,
+                    "id": 1244,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "2025:7:5",
@@ -4892,10 +4892,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1239,
+                  "id": 1247,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1263,
+                  "scope": 1271,
                   "src": "2034:4:5",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4904,7 +4904,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 1238,
+                    "id": 1246,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "2034:4:5",
@@ -4919,7 +4919,7 @@
               ],
               "src": "2018:21:5"
             },
-            "scope": 1285,
+            "scope": 1293,
             "src": "1959:232:5",
             "stateMutability": "view",
             "superFunction": null,
@@ -4927,7 +4927,7 @@
           },
           {
             "body": {
-              "id": 1274,
+              "id": 1282,
               "nodeType": "Block",
               "src": "2361:56:5",
               "statements": [
@@ -4936,34 +4936,34 @@
                     "argumentTypes": null,
                     "baseExpression": {
                       "argumentTypes": null,
-                      "id": 1269,
+                      "id": 1277,
                       "name": "addressToOffersIndex",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1108,
+                      "referencedDeclaration": 1116,
                       "src": "2378:20:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_uint256_$dyn_storage_$",
                         "typeString": "mapping(address => uint256[] storage ref)"
                       }
                     },
-                    "id": 1272,
+                    "id": 1280,
                     "indexExpression": {
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 1270,
+                        "id": 1278,
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3105,
+                        "referencedDeclaration": 3113,
                         "src": "2399:3:5",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
                           "typeString": "msg"
                         }
                       },
-                      "id": 1271,
+                      "id": 1279,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -4988,15 +4988,15 @@
                       "typeString": "uint256[] storage ref"
                     }
                   },
-                  "functionReturnParameters": 1268,
-                  "id": 1273,
+                  "functionReturnParameters": 1276,
+                  "id": 1281,
                   "nodeType": "Return",
                   "src": "2371:39:5"
                 }
               ]
             },
             "documentation": "@dev Get user offer indexes\n@return uint[bool] The list of indexes",
-            "id": 1275,
+            "id": 1283,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -5004,22 +5004,22 @@
             "name": "getOfferIndexesFromAddress",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1264,
+              "id": 1272,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2330:2:5"
             },
             "payable": false,
             "returnParameters": {
-              "id": 1268,
+              "id": 1276,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1267,
+                  "id": 1275,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1275,
+                  "scope": 1283,
                   "src": "2353:6:5",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -5029,7 +5029,7 @@
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 1265,
+                      "id": 1273,
                       "name": "uint",
                       "nodeType": "ElementaryTypeName",
                       "src": "2353:4:5",
@@ -5038,7 +5038,7 @@
                         "typeString": "uint256"
                       }
                     },
-                    "id": 1266,
+                    "id": 1274,
                     "length": null,
                     "nodeType": "ArrayTypeName",
                     "src": "2353:6:5",
@@ -5053,7 +5053,7 @@
               ],
               "src": "2352:8:5"
             },
-            "scope": 1285,
+            "scope": 1293,
             "src": "2295:122:5",
             "stateMutability": "view",
             "superFunction": null,
@@ -5061,7 +5061,7 @@
           },
           {
             "body": {
-              "id": 1283,
+              "id": 1291,
               "nodeType": "Block",
               "src": "2569:41:5",
               "statements": [
@@ -5070,18 +5070,18 @@
                     "argumentTypes": null,
                     "expression": {
                       "argumentTypes": null,
-                      "id": 1280,
+                      "id": 1288,
                       "name": "offersList",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1111,
+                      "referencedDeclaration": 1119,
                       "src": "2586:10:5",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_array$_t_struct$_Offer_$1120_storage_$dyn_storage",
+                        "typeIdentifier": "t_array$_t_struct$_Offer_$1128_storage_$dyn_storage",
                         "typeString": "struct ShastaMarket.Offer storage ref[] storage ref"
                       }
                     },
-                    "id": 1281,
+                    "id": 1289,
                     "isConstant": false,
                     "isLValue": true,
                     "isPure": false,
@@ -5095,15 +5095,15 @@
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 1279,
-                  "id": 1282,
+                  "functionReturnParameters": 1287,
+                  "id": 1290,
                   "nodeType": "Return",
                   "src": "2579:24:5"
                 }
               ]
             },
             "documentation": "@dev Get offers length\n@return bool The length of the offers list",
-            "id": 1284,
+            "id": 1292,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -5111,22 +5111,22 @@
             "name": "getOffersLength",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1276,
+              "id": 1284,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2540:2:5"
             },
             "payable": false,
             "returnParameters": {
-              "id": 1279,
+              "id": 1287,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1278,
+                  "id": 1286,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1284,
+                  "scope": 1292,
                   "src": "2563:4:5",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -5135,7 +5135,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1277,
+                    "id": 1285,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "2563:4:5",
@@ -5150,14 +5150,14 @@
               ],
               "src": "2562:6:5"
             },
-            "scope": 1285,
+            "scope": 1293,
             "src": "2516:94:5",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 1286,
+        "scope": 1294,
         "src": "261:2351:5"
       }
     ],
@@ -5177,10 +5177,10 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x57215469378EF5E8980434E7b4869a94521703Bc",
-      "transactionHash": "0xebc5730c91ed09b34831c392ba203e4db97864ce116145b3689ed775ee372613"
+      "address": "0x9b50F832De92e66E73ba121191B97E0Aec223eb2",
+      "transactionHash": "0x181b50daea0a2ae8a8c4afcc2db1b50ba4a627e6a2bb451eb9b7fb15cf7927b4"
     }
   },
   "schemaVersion": "3.0.0-beta.0",
-  "updatedAt": "2018-10-25T11:25:13.878Z"
+  "updatedAt": "2018-10-26T09:46:19.404Z"
 }
