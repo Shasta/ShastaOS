@@ -18,11 +18,11 @@ library ShastaTypes {
   struct Bill {
     uint256 whConsumed;
     address tokenAddress; // If tokenAddress 0x00 == ETHER as payment
-    address seller;
-    address consumer;
     uint256 price;
     uint256 amount;
+    uint256 round;
     string ipfsMetadata;
+    bool initialized;
   }
 
 }

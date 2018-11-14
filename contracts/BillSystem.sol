@@ -2,42 +2,59 @@ pragma solidity ^0.4.24;
 
 import "openzeppelin-solidity/contracts/ownership/Ownable.sol";
 import "openzeppelin-solidity/contracts/token/ERC20/IERC20.sol";
-import "zos-lib/contracts/migrations/Migratable.sol";
+import "zos-lib/contracts/Initializable.sol";
 import "./libraries/ShastaTypes.sol";
-import "./ContractRegistry.sol";
+import "./libraries/strings.sol";
+import "./Rounds.sol";
 
 /**
  * @title BillSystem
  */
-contract BillSystem is Ownable, Migratable {
+contract BillSystem is Ownable, Initializable {
+  using strings for *;
+  Rounds roundsRegistry;
 
-  address public contractRegistryAddress;
-  ContractRegistry contractRegistry;
-
-  ShastaTypes.Bill[] public bills;
-  
-  mapping(address => uint256[]) sellerBillIndex;
-  mapping(address => uint256[]) consumerBillIndex;
-  mapping(address => string) consumerMetadataIpfs;
-  mapping(uint => bool) isBillPaid;
+  mapping(bytes32 => ShastaTypes.Bill) bills;
+  mapping(bytes32 => bool) public isBillPaid;
   // mapping of token addresses to mapping of account balances (token=0 means Ether)
   mapping (address => mapping (address => uint)) public balances; 
 
-  event NewBill(address consumer, address seller, uint index);
-  event Newseller(address seller);
-  event BillPaid(uint index, address consumer, address seller);
+  event NewBill(bytes32 billId);
+  event BillPaid(bytes32 billId);
 
   // Upgradeable contract pattern with initializer using zeppelinOS way.
-  function initialize() public isInitializer("BillSystem", "0") {
+  function initialize() public initializer {
   }
 
+function verifyMerkle(
+    bytes32[] proof,
+    bytes32 root,
+    bytes32 leaf
+  )
+    public
+    pure
+    returns (bool)
+  {
+    bytes32 computedHash = leaf;
+
+    for (uint256 i = 0; i < proof.length; i++) {
+      bytes32 proofElement = proof[i];
+
+      if (computedHash < proofElement) {
+        computedHash = keccak256(abi.encodePacked(computedHash, proofElement));
+      } else {
+        computedHash = keccak256(abi.encodePacked(proofElement, computedHash));
+      }
+    }
+
+    return computedHash == root;
+  }
   /**
     * @dev Set the contract registry smart contract address
     * @param _contractRegistryAddress The contract registry address to set
     */
-  function setContractRegistry(address _contractRegistryAddress) public {
-    contractRegistryAddress = _contractRegistryAddress;
-    contractRegistry = ContractRegistry(_contractRegistryAddress);
+  function setRoundsRegistry(address roundsRegistryAddress) public {
+    roundsRegistry = Rounds(roundsRegistryAddress);
   }
 
   /**
@@ -51,52 +68,24 @@ contract BillSystem is Ownable, Migratable {
     * @return amount The amount of watt/hour consumed
     * @return ipfsMetadata Extra metadata that is appended to the bill, via IPFS hash
     */
-  function getBill(uint index) public view returns(
+  function getBill(bytes32 billId) public view returns(
     uint256 whConsumed,
     address tokenAddress,
-    address seller,
     address consumer,
     uint256 price,
     uint256 amount,
     string ipfsMetadata
   ) {
-    ShastaTypes.Bill storage bill = bills[index];
+    ShastaTypes.Bill storage bill = bills[billId];
 
     whConsumed = bill.whConsumed;
     tokenAddress = bill.tokenAddress;
-    seller = bill.seller;
     consumer = bill.consumer;
     price = bill.price;
     amount = bill.amount;
     ipfsMetadata = bill.ipfsMetadata;
   }
 
-
-  /**
-    * @dev Get bills length
-    * @return length The bills list length
-    */
-  function getBillsLength() public view returns (uint length) {
-    length = bills.length;
-  }
-
-  /**
-    * @dev Get consumer bill length
-    * @param _address The consumer address
-    * @return length The bills list length
-    */
-  function getConsumerBillsLength(address _address) public view returns (uint length) {
-    length = consumerBillIndex[_address].length;
-  }
-
-  /**
-    * @dev Get seller/producer bill length
-    * @param _address The seller/producer address
-    * @return length The bills list length
-    */
-  function getSellerBillsLength(address _address) public view returns (uint length) {
-    length = sellerBillIndex[_address].length;
-  }
 
   /**
     * @dev Get the ERC20/ETH balance from an address
@@ -109,7 +98,7 @@ contract BillSystem is Ownable, Migratable {
   }
 
   /**
-    * @dev Generates a new prepaid contract between a consumer and a producer
+    * @dev Generates a new bill contract 
     * @param tokenAddress The ERC20 currency address that is used to pay the bill 
     * @param seller The seller/producer address
     * @param consumer The consumer address
@@ -119,44 +108,64 @@ contract BillSystem is Ownable, Migratable {
     * @param ipfsContractMetadata Extra metadata that is appended to the contract, via IPFS hash
     * @param ipfsBillMetadata Extra metadata that is appended to the bill, via IPFS hash
     */
-  function newPrepaidContract(
-    address tokenAddress,
-    address seller,
-    address consumer,
-    uint price,
-    uint monthlyWh,
-    bool enabled,
-    string ipfsContractMetadata,
-    string ipfsBillMetadata
+  function generateAndPayBill(
+    string ipfsBillMetadata,
+    uint token_amount,
+    bytes32 leaf,
+    bytes32 proofs,
+    uint round
   ) public {
-    uint newIndex = contractRegistry.newContract(tokenAddress, seller, consumer, price, monthlyWh, enabled, ipfsContractMetadata);
-    uint newBillIndex = generateBill(monthlyWh, newIndex, ipfsBillMetadata);
-    payBillERC20(newBillIndex);
+    generateBill(billHash, consumed, ipfsBillMetadata);
+    payBillERC20(billHash);
+  }
+
+  /**
+    * @dev Generates a keccak256 concatenating ipfs_bill_hash + "," + consumed
+    * @param ipfsBillMetadata The ipfs hash string of a bill
+    * @param token_amount The amount of watts consumed
+    * @return bytes32  The resulting keccak256 hash
+    */
+  function generateBillHash(string ipfsBillMetadata, uint token_amount) internal returns (bytes32) {
+    string stringAmount = string(bytes32(token_amount));
+    string billIdString = ipfsBillMetadata.toSlice().concat(",".toSlice()).concat(stringAmount.toSlice());
+    return keccak256(bytes(billIdString));
   }
 
   /**
     * @dev Generates a new energy bill
-    * @param wh The amount of watts/hour consumed during a timeframe 
-    * @param contractId The contract index in the registry 
-    * @param ipfsMetadata Extra metadata that is appended to the bill, via IPFS hash
+    * @param ipfsBillMetadata The ipfs hash
+    * @param tokenAmount The token amount
+    * @param round The round to verify the bill and inherit his state
+    * @return bytes32 Returns the bill
     */
-  function generateBill(uint wh, uint contractId, string ipfsMetadata) public returns(uint newIndex) {
-    (address tokenAddress, address seller, address consumer, uint price, bool enabled) = ContractRegistry(contractRegistryAddress).getContractData(contractId);
-    require(enabled == true, "Contract is not enabled.");
-    newIndex = bills.push(
-      ShastaTypes.Bill(
-        wh,
-        tokenAddress,
-        seller,
-        consumer,
-        price,
-        wh * price, // price must be Token/wattHour
-        ipfsMetadata
-      )
-    ) - 1; // Array.push returns the new array length, so (new length - 1) == latest index.
-    consumerBillIndex[consumer].push(newIndex);
-    sellerBillIndex[seller].push(newIndex);
-    emit NewBill(consumer, seller, newIndex);
+  function generateBill(string ipfsBillMetadata, uint tokenAmount, bytes32 leaf, bytes proofs, uint round) public returns(bytes32) {
+    bytes32 billHash = generateBillHash(ipfsBillMetadata, tokenAmount);
+    /**
+      * TODO:
+      * 1. Verify billHash == leaf  (OK)
+      * 2. Grab round. Check if round is activated. (OK)
+      * 3. Verify billHash is inside round bills merkle root, with the given proofs
+      * 4. If OK, inherit the round state and store the bill reference
+      */
+    require(billHash == leaf, "Bill hash should be equal than leaf hash");
+    (
+      uint stage,
+      uint energyPrice,
+      address tokenAddress,
+      bytes32 billingRoot
+    ) = ggetRoundForBilling(round);
+    require(stage == 1, "Round must be activated");
+    require(verifyMerkle() == true, "Bill is not included in the Merkle tree.");
+    bills[billHash] = ShastaTypes.Bill(
+      tokenAddress, // If tokenAddress 0x00 == ETHER as payment
+      energyPrice,
+      tokenAmount,
+      round,
+      ipfsBillMetadata,
+      true
+    );
+    emit NewBill(billHash);
+    return billHash;
   }
 
   /**
@@ -185,15 +194,13 @@ contract BillSystem is Ownable, Migratable {
     * @dev Pay a Shasta bill with ETH 
     * @param billIndex  The bill index
     */
-  function payBillETH(uint256 billIndex) public payable {
-    ShastaTypes.Bill memory bill = bills[billIndex];
+  function payBillETH(bytes32 billId) public payable {
+    ShastaTypes.Bill memory bill = bills[billId];
     require(bill.tokenAddress == address(0), "The ERC20 token is not the same as defined in the contract.");
-    require(bill.consumer == msg.sender, "Bill is from consumer");
-    require(bill.amount > 0, "Bill does not exists");
+    require(bill.amount > 0, "Bill can not be zero amount");
     require(bill.amount == msg.value, "Bill amount is not the same as the amount argument.");
-    require(isBillPaid[billIndex] == false, "Bill is already paid.");
-    isBillPaid[billIndex] = true;
-    balances[address(0)][bill.seller] += msg.value;
+    require(isBillPaid[billId] == false, "Bill is already paid.");
+    isBillPaid[billId] = true;
   }
 
   /**

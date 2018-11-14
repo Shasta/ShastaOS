@@ -1,13 +1,13 @@
 pragma solidity ^0.4.24;
 
 import "openzeppelin-solidity/contracts/ownership/Ownable.sol";
-import "zos-lib/contracts/migrations/Migratable.sol";
+import "zos-lib/contracts/Initializable.sol";
 import "./libraries/ShastaTypes.sol";
 
 /**
   * @title ContractRegistry
   */
-contract ContractRegistry is Ownable, Migratable {
+contract ContractRegistry is Ownable, Initializable {
 
   ShastaTypes.EnergyContract[] public contracts;
 
@@ -15,7 +15,7 @@ contract ContractRegistry is Ownable, Migratable {
 
 
   // Upgradeable contract pattern with initializer using zeppelinOS way.
-  function initialize() public isInitializer("ContractRegistry", "0") {
+  function initialize() initializer public {
   }
 
   /** 

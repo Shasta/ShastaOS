@@ -27,7 +27,6 @@ contract ShaLedger is ERC20, Ownable, ERC20Burnable, ERC20Mintable {
     uint256 amount
   )
     public
-    onlyBeforeMintingFinished
     returns (bool)
   {
     uint user_balance = balanceOf(to);
@@ -45,11 +44,9 @@ contract ShaLedger is ERC20, Ownable, ERC20Burnable, ERC20Mintable {
   function toggleMinting(bool _bool)
     public
     onlyMinter
-    onlyBeforeMintingFinished
     returns (bool)
   {
     _mintingFinished = _bool;
-    emit MintingFinished();
     return true;
   }
 

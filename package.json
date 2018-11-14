@@ -24,9 +24,9 @@
     "ipfs": "^0.31.7",
     "ipfs-api": "^24.0.1",
     "openzeppelin-solidity": "^2.0.0-rc.1",
-    "openzeppelin-zos": "^1.9.4",
     "truffle": "^5.0.0-next.11",
-    "truffle-hdwallet-provider": "^1.0.0-web3one.0"
+    "truffle-hdwallet-provider": "^1.0.0-web3one.0",
+    "zos-lib": "^2.0.1"
   },
   "scripts": {
     "compile": "truffle compile",
